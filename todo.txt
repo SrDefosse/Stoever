@@ -1,0 +1,78 @@
+<instruction> Tienes acceso al código base del sitio web del **Grupo Stoever**, una empresa mexicana con más de 50 años de experiencia en productos basados en Bio-Colágeno, con divisiones en construcción y piel. Tu tarea es extender y mejorar el diseño del sitio, asegurando un diseño **moderno, dinámico y completamente responsivo**, integrando las funcionalidades solicitadas y resolviendo problemas existentes.
+Objetivos Adicionales:
+Reajustar la altura al inicio al cambiar de página:
+
+Garantizar que al navegar entre páginas, la vista siempre comience desde el tope superior.
+Implementar esta funcionalidad globalmente, asegurando compatibilidad con navegadores modernos y dispositivos móviles.
+Navbar con soporte para logo:
+
+Integra el logo del Grupo Stoever en el navbar, asegurando su visibilidad en todas las páginas y dispositivos.
+Aplica un diseño responsivo para el logo y un hover dinámico (e.g., efecto de zoom o cambio de opacidad).
+Extensiones y mejoras solicitadas:
+
+Extender y mejorar secciones con elementos visuales adicionales, como contenedores de imágenes, galerías, sliders, y carousels.
+Diseñar cada página como una landing page, estructurada en subsecciones claras.
+Asegurar que los botones sean visibles y consistentes en todas las páginas, con outlines y efectos hover.
+</instruction>
+<what_is_expected_to_be_returned>
+
+Implementaciones Detalladas:
+1. Reajustar la Altura al Cambiar de Página:
+Funcionalidad:
+
+Implementa un mecanismo que reajuste automáticamente la posición de la página al tope superior (scrollY = 0) al navegar entre páginas.
+Asegúrate de que esta funcionalidad funcione globalmente y no dependa de cada componente individual.
+Sugerencia de Implementación:
+
+Usa un método global para rastrear cambios en la ruta (por ejemplo, con un listener que detecte navegación).
+Verifica que esta funcionalidad no interfiera con el desempeño del sitio, especialmente en dispositivos móviles.
+2. Navbar con Soporte para Logo:
+Requisitos:
+
+Integra el logo del Grupo Stoever en el navbar, con las siguientes características:
+Alineado a la izquierda en pantallas grandes.
+Centrado en móviles, visible mientras el menú desplegable está abierto.
+Asegúrate de que el logo sea redimensionable automáticamente en función del tamaño de la pantalla.
+Interacción:
+
+Aplica un hover dinámico (e.g., zoom suave o cambio de opacidad).
+Añade un fondo sólido al navbar al hacer scroll para mejorar la visibilidad del logo.
+3. Extensión de Todas las Páginas:
+Botones:
+
+Corrige los problemas de visibilidad en los botones. Asegúrate de que tengan:
+Un fondo inicial visible (blanco con outline azul o verde claro).
+Efectos hover que incluyan un degradado (azul-verde) y texto blanco con sombra suave.
+Revisa que el botón flotante de WhatsApp sea visible en todos los fondos.
+Espacios para Imágenes:
+
+Agrega más contenedores para imágenes en cada sección, como:
+Galerías estilo masonry: Ideal para mostrar proyectos o productos.
+Carousels: Para imágenes destacadas de productos o procesos.
+Diseña los contenedores para que incluyan efectos interactivos, como hover con zoom o sombreado.
+Landing Pages:
+
+Asegúrate de que cada página tenga una estructura clara con varias subsecciones:
+Introducción visual con texto y botones.
+Destacados o estadísticas clave.
+Galería visual o testimonios.
+FAQ o preguntas frecuentes.
+Formulario de contacto.
+4. Extensiones Específicas para Páginas:
+Página de Inicio:
+
+Agrega un slider en el hero con imágenes dinámicas y texto superpuesto.
+Incluye una sección de estadísticas con números animados y gráficos sutiles.
+Página "Sobre Nosotros":
+
+Diseña un timeline interactivo para mostrar hitos clave de la historia del Grupo Stoever.
+Asegúrate de que el timeline sea horizontal en pantallas grandes y vertical en móviles.
+Sección de Productos:
+
+Añade un carousel interactivo para productos destacados.
+Incluye un acordeón con descripciones técnicas detalladas para cada producto.
+Página de Contacto:
+
+Diseña un formulario funcional con validación visual en tiempo real.
+Incluye un mapa interactivo de Google Maps con un pin azul personalizado para la ubicación.
+<warnings> 1. Asegúrate de que la funcionalidad de scroll al tope funcione correctamente en todos los navegadores y dispositivos. 2. Verifica que los botones sean visibles en todas las combinaciones de fondo y diseño. 3. Mantén las imágenes optimizadas para un rendimiento rápido sin afectar la carga del sitio. </warnings>
