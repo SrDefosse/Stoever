@@ -80,7 +80,7 @@ const Home = () => {
       description: 'Soluciones avanzadas para proyectos de infraestructura'
     },
     {
-      url: 'https://images.unsplash.com/photo-1565439371467-61c143abd442?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      url: 'https://images.pexels.com/photos/4452511/pexels-photo-4452511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       title: 'Acabados Premium',
       description: 'Tratamientos especializados para la industria del cuero'
     },

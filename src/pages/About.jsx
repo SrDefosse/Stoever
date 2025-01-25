@@ -59,7 +59,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background-light">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
+      <section className="relative py-20 bg-gradient-to-l from-green-400 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center text-white"
@@ -67,7 +67,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
               Nuestra Historia
             </h1>
             <p className="mt-4 text-xl text-white/90 max-w-3xl mx-auto">
@@ -143,7 +143,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary to-primary">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -151,13 +151,13 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-black mb-4">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
               Sé parte de nuestra historia
             </h2>
             <p className="text-black/90 mb-8 max-w-2xl mx-auto">
               Descubre cómo podemos colaborar juntos en tu próximo proyecto
             </p>
-            <OutlineButton to="/contact" color="white">
+            <OutlineButton to="/contact" className='bg-gradient-to-r from-primary to-secondary text-white'>
               Contáctanos
             </OutlineButton>
           </motion.div>

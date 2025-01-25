@@ -21,7 +21,7 @@ const Products = () => {
             {
               title: 'Presentaciones',
               description: '• Polvo micronizado\n• Solución concentrada\n• Gel estabilizado',
-              image: 'https://images.unsplash.com/photo-1576073719676-aa95576db207?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              image: 'https://images.pexels.com/photos/9574568/pexels-photo-9574568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
             }
           ]
         },
@@ -53,7 +53,7 @@ const Products = () => {
             {
               title: 'Características Físico-Químicas',
               description: '• Peso molecular: 2000-5000 Da\n• Solubilidad: Alta\n• Biodisponibilidad: >90%',
-              image: 'https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              image: 'https://images.pexels.com/photos/27305397/pexels-photo-27305397/free-photo-of-verano-vaso-cristal-vidrio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
             },
             {
               title: 'Certificaciones',
@@ -95,7 +95,7 @@ const Products = () => {
             {
               title: 'Presentaciones',
               description: '• Gel industrial\n• Solución concentrada\n• Polvo técnico',
-              image: 'https://images.unsplash.com/photo-1581093458791-9d19a5f32640?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              image: 'https://images.pexels.com/photos/9574568/pexels-photo-9574568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
             }
           ]
         },
@@ -125,7 +125,7 @@ const Products = () => {
       description: 'Calidad médica certificada'
     },
     {
-      url: 'https://images.unsplash.com/photo-1576073719676-aa95576db207?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      url: 'https://images.pexels.com/photos/9574568/pexels-photo-9574568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       title: 'Colágeno Hidrolizado',
       description: 'Soluciones nutricionales'
     },
@@ -139,7 +139,7 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background-light">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
+      <section className="relative py-20 bg-gradient-to-l from-green-400 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center text-white"
@@ -167,7 +167,7 @@ const Products = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-text-primary">
+            <h2 className="text-3xl font-bold text-text-primary mt-10">
               Línea de Productos
             </h2>
             <p className="mt-4 text-text-secondary">
