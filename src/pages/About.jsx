@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Timeline from '../components/Timeline'
-import Button from '../components/Button'
+import { OutlineButton } from '../components/buttons'
 
 const About = () => {
   const timelineEvents = [
@@ -157,9 +157,9 @@ const About = () => {
             <p className="text-black/90 mb-8 max-w-2xl mx-auto">
               Descubre cómo podemos colaborar juntos en tu próximo proyecto
             </p>
-            <Button to="/contact" variant="outline">
+            <OutlineButton to="/contact" color="white">
               Contáctanos
-            </Button>
+            </OutlineButton>
           </motion.div>
         </div>
       </section>

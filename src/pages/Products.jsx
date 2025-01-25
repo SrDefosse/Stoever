@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Accordion from '../components/Accordion'
-import Button from '../components/Button'
+import { LinkButton } from '../components/buttons'
 import MasonryGallery from '../components/MasonryGallery'
 
 const Products = () => {
@@ -150,7 +150,7 @@ const Products = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               Nuestros Productos
             </h1>
-            <p className="mt-4 text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Soluciones innovadoras en Bio-Colágeno para diversas industrias
             </p>
           </motion.div>
@@ -158,7 +158,7 @@ const Products = () => {
       </section>
 
       {/* Products Gallery */}
-      <section className="py-20">
+      <section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -180,7 +180,7 @@ const Products = () => {
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -225,7 +225,7 @@ const Products = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary-DEFAULT to-primary-DEFAULT">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -233,15 +233,15 @@ const Products = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               ¿Necesitas más información?
             </h2>
-            <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-black/90 mb-8 max-w-2xl mx-auto">
               Nuestro equipo técnico está listo para asesorarte
             </p>
-            <Button to="/contact" variant="outline">
+            <LinkButton to="/contact" variant="outline">
               Solicitar información
-            </Button>
+            </LinkButton>
           </motion.div>
         </div>
       </section>

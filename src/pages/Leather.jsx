@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Button from '../components/Button'
+import { LinkButton } from '../components/buttons'
 import MasonryGallery from '../components/MasonryGallery'
 
 const Leather = () => {
@@ -224,9 +224,9 @@ const Leather = () => {
             <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
               Nuestro equipo está listo para asesorarte
             </p>
-            <Button to="/contact" variant="primary">
+            <LinkButton to="/contact" variant="primary">
               Contactar ahora
-            </Button>
+            </LinkButton>
           </motion.div>
         </div>
       </section>

@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import Button from '../components/Button'
-import Carousel from '../components/Carousel'
-import MasonryGallery from '../components/MasonryGallery'
+import { LinkButton } from '../components/buttons'
 import Hero from '../components/Hero'
 
 const Home = () => {
@@ -136,13 +134,13 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <Hero slides={heroSlides} />
 
       {/* Features Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-gray-50 to-gray-100">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -150,7 +148,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary">
+            <h2 className="text-3xl sm:text-4xl font-extrabold">
               Nuestras Divisiones
             </h2>
             <p className="mt-4 text-xl text-text-secondary">
@@ -329,12 +327,12 @@ const Home = () => {
               Contáctanos para discutir tu próximo proyecto
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button to="/contact" variant="primary">
+              <LinkButton to="/contact" variant="primary">
                 Contactar ahora
-              </Button>
-              <Button to="/products" variant="secondary">
+              </LinkButton>
+              <LinkButton to="/products" variant="secondary">
                 Ver productos
-              </Button>
+              </LinkButton>
             </div>
           </div>
         </div>

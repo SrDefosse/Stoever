@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import Button from '../components/Button'
+import { SubmitButton } from '../components/buttons'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -148,13 +148,12 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Button
+                <SubmitButton
                   type="submit"
-                  variant="primary"
                   className="w-full md:w-auto"
                 >
                   Enviar mensaje
-                </Button>
+                </SubmitButton>
               </motion.div>
             </div>
           </form>

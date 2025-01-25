@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { ArrowButton } from './buttons'
 
 const MoleculeShape = ({ className = "", delay = 0 }) => (
   <motion.div
@@ -46,7 +46,7 @@ const Hero = ({ slides }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-DEFAULT/10 to-secondary-DEFAULT/10" />
+          <div className="absolute inset-0" />
         </motion.div>
       </div>
 
@@ -80,7 +80,7 @@ const Hero = ({ slides }) => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                  <span className="bg-primary-DEFAULT/10 text-primary-DEFAULT px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="text-primary-DEFAULT px-4 py-2 rounded-full text-sm font-semibold">
                     Innovación en Bio-Colágeno
                   </span>
                 </motion.div>
@@ -112,19 +112,9 @@ const Hero = ({ slides }) => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                <Link
-                  to="/products"
-                  className="group inline-flex items-center px-8 py-4 border-2 border-primary-DEFAULT text-base font-medium rounded-full bg-white text-primary-DEFAULT hover:bg-primary-DEFAULT hover:text-black transition-all duration-300"
-                >
-                  <span>Descubre más</span>
-                  <motion.svg 
-                    className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </motion.svg>
-                </Link>
+                <ArrowButton to="/products">
+                  Descubre más
+                </ArrowButton>
               </motion.div>
         </motion.div>
 
@@ -165,7 +155,7 @@ const Hero = ({ slides }) => {
             whileTap={{ scale: 0.9 }}
           >
             <motion.div
-              className="absolute inset-0 rounded-full bg-primary-DEFAULT"
+              className="absolute inset-0 rounded-full"
               initial={false}
               animate={{
                 opacity: currentSlide === index ? 1 : 0.3
