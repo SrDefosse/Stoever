@@ -20,14 +20,14 @@ const AccordionItem = ({ title, content, isOpen, onToggle, index }) => {
           <motion.span
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
-            className="text-primary-DEFAULT"
+            className="text-primary"
           >
             <FiChevronDown size={24} />
           </motion.span>
           {title}
         </span>
         <motion.div
-          className="text-sm text-text-secondary group-hover:text-primary-DEFAULT transition-colors duration-300"
+          className="text-sm text-text-secondary group-hover:text-primary transition-colors duration-300"
         >
           {isOpen ? 'Cerrar' : 'Ver detalles'}
         </motion.div>

@@ -31,7 +31,7 @@ const About = () => {
       title: 'Innovación',
       description: 'Buscamos constantemente nuevas formas de mejorar nuestros productos y servicios.',
       icon: (
-        <svg className="w-12 h-12 text-primary-DEFAULT" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       )
@@ -40,7 +40,7 @@ const About = () => {
       title: 'Calidad',
       description: 'Mantenemos los más altos estándares en todos nuestros procesos y productos.',
       icon: (
-        <svg className="w-12 h-12 text-primary-DEFAULT" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       )
@@ -49,7 +49,7 @@ const About = () => {
       title: 'Sostenibilidad',
       description: 'Comprometidos con el medio ambiente y el desarrollo sostenible.',
       icon: (
-        <svg className="w-12 h-12 text-primary-DEFAULT" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
@@ -59,7 +59,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background-light">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary-DEFAULT to-secondary-DEFAULT">
+      <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center text-white"
@@ -143,7 +143,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary-DEFAULT to-primary-DEFAULT">
+      <section className="py-20 bg-gradient-to-r from-secondary to-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

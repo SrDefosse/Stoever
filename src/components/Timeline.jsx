@@ -20,7 +20,7 @@ const TimelineItem = ({ year, title, description, index, isLast }) => {
       {/* Línea y punto */}
       <div className="relative flex-grow-0 flex-shrink-0 w-24 md:w-1/2 flex justify-center">
         <div className="h-full w-px bg-primary-light absolute top-0 bottom-0" />
-        <div className="w-6 h-6 bg-primary-DEFAULT rounded-full shadow-md relative z-10" />
+        <div className="w-6 h-6 bg-primary rounded-full shadow-md relative z-10" />
         {!isLast && <div className="h-full w-px bg-primary-light absolute top-6 bottom-0" />}
       </div>
 
@@ -30,7 +30,7 @@ const TimelineItem = ({ year, title, description, index, isLast }) => {
       }`}>
         <div className="bg-white rounded-xl shadow-soft p-6">
           <motion.span
-            className="font-bold text-primary-DEFAULT text-lg mb-1 block"
+            className="font-bold text-primary text-lg mb-1 block"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}

@@ -22,7 +22,7 @@ const Navbar = () => {
       {/* Botón móvil */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white shadow-md text-text-primary hover:text-primary-DEFAULT md:hidden"
+        className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white shadow-md text-text-primary hover:text-primary md:hidden"
       >
         {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
       </button>
@@ -69,7 +69,7 @@ const Navbar = () => {
 
         {/* Línea decorativa */}
         <div className="px-4">
-          <div className="h-px bg-gradient-to-r from-primary-DEFAULT to-secondary-DEFAULT" />
+          <div className="h-px bg-gradient-to-r from-primary to-secondary" />
         </div>
 
         {/* Links */}
@@ -84,16 +84,16 @@ const Navbar = () => {
               <motion.div
                 className={`absolute left-0 w-1 h-8 rounded-full transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? 'bg-primary-DEFAULT'
-                    : 'bg-transparent group-hover/link:bg-primary-DEFAULT/30'
+                    ? 'bg-primary'
+                    : 'bg-transparent group-hover/link:bg-primary/30'
                 }`}
                 layoutId="navIndicator"
               />
               <div className="flex items-center min-w-[200px]">
                 <span className={`text-xl ${
                   location.pathname === link.path
-                    ? 'text-primary-DEFAULT'
-                    : 'text-text-secondary group-hover/link:text-primary-DEFAULT'
+                    ? 'text-primary'
+                    : 'text-text-secondary group-hover/link:text-primary'
                 }`}>
                   {link.icon}
                 </span>
@@ -102,8 +102,8 @@ const Navbar = () => {
                     isExpanded ? 'opacity-100 translate-x-0' : 'md:opacity-0 md:-translate-x-4 opacity-100 translate-x-0'
                   } ${
                     location.pathname === link.path
-                      ? 'text-primary-DEFAULT font-medium'
-                      : 'text-text-secondary group-hover/link:text-primary-DEFAULT'
+                      ? 'text-primary font-medium'
+                      : 'text-text-secondary group-hover/link:text-primary'
                   }`}
                 >
                   {link.name}

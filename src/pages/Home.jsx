@@ -184,7 +184,7 @@ const Home = () => {
                             initial={{ scale: 0.8, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-primary-DEFAULT/20 p-3 rounded-lg backdrop-blur-sm"
+                            className="bg-primary/20 p-3 rounded-lg backdrop-blur-sm"
                           >
                             {feature.icon}
                           </motion.div>
@@ -193,14 +193,14 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-primary-DEFAULT transition-colors duration-300">
+                    <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <p className="text-text-secondary group-hover:text-text-primary transition-colors duration-300">
                       {feature.description}
                     </p>
                     <motion.div
-                      className="mt-4 flex items-center text-primary-DEFAULT font-medium"
+                      className="mt-4 flex items-center text-primary font-medium"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.2 }}
@@ -219,7 +219,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-6 bg-gradient-to-r from-secondary-DEFAULT to-primary-DEFAULT">
+      <section className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((stat, index) => (
@@ -232,7 +232,7 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <motion.div
-                  className="text-4xl sm:text-5xl font-extrabold text-white"
+                  className="text-4xl sm:text-5xl font-extrabold text-primary"
                   initial={{ scale: 0.5 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -240,7 +240,7 @@ const Home = () => {
                 >
                   <AnimatedNumber number={stat.number} suffix={stat.suffix} />
                 </motion.div>
-                <p className="mt-2 text-sm sm:text-base text-white/80">{stat.label}</p>
+                <p className="mt-2 text-sm sm:text-base text-primary/80">{stat.label}</p>
               </motion.div>
             ))}
           </div>

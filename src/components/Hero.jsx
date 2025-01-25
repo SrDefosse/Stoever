@@ -14,10 +14,10 @@ const MoleculeShape = ({ className = "", delay = 0 }) => (
     }}
   >
     <div className="relative">
-      <div className="absolute -inset-8 rounded-full border-2 border-primary-DEFAULT/30" />
-      <div className="absolute -inset-12 rounded-full border-2 border-secondary-DEFAULT/20" />
-      <div className="absolute -inset-16 rounded-full border-2 border-primary-DEFAULT/10" />
-      <div className="w-4 h-4 rounded-full bg-primary-DEFAULT/40" />
+      <div className="absolute -inset-8 rounded-full border-2 border-primary/30" />
+      <div className="absolute -inset-12 rounded-full border-2 border-secondary/20" />
+      <div className="absolute -inset-16 rounded-full border-2 border-primary/10" />
+      <div className="w-4 h-4 rounded-full bg-primary/40" />
     </div>
   </motion.div>
 )
@@ -80,7 +80,7 @@ const Hero = ({ slides }) => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                  <span className="text-primary-DEFAULT px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="text-primary px-4 py-2 rounded-full text-sm font-semibold">
                     Innovación en Bio-Colágeno
                   </span>
                 </motion.div>
@@ -93,9 +93,9 @@ const Hero = ({ slides }) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
                 >
-                  <div className="h-px w-12 bg-primary-DEFAULT" />
-                  <div className="h-px w-8 bg-secondary-DEFAULT" />
-                  <div className="h-px w-4 bg-primary-DEFAULT" />
+                  <div className="h-px w-12 bg-primary" />
+                  <div className="h-px w-8 bg-secondary" />
+                  <div className="h-px w-4 bg-primary" />
                 </motion.div>
               </motion.div>
               <motion.p 
@@ -131,7 +131,7 @@ const Hero = ({ slides }) => {
             alt={slides[currentSlide].title}
             className="w-full h-[500px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary-DEFAULT/20 to-transparent">
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent">
             <MoleculeShape className="top-1/4 left-1/4 scale-75" delay={0.8} />
             <MoleculeShape className="bottom-1/4 right-1/4 scale-75" delay={1.2} />
           </div>

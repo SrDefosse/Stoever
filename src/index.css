@@ -34,7 +34,7 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-DEFAULT to-secondary-DEFAULT;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
 
   .text-content {
@@ -62,11 +62,11 @@
   }
 
   .link-primary {
-    @apply text-primary-DEFAULT hover:text-primary-dark transition-colors duration-200;
+    @apply text-primary hover:text-primary-dark transition-colors duration-200;
   }
 
   .link-secondary {
-    @apply text-secondary-DEFAULT hover:text-secondary-dark transition-colors duration-200;
+    @apply text-secondary hover:text-secondary-dark transition-colors duration-200;
   }
 
   .link-light {

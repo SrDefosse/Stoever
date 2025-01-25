@@ -64,7 +64,7 @@ const Construction = () => {
               <div className="text-center lg:text-left">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block">División de</span>
-                  <span className="block text-secondary-DEFAULT">Construcción</span>
+                  <span className="block text-secondary">Construcción</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   Soluciones innovadoras y sostenibles para la industria de la construcción,
@@ -104,7 +104,7 @@ const Construction = () => {
                 key={service.title}
                 className="relative bg-white p-6 rounded-lg shadow-soft hover:shadow-md transition-shadow duration-300"
               >
-                <div className="inline-flex p-3 bg-primary-light bg-opacity-10 text-primary-DEFAULT rounded-lg">
+                <div className="inline-flex p-3 bg-primary-light bg-opacity-10 text-primary rounded-lg">
                   {service.icon}
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">{service.title}</h3>
@@ -161,7 +161,7 @@ const Construction = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-secondary-DEFAULT">
+      <div className="bg-secondary">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">¿Listo para comenzar tu proyecto?</span>
@@ -171,7 +171,7 @@ const Construction = () => {
             <div className="inline-flex rounded-md shadow">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary-DEFAULT bg-white hover:bg-gray-50 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-white hover:bg-gray-50 transition-colors duration-200"
               >
                 Contactar ahora
               </a>

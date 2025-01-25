@@ -10,8 +10,8 @@ const OutlineButton = ({
   const baseStyles = 'inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 border-2 relative'
   
   const colors = {
-    primary: 'border-primary-DEFAULT text-text-primary hover:bg-primary-DEFAULT',
-    secondary: 'border-secondary-DEFAULT text-text-primary hover:bg-secondary-DEFAULT',
+    primary: 'border-primary text-text-primary hover:bg-primary',
+    secondary: 'border-secondary text-text-primary hover:bg-secondary',
     white: 'border-white text-text-primary hover:bg-white'
   }
 

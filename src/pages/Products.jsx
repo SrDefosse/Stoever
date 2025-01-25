@@ -139,7 +139,7 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background-light">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary-DEFAULT to-secondary-DEFAULT">
+      <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center text-white"

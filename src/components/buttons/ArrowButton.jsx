@@ -6,7 +6,7 @@ const ArrowButton = ({ to, children, className = "" }) => {
   return (
     <Link
       to={to}
-      className={`group inline-flex items-center px-8 py-4 border-2 border-primary-DEFAULT text-base font-medium rounded-full bg-white text-text-primary hover:bg-primary-DEFAULT transition-all duration-300 ${className}`}
+      className={`group inline-flex items-center px-8 py-4 border-2 border-primary text-base font-medium rounded-full bg-white text-text-primary hover:bg-primary transition-all duration-300 ${className}`}
     >
       <span>{children}</span>
       <motion.svg 

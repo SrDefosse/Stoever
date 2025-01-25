@@ -8,7 +8,7 @@ const SubmitButton = ({
   ...props 
 }) => {
   const baseStyles = 'inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 border relative'
-  const buttonStyles = `${baseStyles} bg-primary-DEFAULT text-text-primary hover:bg-primary-600 border-primary-DEFAULT shadow-sm ${className} ${isLoading ? 'cursor-not-allowed opacity-75' : ''}`
+  const buttonStyles = `${baseStyles} bg-primary text-text-primary hover:bg-primary-600 border-primary shadow-sm ${className} ${isLoading ? 'cursor-not-allowed opacity-75' : ''}`
 
   const loadingSpinner = (
     <svg className="animate-spin h-5 w-5 mr-2" viewBox="0 0 24 24">
