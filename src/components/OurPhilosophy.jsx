@@ -27,7 +27,7 @@ const OurPhilosofy = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-white/10 backdrop-blur-sm p-8 rounded-lg"
+          className="p-8 rounded-lg"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#011961]">
             Our Philosophy

@@ -5,7 +5,7 @@ import { FaLightbulb, FaIndustry, FaSolarPanel } from "react-icons/fa";
 export const DisappearingFeatures = () => {
   return (
     <>
-      <div className="relative h-fit">
+      <div className="relative min-h-screen mt-16">
         <Features />
       </div>
     </>
@@ -31,10 +31,7 @@ const Copy = () => {
         Why Choose Us?
       </h2>
       <p className="text-lg text-black">
-        Lorem ipsum dolor sit amet consectetur. Dolor quis a leo lobortis orci
-        tortor eget. Enim proin aliquam nulla a lacus pellentesque quam in. Nec
-        vel vel nulla nunc vel in molestie proin convallis. Leo et vulputate
-        tincidunt justo a varius et elementum.
+        With over 30 years of experience in the industry, we've established ourselves as pioneers in sustainable chemical solutions. Our commitment to excellence, coupled with state-of-the-art facilities and a dedicated team of experts, ensures we deliver products that not only meet but exceed industry standards. We take pride in our ability to provide customized solutions while maintaining our commitment to environmental responsibility.
       </p>
     </div>
   );
@@ -88,22 +85,26 @@ const CarouselItem = ({ scrollYProgress, position, numItems }) => {
     {
       icon: <FaLightbulb className="text-4xl text-[#0126A9]" />,
       title: "Innovative Research",
-      subtitle: "and Edge-Cutting Technology"
+      subtitle: "Leading R&D facility with breakthrough solutions",
+      description: "Our state-of-the-art research facilities and expert team continuously develop innovative solutions that shape industry standards."
     },
     {
       icon: <FaIndustry className="text-4xl text-[#0126A9]" />,
       title: "800 tons",
-      subtitle: "Of production capacity by month"
+      subtitle: "Monthly production capacity with consistent quality",
+      description: "Our advanced manufacturing facilities ensure high-volume production without compromising on quality or reliability."
     },
     {
       icon: <FaSolarPanel className="text-4xl text-[#0126A9]" />,
-      title: "Sustainable alternatives",
-      subtitle: "for various industries"
+      title: "Sustainable Solutions",
+      subtitle: "Eco-friendly products for a greener future",
+      description: "We prioritize environmental responsibility by developing products that minimize ecological impact while maximizing performance."
     },
     {
       icon: <FaLightbulb className="text-4xl text-[#0126A9]" />,
-      title: "Feature 4",
-      subtitle: "Description here"
+      title: "Global Reach",
+      subtitle: "Serving clients across 40+ countries",
+      description: "With an extensive distribution network and local support teams, we deliver excellence worldwide with personalized attention."
     }
   ];
 
@@ -115,12 +116,15 @@ const CarouselItem = ({ scrollYProgress, position, numItems }) => {
       }}
       className="w-full shrink-0 rounded-2xl bg-white p-8 shadow-lg"
     >
-      <div className="flex items-center gap-6">
-        {features[position - 1].icon}
-        <div>
-          <h3 className="text-2xl font-semibold text-indigo-950">{features[position - 1].title}</h3>
-          <p className="text-lg text-indigo-800">{features[position - 1].subtitle}</p>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center gap-6">
+          {features[position - 1].icon}
+          <div>
+            <h3 className="text-2xl font-semibold text-indigo-950">{features[position - 1].title}</h3>
+            <p className="text-lg text-indigo-800">{features[position - 1].subtitle}</p>
+          </div>
         </div>
+        <p className="text-sm text-gray-600 leading-relaxed">{features[position - 1].description}</p>
       </div>
     </motion.div>
   );
