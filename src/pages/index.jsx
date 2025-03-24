@@ -2,12 +2,10 @@ import { font } from "@/fonts";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Cards from "@/components/Cards";
-import TwoColumnLayout from "@/components/TwoColumnLayout";
 import ContentandCollage from "@/components/ContentandCollage";
-import DoubleCards from "@/components/DoubleCards";
 import WhatWeDo from "@/components/WhatWeDo";
-import OurPhilosofy from "@/components/OurPhilosofy";
-
+import OurPhilosophy from "@/components/OurPhilosophy";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -26,13 +24,10 @@ export default function Home() {
         <WhatWeDo />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <OurPhilosofy />
+        <OurPhilosophy />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <DoubleCards />
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <TwoColumnLayout />
+        <Footer />
       </div>
     </main>
   );

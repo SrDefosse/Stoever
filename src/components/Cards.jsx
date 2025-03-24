@@ -7,25 +7,25 @@ const Cards = () => {
     <section className="w-full bg-slate-50 px-4 md:px-8 py-16 md:py-24 md:mt-0">
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Card
+          title="Stoever Construction"
+          description="With over 25 years of experience, Stoever Construction is a manufacturer and applicator of our extensive range of paints and supplies for use in construction"
+          href="#"
+          bgUrl="/construction.jpg"
+          icon="/construction_icon.png"
+        />      
+        <Card
+          title="Stoever Group"
+          description="With over 70 years of experience in the chemical and leather tanning industry, Stoever Group holds presence in 15 countries worldwide. "
+          href="#"
+          bgUrl="/enterprise.jpg"
+          icon="/group_icon.png"
+        />
+        <Card
           title="Stoever Biosolutions for Leather"
           description="Specialized in the research, development, manufacturing and marketing of biochemicals for the tanning industry; Stoever Biosolutions for Leather is compromised with environmentally friendly solutions."
           href="#"
           bgUrl="/leather.jpg"
           icon="/biosolutions_icon.png"
-        />
-        <Card
-          title="Stoever Group"
-          description="With over 70 years of experience in the chemical and leather tanning industry, Stoever Group holds presence in 15 countries worldwide. "
-          href="#"
-          bgUrl="enterprise.jpg"
-          icon="/group_icon.png"
-        />
-        <Card
-          title="Stoever Construction"
-          description="With over 25 years of experience, Stoever Construction is a manufacturer and applicator of our extensive range of paints and supplies for use in construction"
-          href="#"
-          bgUrl="construction.jpg"
-          icon="/construction_icon.png"
         />
       </div>
     </section>

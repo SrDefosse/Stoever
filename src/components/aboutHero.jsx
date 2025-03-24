@@ -9,11 +9,11 @@ const AboutHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/construction.jpg"
+          src="/about-bg.jpg"
           alt="Stoever sustainable construction"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-blue-800/10"></div>
       </div>
 
       {/* Content */}
