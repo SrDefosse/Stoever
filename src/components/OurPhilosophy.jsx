@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Button from './Button';
 
 const OurPhilosofy = () => {
   return (
-    <section className="relative min-h-[600px] w-full">
+    <section className="mt-16 relative min-h-[600px] w-full">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center">
         <div className="relative w-full h-full">
@@ -32,11 +33,11 @@ const OurPhilosofy = () => {
             Our Philosophy
           </h2>
           <p className="text-lg md:text-xl text-black">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-            doloremque laudantium.
+          We are a competitive business with creative, sustainable and innovative values held as the foremost of our business model. We aim to satisfy our clients’ necessities with products of high quality and international environmental standards. 
           </p>
+          <Button>
+            Learn More
+          </Button>
         </motion.div>
       </div>
     </section>

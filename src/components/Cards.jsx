@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Cards = () => {
   return (
-    <section className="w-full bg-slate-50 px-4 md:px-8 py-16 md:py-24 md:mt-0">
+    <section className="w-full px-4 md:px-8 py-16 md:py-24 md:mt-0">
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Card
           title="Stoever Construction"
