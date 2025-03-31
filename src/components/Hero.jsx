@@ -97,13 +97,9 @@ const HeroSection = ({ heroImage, videoUrl = "/hero_video.mp4" }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <BlueButton>
-              Learn More
-            </BlueButton>
+            <BlueButton text="Learn More" />
 
-            <WhiteButton>
-              Contact Us
-            </WhiteButton>
+            <WhiteButton text="Contact Us" />
           </motion.div>
         </motion.div>
 

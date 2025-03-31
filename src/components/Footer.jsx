@@ -9,14 +9,8 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-gradient-to-b from-[#001845] to-[#00205B] text-white">
-      {/* Separador de ola superior */}
-      <div className="w-full overflow-hidden">
-        <svg className="w-full h-12 md:h-16 text-white fill-current" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-        </svg>
-      </div>
 
-      <div className="w-full px-4 pt-8 pb-12">
+      <div className="w-full px-4 pt-12 pb-12">
         {/* Contenido principal del Footer */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Información de la compañía */}
