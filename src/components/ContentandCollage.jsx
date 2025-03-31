@@ -20,7 +20,7 @@ const ContentandCollage = () => {
             Active in <span className="text-[#007AFF]">15 countries</span> worldwide
           </p>
           <p className="text-gray-600">
-          Since our establishment in 1946, in León, Gto. México, we have maintained our compromise to develop chemical solutions that are innovative, creative and good for the environment. Today we are a proudly Mexican business with multiple important industry certifications and alliances.
+            Since our establishment in 1946, in León, Gto. México, we have maintained our commitment to develop chemical solutions that are innovative, creative and good for the environment. Today we are a proudly Mexican business with multiple important industry certifications and alliances.
           </p>
           
           {/* Buttons */}
@@ -38,26 +38,53 @@ const ContentandCollage = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          {/* Text above collage */}
+          {/* Texto superior al collage */}
           <p className="text-[#007AFF] mb-4">
             160 employees. 2 production factories.
           </p>
           
-          {/* Collage images */}
+          {/* Collage de imágenes */}
           <div className="grid grid-cols-2 gap-4 flex-grow">
             {/* Columna izquierda del collage: dos imágenes apiladas */}
             <div className="grid grid-rows-2 gap-4">
-              <div className="relative w-full h-full">
-                <Image src="/collage1.jpg" alt="Image 1" fill className="object-cover rounded-lg" />
-              </div>
-              <div className="relative w-full h-full">
-                <Image src="/collage2.jpg" alt="Image 2" fill className="object-cover rounded-lg" />
-              </div>
+              <motion.div 
+                className="relative w-full h-full" 
+                whileHover={{ scale: 1.05 }} 
+                transition={{ duration: 0.3 }}
+              >
+                <Image 
+                  src="/collage1.jpg" 
+                  alt="Image 1" 
+                  fill 
+                  className="object-cover rounded-lg" 
+                />
+              </motion.div>
+              <motion.div 
+                className="relative w-full h-full" 
+                whileHover={{ scale: 1.05 }} 
+                transition={{ duration: 0.3 }}
+              >
+                <Image 
+                  src="/collage2.jpg" 
+                  alt="Image 2" 
+                  fill 
+                  className="object-cover rounded-lg" 
+                />
+              </motion.div>
             </div>
             {/* Columna derecha: una imagen que ocupa todo el alto */}
-            <div className="relative w-full h-full">
-              <Image src="/collage3.jpg" alt="Image 3" fill className="object-cover rounded-lg" />
-            </div>
+            <motion.div 
+              className="relative w-full h-full" 
+              whileHover={{ scale: 1.05 }} 
+              transition={{ duration: 0.3 }}
+            >
+              <Image 
+                src="/collage3.jpg" 
+                alt="Image 3" 
+                fill 
+                className="object-cover rounded-lg" 
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>

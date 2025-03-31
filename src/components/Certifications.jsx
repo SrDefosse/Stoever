@@ -2,20 +2,18 @@ import { motion } from "framer-motion";
 
 // Lista de logos
 const logos = [
-  { id: 1, src: "/construction_icon.png", alt: "Logo Carrusel 1" },
-  { id: 2, src: "/construction_icon.png", alt: "Logo Carrusel 2" },
-  { id: 3, src: "/construction_icon.png", alt: "Logo Carrusel 3" },
-  { id: 4, src: "/construction_icon.png", alt: "Logo Carrusel 4" },
-  { id: 5, src: "/construction_icon.png", alt: "Logo Carrusel 5" },
-  { id: 6, src: "/construction_icon.png", alt: "Logo Carrusel 6" },
-  { id: 7, src: "/construction_icon.png", alt: "Logo Carrusel 7" },
-  { id: 8, src: "/construction_icon.png", alt: "Logo Carrusel 8" },
-  { id: 9, src: "/construction_icon.png", alt: "Logo Carrusel 9" }
+  { id: 1, src: "/certificacion1.png", alt: "Logo Carrusel 1" },
+  { id: 2, src: "/certificacion2.png", alt: "Logo Carrusel 2" },
+  { id: 3, src: "/certificacion3.png", alt: "Logo Carrusel 3" },
+  { id: 4, src: "/certificacion4.png", alt: "Logo Carrusel 4" },
+  { id: 5, src: "/certificacion5.png", alt: "Logo Carrusel 5" },
+  { id: 6, src: "/certificacion6.png", alt: "Logo Carrusel 6" },
+  { id: 7, src: "/certificacion7.png", alt: "Logo Carrusel 7" }
 ];
 
 const Certifications = () => {
   return (
-    <section className="relative w-full overflow-hidden border-b border-zinc-700 py-12 sm:py-16">
+    <section className="relative w-full overflow-hidden py-12 sm:py-16">
       <div className="flex flex-col items-center justify-center">
         <span className="mb-8 bg-gradient-to-br from-zinc-200 to-zinc-500 bg-clip-text text-center text-2xl">
           Certifications

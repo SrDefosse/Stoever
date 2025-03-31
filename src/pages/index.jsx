@@ -7,7 +7,7 @@ import WhatWeDo from "@/components/WhatWeDo";
 import OurPresence from "@/components/OurPresence";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
-import HomeContactUs from "@/components/HomeContactUs";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
@@ -17,12 +17,12 @@ export default function Home() {
         <Hero />
       </div>
       <div className="flex flex-col items-center justify-center">
+        <ContentandCollage />
+      </div>
+      <div className="flex flex-col items-center justify-center">
         <Cards />
       </div>
       <Divider />
-      <div className="flex flex-col items-center justify-center">
-        <ContentandCollage />
-      </div>
       <div className="flex flex-col items-center justify-center">
         <WhatWeDo />
       </div>
@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       <Divider />
       <div className="flex flex-col items-center justify-center">
-        <HomeContactUs/>
+        <ContactUs/>
       </div>
       <div className="flex flex-col items-center justify-center">
         <Footer />

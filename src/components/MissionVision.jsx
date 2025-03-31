@@ -36,11 +36,11 @@ const MissionVision = () => {
     },
     {
       number: '03',
-      title: 'Certifications',
+      title: 'Values',
       content: [
-        'ZDHC',
-        'BLC (Leather Technology Center)',
-        'ISO',
+        'Example Text',
+        'Example Text',
+        'Example Text',
         'Example Text',
         'Example Text',
       ],
@@ -57,9 +57,12 @@ const MissionVision = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: idx * 0.2 }}
         >
-          <div className="flex justify-between items-start">
+          <div 
+            className="flex justify-between items-start cursor-pointer group"
+            onClick={() => handleToggle(idx)}
+          >
             <div className="flex-1">
-              <h2 className="text-2xl text-gray-800 font-light mb-4">
+              <h2 className="text-2xl lg:text-4xl text-gray-800 font-light mb-4 group-hover:text-blue-500 transition-colors duration-200">
                 <span className="font-normal mr-2">{item.number}</span>
                 {item.title}
               </h2>
@@ -73,7 +76,7 @@ const MissionVision = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="pl-6 text-gray-600 space-y-2">
+                    <div className="pl-6 text-gray-600 space-y-2 text-base lg:text-lg">
                       {item.content.map((line, lineIdx) => (
                         <motion.p
                           key={lineIdx}
@@ -91,14 +94,17 @@ const MissionVision = () => {
             </div>
 
             <motion.button
-              onClick={() => handleToggle(idx)}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleToggle(idx);
+              }}
               className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               animate={{ rotate: openItems[idx] ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <FiPlus className="w-5 h-5" />
+              {openItems[idx] ? <FiMinus className="w-5 h-5" /> : <FiPlus className="w-5 h-5" />}
             </motion.button>
           </div>
         </motion.div>

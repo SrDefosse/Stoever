@@ -4,6 +4,10 @@ import Navbar from "../../components/Navbar";
 import DoubleCards from "../../components/DoubleCards";
 import MissionVision from "../../components/MissionVision";
 import Footer from "../../components/Footer";
+import WhyChooseUs from "../../components/WhyChooseUs";
+import SubsidiariesSection from "../../components/SubsidiariesSection";
+import Divider from "@/components/Divider";
+import Certifications from "@/components/Certifications";
 
 const AboutUs = () => {
   return (
@@ -11,11 +15,18 @@ const AboutUs = () => {
       <Navbar />
       <AboutHero />
       <div className="flex flex-col items-center justify-center pt-16">
-         <DoubleCards />
+      <DoubleCards />
       </div>
       <MissionVision />
       <div className="flex flex-col items-center justify-center pt-16">
-        
+      <WhyChooseUs />
+      </div>
+      <div className="flex flex-col items-center justify-center pt-16">
+      <Certifications />
+      </div>
+      <Divider />
+      <div className="flex flex-col items-center justify-center pt-16">
+      <SubsidiariesSection />
       </div>
       <Footer />
     </div>

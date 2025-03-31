@@ -92,13 +92,12 @@ const HeroSection = ({ heroImage, videoUrl = "/hero_video.mp4" }) => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+            className="flex flex-row justify-center md:justify-start gap-4 w-fit mx-auto md:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <BlueButton text="Learn More" />
-
             <WhiteButton text="Contact Us" />
           </motion.div>
         </motion.div>

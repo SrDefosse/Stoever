@@ -17,25 +17,16 @@ const NavLink = ({ href, children, mobile = false }) => (
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
       const offset = 50;
-
-      // Determinar si debe mostrarse el navbar
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < offset);
-      setPrevScrollPos(currentScrollPos);
-
-      // Efecto de fondo
-      setScrolled(currentScrollPos > offset);
+      setScrolled(window.scrollY > offset);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   const navLinks = [
     { href: '/', text: 'Home' },
@@ -46,27 +37,38 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300 transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <div className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300 `}>
       <div className="flex w-full max-w-6xl flex-col lg:flex-row">
         {/* Top bar with logo and hamburger */}
         <div className="flex justify-between items-center w-full lg:w-auto">
           {/* Left rounded section - glassmorphism effect */}
           <Link href="/">
             <div className="flex items-center bg-gray-900/20 backdrop-blur-xl rounded-full py-2 px-6 shadow-lg border border-white/30 transition-transform duration-200 hover:scale-[1.02] cursor-pointer">
-              <Image
-                src="/group_text_icon_white.png"
-                alt="Stoever Group"
-                width={150}
-                height={40}
-                className="object-contain"
-              />
+              <div className="hidden lg:block">
+                <Image
+                  src="/group_text_icon_white.png"
+                  alt="Stoever Group"
+                  width={150}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+              <div className="lg:hidden">
+                <Image
+                  src="/stoever_logo_notext.png"
+                  alt="Stoever Group"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
             </div>
           </Link>
 
           {/* Hamburger menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden bg-gray-900/20 backdrop-blur-xl rounded-full p-2 shadow-lg border border-white/30 transition-all duration-200 hover:scale-105 active:scale-95"
+            className="lg:hidden bg-slate-900/20 backdrop-blur-xl rounded-full p-2 shadow-lg border border-white/30 transition-all duration-200 hover:scale-105 active:scale-95"
           >
             <svg
               className="w-6 h-6 text-white transition-transform duration-200"
@@ -91,7 +93,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <div 
-          className={`lg:hidden mt-4 bg-gray-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transition-all duration-200 ease-in-out ${
+          className={`lg:hidden mt-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transition-all duration-200 ease-in-out ${
             isOpen 
               ? 'opacity-100 max-h-[500px] translate-y-0' 
               : 'opacity-0 max-h-0 -translate-y-4'
@@ -114,7 +116,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden lg:flex flex-1 mx-4 bg-gray-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30">
+        <div className="hidden lg:flex flex-1 mx-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30">
           <nav className="flex items-center justify-center w-full">
             <ul className="flex space-x-8">
               {navLinks.map((link) => (
@@ -127,7 +129,7 @@ const Navbar = () => {
         </div>
 
         {/* Right section - glassmorphism effect (desktop only) */}
-        <div className="hidden lg:flex items-center bg-gray-900/20 backdrop-blur-xl rounded-xl px-6 shadow-lg border border-white/30">
+        <div className="hidden lg:flex items-center bg-slate-900/20 backdrop-blur-xl rounded-xl px-6 shadow-lg border border-white/30">
           <div className="font-medium text-white cursor-pointer">
             ENG <span className="mx-2 text-white/60">/</span> ESP
           </div>

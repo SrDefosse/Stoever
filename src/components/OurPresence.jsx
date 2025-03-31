@@ -9,7 +9,7 @@ const OurPresence = () => {
         <p className="text-xl text-center text-gray-600 mb-12">
           We currently hold presence in over 15 countries
         </p>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <img 
             src="/world-map.png"
             alt="World Map showing our global presence" 
