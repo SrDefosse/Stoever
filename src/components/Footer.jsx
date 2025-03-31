@@ -1,74 +1,125 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-[#00205B] text-white py-16 px-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Who We Are Section */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Who We Are</h2>
-            <ul className="space-y-2">
-              <li><Link href="/about-us" className="hover:text-gray-300">About Us</Link></li>
-              <li><Link href="/technology" className="hover:text-gray-300">Technology</Link></li>
-              <li><Link href="/leather" className="hover:text-gray-300">Leather</Link></li>
-              <li><Link href="/construction" className="hover:text-gray-300">Construction</Link></li>
-            </ul>
-          </div>
+    <footer className="w-full bg-gradient-to-b from-[#001845] to-[#00205B] text-white">
+      {/* Separador de ola superior */}
+      <div className="w-full overflow-hidden">
+        <svg className="w-full h-12 md:h-16 text-white fill-current" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
+      </div>
 
-          {/* Company Section */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Company</h2>
-            <ul className="space-y-2">
-              <li><Link href="/careers" className="hover:text-gray-300">Careers</Link></li>
-            </ul>
-          </div>
-
-          {/* Support Section */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Support</h2>
-            <ul className="space-y-2">
-              <li><Link href="/contact" className="hover:text-gray-300">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Newsletter Section */}
-          <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">For News & Promotions. Join Our Newsletter!</h2>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Type your email. Ex. example@gmail.com"
-                className="flex-grow p-2 rounded bg-transparent border-b border-white focus:outline-none"
-              />
-              <button className="bg-[#2563EB] text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
-                Subscribe
-              </button>
+      <div className="w-full px-4 pt-8 pb-12">
+        {/* Contenido principal del Footer */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+          {/* Información de la compañía */}
+          <div className="flex flex-col space-y-12">
+            <div className="flex items-center">
+              <div className="h-12 w-auto relative mb-6">
+                <Image
+                  src="/stoever_group_logo_white.png"
+                  alt="Stoever Group Logo"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+            <p className="text-gray-300">
+              With over 70 years of experience in the chemical industry, Stoever Group is a leader in developing innovative solutions for leather processing and construction materials.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300">
+                <FaFacebookF className="text-white" />
+              </a>
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300">
+                <FaTwitter className="text-white" />
+              </a>
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300">
+                <FaInstagram className="text-white" />
+              </a>
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300">
+                <FaLinkedinIn className="text-white" />
+              </a>
             </div>
           </div>
-        </div>
 
-        {/* Address */}
-        <div className="mt-12 text-center md:text-left">
-          <p>Industriales 502, Fraccionamiento Julian de Obregon León, Gto. México</p>
-        </div>
-
-        {/* Social Media & Copyright */}
-        <div className="mt-12 text-center">
-          <h2 className="text-2xl font-bold mb-4">FOLLOW US:</h2>
-          <div className="flex justify-center gap-6 mb-8">
-            <a href="#" className="hover:text-gray-300">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
-            </a>
-            <a href="#" className="hover:text-gray-300">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.667 14.667H8.333v-1.666h7.334v1.666zM15.667 13H8.333v-1.667h7.334V13zm0-2.667H8.333V8.667h7.334v1.666z"/></svg>
-            </a>
-            <a href="#" className="hover:text-gray-300">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-            </a>
+          {/* Enlaces rápidos */}
+          <div className="lg:px-8">
+            <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-blue-400/30">Quick Links</h3>
+            <ul className="space-y-2">
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/about-us" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>About Us
+                </Link>
+              </li>
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/technology" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Technology
+                </Link>
+              </li>
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/leather" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Leather Solutions
+                </Link>
+              </li>
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/construction" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Construction
+                </Link>
+              </li>
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/careers" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Careers
+                </Link>
+              </li>
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/contact" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Contact
+                </Link>
+              </li>
+            </ul>
           </div>
-          <p>STOEVER © 2020 | All Rights Reserved</p>
+
+          {/* Información de contacto */}
+          <div className="lg:px-4">
+            <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-blue-400/30">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <FiMapPin className="text-blue-400 mt-1 mr-3" />
+                <span className="text-gray-300">Industriales 502, Fraccionamiento Julian de Obregon León, Gto. México</span>
+              </li>
+              <li className="flex items-center">
+                <FiPhone className="text-blue-400 mr-3" />
+                <span className="text-gray-300">+52 (477) 123-4567</span>
+              </li>
+              <li className="flex items-center">
+                <FiMail className="text-blue-400 mr-3" />
+                <span className="text-gray-300">info@stoever.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Divisor inferior */}
+        <div className="max-w-7xl mx-auto border-t border-blue-400/30 my-8"></div>
+
+        {/* Copyright y políticas */}
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+          <p>© {currentYear} Stoever Group. All Rights Reserved.</p>
+          <div className="mt-4 md:mt-0 flex space-x-6">
+            <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link>
+            <Link href="/cookie-policy" className="hover:text-white">Cookie Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

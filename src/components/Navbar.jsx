@@ -1,156 +1,139 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
+const NavLink = ({ href, children, mobile = false }) => (
+  <Link href={href}>
+    <li className={`text-white font-medium transition-all duration-200 ${
+      mobile 
+        ? 'hover:text-blue-200 hover:translate-x-2 transform' 
+        : 'hover:text-blue-200'
+    }`}>
+      {children}
+    </li>
+  </Link>
+);
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const currentScrollPos = window.scrollY;
+      const offset = 50;
+
+      // Determinar si debe mostrarse el navbar
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < offset);
+      setPrevScrollPos(currentScrollPos);
+
+      // Efecto de fondo
+      setScrolled(currentScrollPos > offset);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [prevScrollPos]);
+
+  const navLinks = [
+    { href: '/', text: 'Home' },
+    { href: '/aboutUs', text: 'About Us' },
+    { href: '/leather', text: 'Leather' },
+    { href: '/construction', text: 'Construction' },
+    { href: '/contact', text: 'Contact' },
+  ];
 
   return (
-    <>
-      <header
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled || isMenuOpen ? 'bg-slate-900/75 backdrop-blur-sm' : ''
-        }`}
-      >
-        <nav className="max-w-[1400px] mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="relative w-32 h-8">
+    <div className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300 transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className="flex w-full max-w-6xl flex-col lg:flex-row">
+        {/* Top bar with logo and hamburger */}
+        <div className="flex justify-between items-center w-full lg:w-auto">
+          {/* Left rounded section - glassmorphism effect */}
+          <Link href="/">
+            <div className="flex items-center bg-gray-900/20 backdrop-blur-xl rounded-full py-2 px-6 shadow-lg border border-white/30 transition-transform duration-200 hover:scale-[1.02] cursor-pointer">
               <Image
-                src="/stoever_logo_white.png"
+                src="/group_text_icon_white.png"
                 alt="Stoever Group"
-                fill
+                width={150}
+                height={40}
                 className="object-contain"
-                priority
               />
-            </Link>
-
-            {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-white hover:text-[#FFDD0A] transition-colors">
-                Home
-              </Link>
-              <Link href="/aboutUs" className="text-white hover:text-[#FFDD0A] transition-colors">
-                About Us
-              </Link>
-              <Link href="/technology" className="text-white hover:text-[#FFDD0A] transition-colors">
-                Technology
-              </Link>
-              <Link href="/leather" className="text-white hover:text-[#FFDD0A] transition-colors">
-                Leather
-              </Link>
-              <Link href="/construction" className="text-white hover:text-[#FFDD0A] transition-colors">
-                Construction
-              </Link>
-              <Link href="/more" className="text-white hover:text-[#FFDD0A] transition-colors">
-                More
-              </Link>
             </div>
+          </Link>
 
-            {/* Contact Button (Desktop) */}
-            <Link
-              href="/contact"
-              className="hidden md:block px-6 py-2 text-sm font-medium text-black bg-white rounded-full hover:bg-[#FFDD0A] transition-colors"
+          {/* Hamburger menu button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden bg-gray-900/20 backdrop-blur-xl rounded-full p-2 shadow-lg border border-white/30 transition-all duration-200 hover:scale-105 active:scale-95"
+          >
+            <svg
+              className="w-6 h-6 text-white transition-transform duration-200"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              style={{
+                transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              }}
             >
-              Contact
-            </Link>
+              {isOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden z-50 relative"
-              aria-label="Toggle Menu"
-            >
-              <div
-                className={`w-6 h-[2px] bg-white transition-all duration-300 ${
-                  isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''
-                }`}
-              />
-              <div
-                className={`w-6 h-[2px] bg-white my-[6px] transition-opacity duration-300 ${
-                  isMenuOpen ? 'opacity-0' : ''
-                }`}
-              />
-              <div
-                className={`w-6 h-[2px] bg-white transition-all duration-300 ${
-                  isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''
-                }`}
-              />
-            </button>
+        {/* Mobile menu */}
+        <div 
+          className={`lg:hidden mt-4 bg-gray-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transition-all duration-200 ease-in-out ${
+            isOpen 
+              ? 'opacity-100 max-h-[500px] translate-y-0' 
+              : 'opacity-0 max-h-0 -translate-y-4'
+          }`}
+        >
+          <div className="p-4">
+            <nav>
+              <ul className="flex flex-col space-y-4">
+                {navLinks.map((link) => (
+                  <NavLink key={link.href} href={link.href} mobile>
+                    {link.text}
+                  </NavLink>
+                ))}
+                <li className="text-white font-medium pt-4 border-t border-white/30">
+                  ENG <span className="mx-2 text-white/60">/</span> ESP
+                </li>
+              </ul>
+            </nav>
           </div>
-        </nav>
-        <div className="h-[1px] bg-gray-200 w-full"></div>
-      </header>
+        </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 bg-gradient-to-b from-slate-900 to-slate-800 transform transition-transform duration-300 ease-in-out md:hidden z-40 ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="flex flex-col items-center justify-center h-full gap-8 text-xl">
-          <Link
-            href="/"
-            className="text-white hover:text-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            href="/aboutUs"
-            className="text-white hover:text-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About Us
-          </Link>
-          <Link
-            href="/technology"
-            className="text-white hover:text-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Technology
-          </Link>
-          <Link
-            href="/leather"
-            className="text-white hover:text-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Leather
-          </Link>
-          <Link
-            href="/construction"
-            className="text-white hover:text-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Construction
-          </Link>
-          <Link
-            href="/more"
-            className="text-white hover:text-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            More
-          </Link>
-          <Link
-            href="/contact"
-            className="px-6 py-2 text-sm font-medium text-black bg-white rounded-full hover:bg-[#FFDD0A] transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </Link>
+        {/* Desktop menu */}
+        <div className="hidden lg:flex flex-1 mx-4 bg-gray-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30">
+          <nav className="flex items-center justify-center w-full">
+            <ul className="flex space-x-8">
+              {navLinks.map((link) => (
+                <NavLink key={link.href} href={link.href}>
+                  {link.text}
+                </NavLink>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        {/* Right section - glassmorphism effect (desktop only) */}
+        <div className="hidden lg:flex items-center bg-gray-900/20 backdrop-blur-xl rounded-xl px-6 shadow-lg border border-white/30">
+          <div className="font-medium text-white cursor-pointer">
+            ENG <span className="mx-2 text-white/60">/</span> ESP
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

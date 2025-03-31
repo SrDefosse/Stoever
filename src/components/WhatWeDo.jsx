@@ -4,26 +4,26 @@ import Image from 'next/image';
 
 const WhatWeDo = () => {
   return (
-    <section className="relative w-screen min-h-[500px] flex items-center overflow-hidden">
+    <section className="relative w-full max-w-7xl mx-auto min-h-[700px] flex items-center overflow-hidden my-20 rounded-3xl">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-0 rounded-3xl">
         <Image 
           src="/what-we-do-bg.jpg" 
           alt="What We Do Background"
           fill
-          className="object-cover brightness-75"
+          className="object-cover brightness-75 rounded-3xl"
           priority
         />
       </div>
       
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20 text-white">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-32 text-white flex justify-end">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-2xl text-left"
+          className="max-w-2xl text-right"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">What We Do</h2>
           <p className="text-lg md:text-xl mb-8">

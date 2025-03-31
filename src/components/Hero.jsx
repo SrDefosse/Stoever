@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import Button from "./Button";
-import Button2 from "./Button2";
+import BlueButton from "./BlueButton";
+import WhiteButton from "./WhiteButton";
 
 // Definición de la paleta de colores (se mueve fuera del componente para optimizar)
 const colors = {
@@ -97,13 +97,13 @@ const HeroSection = ({ heroImage, videoUrl = "/hero_video.mp4" }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button>
+            <BlueButton>
               Learn More
-            </Button>
+            </BlueButton>
 
-            <Button2>
+            <WhiteButton>
               Contact Us
-            </Button2>
+            </WhiteButton>
           </motion.div>
         </motion.div>
 

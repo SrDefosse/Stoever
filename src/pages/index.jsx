@@ -4,8 +4,10 @@ import Hero from "@/components/Hero";
 import Cards from "@/components/Cards";
 import ContentandCollage from "@/components/ContentandCollage";
 import WhatWeDo from "@/components/WhatWeDo";
-import OurPhilosophy from "@/components/OurPhilosophy";
+import OurPresence from "@/components/OurPresence";
 import Footer from "@/components/Footer";
+import Divider from "@/components/Divider";
+import HomeContactUs from "@/components/HomeContactUs";
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center">
         <Cards />
       </div>
+      <Divider />
       <div className="flex flex-col items-center justify-center">
         <ContentandCollage />
       </div>
@@ -24,7 +27,11 @@ export default function Home() {
         <WhatWeDo />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <OurPhilosophy />
+        <OurPresence />
+      </div>
+      <Divider />
+      <div className="flex flex-col items-center justify-center">
+        <HomeContactUs/>
       </div>
       <div className="flex flex-col items-center justify-center">
         <Footer />

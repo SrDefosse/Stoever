@@ -5,6 +5,7 @@ import Image from "next/image";
 const Cards = () => {
   return (
     <section className="w-full px-4 md:px-8 py-16 md:py-24 md:mt-0">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#011961] mb-12">Our Subsidiaries</h2>
       <div className="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Card
           title="Stoever Construction"

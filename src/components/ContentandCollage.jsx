@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Button from './Button';
-import Button2 from './Button2';
+import BlueButton from './BlueButton';
+import WhiteButton from './WhiteButton';
 
 const ContentandCollage = () => {
   return (
@@ -25,8 +25,8 @@ const ContentandCollage = () => {
           
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mt-6">
-            <Button>Learn More</Button>
-            <Button2>Contact Us</Button2>
+            <BlueButton text="Learn More" />
+            <WhiteButton text="Contact Us" />
           </div>
         </motion.div>
 
