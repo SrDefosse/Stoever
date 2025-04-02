@@ -1,7 +1,41 @@
-import React from 'react';
-import WhiteButton from './WhiteButton'; // Asegúrate que este componente exista
+import React, { useState } from 'react';
+import WhiteGlassButton from './WhiteGlassButton'; // Asegúrate que este componente exista
+import { motion } from 'framer-motion';
+import CustomSelect from './CustomSelect';
+
+const formAnimation = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const inputAnimation = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    }
+  }
+};
 
 const ContactUs = () => {
+  const [division, setDivision] = useState('');
+
+  const divisionOptions = [
+    { value: 'leather', label: 'Stoever Leather' },
+    { value: 'construction', label: 'Stoever Construction' }
+  ];
+
   return (
     <section className="w-full relative py-20 md:py-28">
       <div className="container mx-auto px-4 relative z-10">
@@ -102,38 +136,70 @@ const ContactUs = () => {
           </div> {/* --- Fin Columna Izquierda --- */}
 
           {/* --- Columna Derecha: Formulario --- */}
-          {/* (El código del formulario permanece igual que en la versión anterior 'mejorada') */}
           <div className="bg-[#007AFF]/75 backdrop-blur-lg rounded-xl shadow-2xl p-6 md:p-10 border border-white/20">
-             <form className="space-y-6">
-               <div>
-                 <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-1">Full Name</label>
-                 <input type="text" id="name" placeholder="Type your full name" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition duration-200"/>
-               </div>
-               <div>
-                 <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-1">Email Address</label>
-                 <input type="email" id="email" placeholder="example@yourcompany.com" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition duration-200"/>
-               </div>
-               <div>
-                 <label htmlFor="subject" className="block text-sm font-medium text-white/80 mb-1">Subject</label>
-                 <input type="text" id="subject" placeholder="What is this about?" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition duration-200"/>
-               </div>
-               <div>
-                 <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-1">Message</label>
-                 <textarea id="message" rows={4} placeholder="Write your comment or question here..." className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent resize-none transition duration-200"/>
-               </div>
-               <div className="pt-4">
-                  {/* Asegúrate que WhiteButton tenga padding y estilos adecuados */}
-                 <WhiteButton text="Send Message" /> 
-               </div>
-             </form>
-           </div> {/* --- Fin Columna Derecha --- */}
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-1">Full Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  placeholder="Type your full name" 
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-1">Email Address</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  placeholder="example@yourcompany.com" 
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="division" className="block text-sm font-medium text-white/80 mb-1">Select Division</label>
+                <CustomSelect
+                  options={divisionOptions}
+                  value={division}
+                  onChange={setDivision}
+                  placeholder="Select a division..."
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-white/80 mb-1">Subject</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  placeholder="What is this about?" 
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-1">Message</label>
+                <textarea 
+                  id="message" 
+                  rows={4} 
+                  placeholder="Write your comment or question here..." 
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent resize-none transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
+                />
+              </div>
+
+              <div className="pt-4">
+                <WhiteGlassButton text="Send Message" />
+              </div>
+            </form>
+          </div> {/* --- Fin Columna Derecha --- */}
 
         </div> {/* --- Fin Contenedor Principal (Grid) --- */}
 
         {/* --- Mapa de Google --- */}
         <div className="max-w-7xl mx-auto mt-16 md:mt-24"> {/* Aumentado margen superior */}
           <h3 className="text-2xl md:text-3xl font-bold text-[#011961] mb-6 text-center md:text-left"> {/* Título ajustado y centrado en móvil */}
-            Our Location
+            Our Headquarters
           </h3>
           <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-200"> {/* Altura ajustada y borde añadido */}
             {/* IMPORTANTE: Reemplaza el src con el enlace de embed correcto de Google Maps */}

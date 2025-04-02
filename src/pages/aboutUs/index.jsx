@@ -8,6 +8,7 @@ import WhyChooseUs from "../../components/WhyChooseUs";
 import SubsidiariesSection from "../../components/SubsidiariesSection";
 import Divider from "@/components/Divider";
 import Certifications from "@/components/Certifications";
+import Stats from "@/components/Stats";
 
 const AboutUs = () => {
   return (
@@ -17,7 +18,12 @@ const AboutUs = () => {
       <div className="flex flex-col items-center justify-center pt-16">
       <DoubleCards />
       </div>
+      <div className="flex flex-col items-center justify-center pt-16">
+      <Stats />
+      </div>
+      <div className="flex flex-col items-center justify-center pt-16">
       <MissionVision />
+      </div>
       <div className="flex flex-col items-center justify-center pt-16">
       <WhyChooseUs />
       </div>

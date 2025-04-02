@@ -11,13 +11,15 @@ import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
-    <main className={`${font.className} overflow-hidden`}>
+    <main className={`${font.className}`}>
       <Navbar />
       <div className="flex flex-col items-center justify-center">
         <Hero />
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <ContentandCollage />
+      <div>
+        <Divider />
+        <ContentandCollage/>
+        <Divider />
       </div>
       <div className="flex flex-col items-center justify-center">
         <Cards />

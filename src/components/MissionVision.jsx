@@ -48,7 +48,7 @@ const MissionVision = () => {
   ];
 
   return (
-    <div className="w-[70%] mx-auto px-4 mt-24">
+    <div className="w-[70%] mx-auto px-4">
       {items.map((item, idx) => (
         <motion.div
           key={idx}
