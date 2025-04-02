@@ -6,6 +6,14 @@ const CountUpStatsGrid = () => { // Renombrado para claridad
   return (
     <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        {/* Image - Left Column */}
+        <div className="relative h-full min-h-[400px] overflow-hidden rounded-2xl">
+          <img
+            src="/manufacturing-process.jpg" // Aquí deberás colocar la ruta correcta de tu imagen
+            alt="Stoever manufacturing process"
+            className="h-full w-full object-cover"
+          />
+        </div>
         {/* Stats Grid - Left Column */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-12">
           <Stat
@@ -29,16 +37,7 @@ const CountUpStatsGrid = () => { // Renombrado para claridad
             subheading="Production Factories"
             decimals={0}
           />
-        </div>
-
-        {/* Image - Right Column */}
-        <div className="relative h-full min-h-[400px] overflow-hidden rounded-2xl">
-          <img
-            src="/manufacturing-process.jpg" // Aquí deberás colocar la ruta correcta de tu imagen
-            alt="Stoever manufacturing process"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        </div>     
       </div>
     </div>
   );
@@ -67,7 +66,7 @@ const Stat = ({ num, suffix, decimals = 0, subheading }) => {
     // Contenedor de la tarjeta individual
     <div className="border-b border-gray-300 flex h-full flex-col items-center justify-center bg-white p-6 text-center"> 
       {/* Número animado y sufijo */}
-      <p className="mb-3 text-5xl font-bold text-[#011961] md:text-6xl"> 
+      <p className="mb-3 text-5xl font-bold text-green-700 md:text-6xl"> 
         {/* El span se llenará con el número animado */}
         <span ref={ref}>{isInView ? num.toFixed(decimals) : '0'}</span> 
         {suffix}

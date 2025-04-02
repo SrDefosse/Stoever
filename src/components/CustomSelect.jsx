@@ -57,7 +57,7 @@ const CustomSelect = ({ options, value, onChange, placeholder }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="absolute z-50 w-full mt-2 bg-[#007AFF] backdrop-blur-xl border border-white/30 rounded-lg shadow-lg overflow-hidden"
+            className="absolute z-50 w-full mt-2 bg-green-600 backdrop-blur-xl border border-white/30 rounded-lg shadow-lg overflow-hidden"
           >
             <motion.ul
               className="py-1 max-h-60 overflow-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent"
