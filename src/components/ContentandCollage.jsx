@@ -17,7 +17,7 @@ function ImageGridHero() {
   const { scrollYProgress } = useScroll({ target: targetRef });
 
   return (
-    <section ref={targetRef} className="relative bg-white h-[350vh]">
+    <section ref={targetRef} className="relative bg-white h-[200vh]">
       <div className="sticky top-0 h-screen w-full overflow-hidden p-2 sm:p-4 grid grid-cols-2 md:grid-cols-3 md:grid-rows-3 gap-2 sm:gap-4">
         <Copy scrollYProgress={scrollYProgress} />
         <Images scrollYProgress={scrollYProgress} />
