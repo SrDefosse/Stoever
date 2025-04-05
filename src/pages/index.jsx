@@ -1,13 +1,13 @@
 import { font } from "@/fonts";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Cards from "@/components/Cards";
-import ContentandCollage from "@/components/ContentandCollage";
-import WhatWeDo from "@/components/WhatWeDo";
-import OurPresence from "@/components/OurPresence";
-import Footer from "@/components/Footer";
-import Divider from "@/components/Divider";
-import ContactUs from "@/components/ContactUs";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/stoever/Hero";
+import Cards from "@/components/stoever/Cards";
+import ContentandCollage from "@/components/stoever/ContentandCollage";
+import WhatWeDo from "@/components/stoever/WhatWeDo";
+import OurPresence from "@/components/stoever/OurPresence";
+import Footer from "@/components/layout/Footer";
+import Divider from "@/components/ui/Divider";
+import ContactUs from "@/components/stoever/ContactUs";
 
 export default function Home() {
   return (

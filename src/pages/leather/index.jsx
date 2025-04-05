@@ -1,39 +1,43 @@
 import React from 'react';
-import HeroLeather from '../../components/HeroLeather';
-import NavbarLeather from '../../components/NavbarLeather';
-import LeatherMarquee from '../../components/LeatherMarquee';
-import LeatherFuture from '../../components/LeatherFuture';
-import LeatherStats from '../../components/LeatherStats';
-import Divider from '../../components/Divider';
-import LeatherProductsBento from '../../components/LeatherProductsBento';   
-import LeatherContact from '../../components/LeatherContact';
+import HeroLeather from '@/components/leather/HeroLeather';
+import NavbarLeather from '@/components/layout/NavbarLeather';
+import LeatherMarquee from '@/components/leather/LeatherMarquee';
+import LeatherFuture from '@/components/leather/LeatherFuture';
+import LeatherStats from '@/components/leather/LeatherStats';
+import Divider from '@/components/ui/Divider';
+import LeatherProductsBento from '@/components/leather/LeatherProductsBento';   
+import LeatherContact from '@/components/leather/LeatherContact';
+import FooterLeather from '@/components/layout/FooterLeather';
 
 const LeatherPage = () => {
   return (
-    <main className="relative">
-      <NavbarLeather />
-      <div>
-      <HeroLeather />
-      </div>
-      <div>
-        <LeatherMarquee />
-      </div>
-      <div>
-        <Divider />
-        <LeatherFuture />
-        <Divider />
-      </div>
-      <div>
-        <LeatherStats />
-      </div>
-      <div>
-        <Divider />
-        <LeatherProductsBento />
-      </div>
-      <div>
-        <LeatherContact />
-      </div>
-    </main>
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">
+        <NavbarLeather />
+        <div>
+          <HeroLeather />
+        </div>
+        <div>
+          <LeatherMarquee />
+        </div>
+        <div>
+          <Divider />
+          <LeatherFuture />
+          <Divider />
+        </div>
+        <div>
+          <LeatherStats />
+        </div>
+        <div>
+          <Divider />
+          <LeatherProductsBento />
+        </div>
+        <div>
+          <LeatherContact />
+        </div>
+      </main>
+      <FooterLeather />
+    </div>
   );
 };
 

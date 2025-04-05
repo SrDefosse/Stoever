@@ -1,18 +1,19 @@
 import React from "react";
-import AboutHero from "../../components/aboutHero";
-import Navbar from "../../components/Navbar";
-import DoubleCards from "../../components/DoubleCards";
-import MissionVision from "../../components/MissionVision";
-import Footer from "../../components/Footer";
-import WhyChooseUs from "../../components/WhyChooseUs";
-import SubsidiariesSection from "../../components/SubsidiariesSection";
-import Divider from "@/components/Divider";
-import Certifications from "@/components/Certifications";
-import Stats from "@/components/Stats";
+import { font } from "@/fonts";
+import AboutHero from "@/components/stoever/aboutHero";
+import Navbar from "@/components/layout/Navbar";
+import DoubleCards from "@/components/stoever/DoubleCards";
+import MissionVision from "@/components/stoever/MissionVision";
+import Footer from "@/components/layout/Footer";
+import WhyChooseUs from "@/components/stoever/WhyChooseUs";
+import SubsidiariesSection from "@/components/stoever/SubsidiariesSection";
+import Divider from "@/components/ui/Divider";
+import Certifications from "@/components/stoever/Certifications";
+import Stats from "@/components/stoever/Stats";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen bg-white ${font.className}`}>
       <Navbar />
       <AboutHero />
       <div className="flex flex-col items-center justify-center pt-16">
