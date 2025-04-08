@@ -2,17 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 
 const NavLink = ({ href, children, dropdown = false }) => (
-  <Link href={href}>
-    <li
-      className={`text-white font-medium transition-all duration-200 ${
-        dropdown
-          ? 'hover:text-blue-200 py-2 px-4 hover:bg-white/10 rounded-lg w-full'
-          : 'hover:text-blue-200'
-      }`}
-    >
+  <li className={`text-white font-medium transition-all duration-200 ${
+      dropdown
+        ? 'hover:text-blue-200 py-2 px-4 hover:bg-white/10 rounded-lg w-full'
+        : 'hover:text-blue-200'
+    }`}
+  >
+    <Link href={href}>
       {children}
-    </li>
-  </Link>
+    </Link>
+  </li>
 );
 
 const DropdownMenu = ({ items, isOpen }) => {

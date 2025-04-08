@@ -3,18 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DropdownMenu from "../ui/DropdownMenu";
 
-const NavLink = ({ href, children, mobile = false }) => (
-  <Link href={href}>
-    <li
-      className={`text-white font-medium transition-all duration-200 ${
-        mobile
-          ? 'hover:text-blue-200 hover:translate-x-2 transform'
-          : 'hover:text-blue-200'
-      }`}
-    >
+const NavLink = ({ href, children, mobile = false, closeMenu }) => (
+  <li
+    onClick={mobile ? closeMenu : undefined}
+    className={`text-white font-medium transition-all duration-200 ${
+      mobile
+        ? 'hover:text-blue-200 hover:translate-x-2 transform'
+        : 'hover:text-blue-200'
+    }`}
+  >
+    <Link href={href} onClick={mobile ? closeMenu : undefined}>
       {children}
-    </li>
-  </Link>
+    </Link>
+  </li>
 );
 
 const Navbar = () => {
@@ -36,16 +37,13 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (activeDropdown !== null) {
-        // Si el click fue fuera de elementos con la clase 'dropdown-container'
         const dropdownContainers = document.querySelectorAll('.dropdown-container');
         let isClickInside = false;
-        
         dropdownContainers.forEach(container => {
           if (container.contains(event.target)) {
             isClickInside = true;
           }
         });
-        
         if (!isClickInside) {
           setActiveDropdown(null);
         }
@@ -73,9 +71,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300`}
-    >
+    <div className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300`}>
       <div className="flex w-full max-w-6xl flex-col lg:flex-row">
         {/* Top bar with logo and hamburger */}
         <div className="flex justify-between items-center w-full lg:w-auto">
@@ -116,9 +112,7 @@ const Navbar = () => {
               strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{
-                transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-              }}
+              style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
             >
               {isOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" />
@@ -145,15 +139,11 @@ const Navbar = () => {
                       <>
                         <div
                           className="text-white font-medium flex items-center justify-between cursor-pointer hover:text-blue-200 transition-all duration-200 dropdown-container"
-                          onClick={() => {
-                            setActiveDropdown(activeDropdown === index ? null : index);
-                          }}
+                          onClick={() => setActiveDropdown(activeDropdown === index ? null : index)}
                         >
                           <span>{link.text}</span>
                           <svg
-                            className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
-                              activeDropdown === index ? 'rotate-180' : ''
-                            }`}
+                            className={`w-4 h-4 transition-transform duration-300 ease-in-out ${activeDropdown === index ? 'rotate-180' : ''}`}
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -166,21 +156,24 @@ const Navbar = () => {
                         </div>
                         <div
                           className={`pl-4 mt-2 space-y-2 transition-all duration-300 ease-in-out overflow-hidden ${
-                            activeDropdown === index 
-                              ? 'max-h-[300px] opacity-100' 
-                              : 'max-h-0 opacity-0 pointer-events-none'
+                            activeDropdown === index ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
                           }`}
-                          style={{ transformOrigin: 'top' }}
                         >
-                          {link.items.map((item) => (
-                            <NavLink key={item.href} href={item.href} mobile>
-                              {item.text}
-                            </NavLink>
+                          {link.items.map((item, itemIndex) => (
+                            <div key={itemIndex} className="py-2">
+                              <Link
+                                href={item.href}
+                                onClick={() => setIsOpen(false)}
+                                className="block text-white font-medium hover:text-blue-200 transform transition-all duration-200 hover:translate-x-2"
+                              >
+                                {item.text}
+                              </Link>
+                            </div>
                           ))}
                         </div>
                       </>
                     ) : (
-                      <NavLink href={link.href} mobile>
+                      <NavLink href={link.href} mobile closeMenu={() => setIsOpen(false)}>
                         {link.text}
                       </NavLink>
                     )}
@@ -207,14 +200,10 @@ const Navbar = () => {
                 >
                   {link.items ? (
                     <>
-                      <div
-                        className="text-white font-medium cursor-pointer hover:text-blue-200 flex items-center space-x-1 relative"
-                      >
+                      <div className="text-white font-medium cursor-pointer hover:text-blue-200 flex items-center space-x-1 relative">
                         <span>{link.text}</span>
                         <svg
-                          className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
-                            activeDropdown === index ? 'rotate-180' : ''
-                          }`}
+                          className={`w-4 h-4 transition-transform duration-300 ease-in-out ${activeDropdown === index ? 'rotate-180' : ''}`}
                           fill="none"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -225,10 +214,7 @@ const Navbar = () => {
                           <path d="M19 9l-7 7-7-7" />
                         </svg>
                       </div>
-                      <DropdownMenu
-                        items={link.items}
-                        isOpen={activeDropdown === index}
-                      />
+                      <DropdownMenu items={link.items} isOpen={activeDropdown === index} />
                     </>
                   ) : (
                     <NavLink href={link.href}>{link.text}</NavLink>
@@ -251,4 +237,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

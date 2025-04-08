@@ -16,11 +16,6 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center">
         <Hero />
       </div>
-      <div>
-        <Divider />
-        <ContentandCollage/>
-        <Divider />
-      </div>
       <div className="flex flex-col items-center justify-center">
         <Cards />
       </div>

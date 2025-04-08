@@ -172,12 +172,16 @@ const NavbarLeather = () => {
                               ? 'max-h-[300px] opacity-100' 
                               : 'max-h-0 opacity-0 pointer-events-none'
                           }`}
-                          style={{ transformOrigin: 'top' }}
                         >
-                          {link.items.map((item) => (
-                            <NavLink key={item.href} href={item.href} mobile>
-                              {item.text}
-                            </NavLink>
+                          {link.items.map((item, itemIndex) => (
+                            <div key={itemIndex} className="py-2">
+                              <Link 
+                                href={item.href}
+                                className="block text-white font-medium hover:text-blue-200 transform transition-all duration-200 hover:translate-x-2"
+                              >
+                                {item.text}
+                              </Link>
+                            </div>
                           ))}
                         </div>
                       </>
