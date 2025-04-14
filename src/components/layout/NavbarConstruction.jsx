@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import DropdownMenu from "../ui/DropdownMenu";
 
+// Reusing NavLink structure from Navbar.jsx/NavbarLeather.jsx for consistency
 const NavLink = ({ href, children, mobile = false }) => (
   <Link href={href}>
     <li
@@ -17,7 +18,7 @@ const NavLink = ({ href, children, mobile = false }) => (
   </Link>
 );
 
-const NavbarLeather = () => {
+const NavbarConstruction = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -32,20 +33,16 @@ const NavbarLeather = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Efecto para cerrar el dropdown cuando se hace clic fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (activeDropdown !== null) {
-        // Si el click fue fuera de elementos con la clase 'dropdown-container'
         const dropdownContainers = document.querySelectorAll('.dropdown-container');
         let isClickInside = false;
-        
         dropdownContainers.forEach(container => {
           if (container.contains(event.target)) {
             isClickInside = true;
           }
         });
-        
         if (!isClickInside) {
           setActiveDropdown(null);
         }
@@ -58,41 +55,41 @@ const NavbarLeather = () => {
     };
   }, [activeDropdown]);
 
+  // Construction specific links within the target structure
   const navLinks = [
-    { href: '/leather', text: 'Home' },
-    { href: '/leather/about', text: 'About Us' },
-    { href: '/leather/products', text: 'Products' },
+    { href: '/construction', text: 'Home' },
+    { href: '/construction/about', text: 'About Us' },
+    { href: '/construction/services', text: 'Products and Services' }, // Kept specific construction link
     {
-      text: 'Our Companies',
+      text: 'Our Companies', // Added dropdown
       items: [
         { href: '/', text: 'Stoever Group' },
         { href: '/leather', text: 'Stoever Leather' },
         { href: '/construction', text: 'Stoever Construction' },
       ],
     },
-    { href: '/leather/contact', text: 'Contact' },
+    { href: '/construction/contact', text: 'Contact' },
   ];
 
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300`}
-    >
+    // Using the fixed positioning and structure from target navbars
+    <div className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300`}>
       <div className="flex w-full max-w-6xl flex-col lg:flex-row">
-        {/* Top bar with logo and hamburger */}
+        {/* Left section: Logo */} 
         <div className="flex justify-between items-center w-full lg:w-auto">
-          {/* Logo */}
-          <Link href="/">
+          <Link href="/construction"> {/* Link to construction home */} 
             <div className="flex items-center bg-gray-900/20 backdrop-blur-xl rounded-full py-2 px-6 shadow-lg border border-white/30 transition-transform duration-200 hover:scale-[1.02] cursor-pointer">
               <div className="hidden lg:block">
                 <Image
-                  src="/biosolutions_text_logo_white.png"
-                  alt="Biosolutions for Leather"
-                  width={150}
+                  src="/construction_text_icon_white.png" // Construction Logo
+                  alt="Stoever Construction"
+                  width={150} // Adjusted width for this logo
                   height={40}
                   className="object-contain"
+                  priority
                 />
               </div>
-              <div className="lg:hidden">
+              <div className="lg:hidden"> {/* Mobile Logo - Using Stoever S for consistency */}
                 <Image
                   src="/stoever_logo_notext.png"
                   alt="Stoever Group"
@@ -104,22 +101,15 @@ const NavbarLeather = () => {
             </div>
           </Link>
 
-          {/* Botón del menú hamburguesa */}
+          {/* Hamburger button (same as target) */} 
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden bg-slate-900/20 backdrop-blur-xl rounded-full p-2 shadow-lg border border-white/30 transition-all duration-200 hover:scale-105 active:scale-95"
           >
             <svg
               className="w-6 h-6 text-white transition-transform duration-200"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              style={{
-                transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-              }}
+              fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"
+              style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
             >
               {isOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" />
@@ -130,11 +120,9 @@ const NavbarLeather = () => {
           </button>
         </div>
 
-        {/* Menú móvil */}
+        {/* Mobile Menu (Structure from target) */} 
         <div
-          className={`lg:hidden mt-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transform transition-all duration-300 ease-out ${
-            isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'
-          }`}
+          className={`lg:hidden mt-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transform transition-all duration-300 ease-out ${isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'}`}
           style={{ transformOrigin: 'top' }}
         >
           <div className="p-4">
@@ -146,35 +134,17 @@ const NavbarLeather = () => {
                       <>
                         <div
                           className="text-white font-medium flex items-center justify-between cursor-pointer hover:text-blue-200 transition-all duration-200 dropdown-container"
-                          onClick={() => {
-                            setActiveDropdown(activeDropdown === index ? null : index);
-                          }}
+                          onClick={() => setActiveDropdown(activeDropdown === index ? null : index)}
                         >
                           <span>{link.text}</span>
-                          <svg
-                            className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
-                              activeDropdown === index ? 'rotate-180' : ''
-                            }`}
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
+                          <svg className={`w-4 h-4 transition-transform duration-300 ease-in-out ${activeDropdown === index ? 'rotate-180' : ''}`} fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M19 9l-7 7-7-7" />
                           </svg>
                         </div>
-                        <div
-                          className={`pl-4 mt-2 space-y-2 transition-all duration-300 ease-in-out overflow-hidden ${
-                            activeDropdown === index 
-                              ? 'max-h-[300px] opacity-100' 
-                              : 'max-h-0 opacity-0 pointer-events-none'
-                          }`}
-                        >
+                        <div className={`pl-4 mt-2 space-y-2 transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === index ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
                           {link.items.map((item, itemIndex) => (
                             <div key={itemIndex} className="py-2">
-                              <Link 
+                              <Link
                                 href={item.href}
                                 className="block text-white font-medium hover:text-blue-200 transform transition-all duration-200 hover:translate-x-2"
                               >
@@ -199,7 +169,7 @@ const NavbarLeather = () => {
           </div>
         </div>
 
-        {/* Menú de escritorio */}
+        {/* Desktop Menu (Center section - structure from target) */} 
         <div className="hidden lg:flex flex-1 mx-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30">
           <nav className="flex items-center justify-center w-full">
             <ul className="flex space-x-8">
@@ -212,28 +182,13 @@ const NavbarLeather = () => {
                 >
                   {link.items ? (
                     <>
-                      <div
-                        className="text-white font-medium cursor-pointer hover:text-blue-200 flex items-center space-x-1 relative"
-                      >
+                      <div className="text-white font-medium cursor-pointer hover:text-blue-200 flex items-center space-x-1 relative">
                         <span>{link.text}</span>
-                        <svg
-                          className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
-                            activeDropdown === index ? 'rotate-180' : ''
-                          }`}
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
+                        <svg className={`w-4 h-4 transition-transform duration-300 ease-in-out ${activeDropdown === index ? 'rotate-180' : ''}`} fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                           <path d="M19 9l-7 7-7-7" />
                         </svg>
                       </div>
-                      <DropdownMenu
-                        items={link.items}
-                        isOpen={activeDropdown === index}
-                      />
+                      <DropdownMenu items={link.items} isOpen={activeDropdown === index} />
                     </>
                   ) : (
                     <NavLink href={link.href}>{link.text}</NavLink>
@@ -244,7 +199,7 @@ const NavbarLeather = () => {
           </nav>
         </div>
 
-        {/* Sección derecha (solo escritorio) */}
+        {/* Right section: Language switcher (Structure from target) */} 
         <div className="hidden lg:flex items-center bg-slate-900/20 backdrop-blur-xl rounded-xl px-6 shadow-lg border border-white/30">
           <div className="font-medium text-white cursor-pointer">
             ENG <span className="mx-2 text-white/60">/</span> ESP
@@ -255,5 +210,4 @@ const NavbarLeather = () => {
   );
 };
 
-export default NavbarLeather;
-
+export default NavbarConstruction;

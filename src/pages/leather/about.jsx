@@ -8,6 +8,8 @@ import TimelineDemo from "@/components/leather/TimelineDemo";
 import LeatherVideo from "@/components/leather/LeatherVideo";
 import LeatherPhilosophy from "@/components/leather/LeatherPhilosophy";
 import LeatherCTA from "@/components/leather/LeatherCTA";
+import LeatherContact from "@/components/leather/LeatherContact";
+
 const LeatherAbout = () => {
   return (
     <div className={`min-h-screen bg-white ${font.className}`}>
@@ -18,6 +20,7 @@ const LeatherAbout = () => {
       <LeatherPhilosophy />
       <LeatherCTA />
       <Divider />
+      <LeatherContact/>
       <FooterLeather />
     </div>
   );
