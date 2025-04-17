@@ -102,99 +102,101 @@ const productsData = [
   },
 ];
 
-const OurProducts = () => (
-  <section className="bg-[#3A3A3A] p-4 text-neutral-50 md:p-12">
-    <div className="max-w-7xl mx-auto mb-8">
-      <h2 className="inline-block text-3xl lg:text-4xl font-bold text-white mb-4 border-b-4 border-yellow-600 pb-2">
-        Our Products
-      </h2>
-    </div>
-    <div className="max-w-7xl mx-auto rounded-lg overflow-hidden border border-neutral-700">
-    <div className="rounded-xl mx-auto grid max-w-7xl grid-cols-1 divide-y divide-neutral-700 border border-neutral-700 md:grid-cols-2 md:divide-x md:divide-y">
-      {productsData.map((p) => (
-        <Card
-          key={p.id}
-          title={p.title}
-          description={p.description}
-          src={p.src}
+function OurProducts() {
+  return (
+    <section className="bg-[#3A3A3A] p-4 text-neutral-50 md:p-12">
+      <div className="max-w-7xl mx-auto mb-8">
+        <h2 className="inline-block text-3xl lg:text-4xl font-bold text-white mb-4 border-b-4 border-yellow-600 pb-2">
+          Our Products
+        </h2>
+      </div>
+      <div className="max-w-7xl mx-auto rounded-lg overflow-hidden border border-neutral-700">
+        <div className="rounded-xl mx-auto grid max-w-7xl grid-cols-1 divide-y divide-neutral-700 border border-neutral-700 md:grid-cols-2 md:divide-x md:divide-y">
+          {productsData.map((p) => (
+            <Card
+              key={p.id}
+              title={p.title}
+              description={p.description}
+              src={p.src}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const Card = React.memo(function Card({ title, description, src }) {
+  return (
+    <div className="rounded-xl group relative flex h-56 flex-col overflow-hidden p-6 text-center md:h-80 md:p-9">
+      <div className="absolute inset-0">
+        <Image
+          src={src}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="
+            transition-transform duration-500 ease-in-out
+            group-hover:scale-110
+            group-hover:blur-sm
+          "
         />
+        <div
+          className="
+            absolute inset-0 bg-black/50 backdrop-blur-sm
+            opacity-0 transition-opacity duration-500
+            group-hover:opacity-100
+          "
+        />
+      </div>
+      <div className="relative z-10 flex flex-col justify-center items-center h-full">
+        <h2 className="mb-2 text-2xl font-semibold md:text-3xl">{title}</h2>
+        <p
+          className="
+            max-w-xs text-sm text-neutral-200
+            opacity-0 transition-opacity duration-300 delay-100
+            group-hover:opacity-100
+          "
+        >
+          {description}
+        </p>
+      </div>
+      <Corners />
+    </div>
+  );
+});
+
+const Corners = function Corners() {
+  return (
+    <>
+      {["top left", "top right", "bottom left", "bottom right"].map((pos) => (
+        <React.Fragment key={pos}>
+          <span
+            className={`
+              absolute ${pos.includes("top") ? "top-[1px]" : "bottom-[1px]"}
+                       ${pos.includes("left") ? "left-[1px]" : "right-[1px]"}
+                       z-10 h-3 w-[1px] origin-${pos.replace(" ", "-")}
+                       bg-yellow-500 scale-0
+                       transition-transform duration-500
+                       group-hover:scale-100
+            `}
+          />
+          <span
+            className={`
+              absolute ${pos.includes("top") ? "top-[1px]" : "bottom-[1px]"}
+                       ${pos.includes("left") ? "left-[1px]" : "right-[1px]"}
+                       z-10 h-[1px] w-3 origin-${
+                         pos.includes("left") ? "left" : "right"
+                       }
+                       bg-yellow-500 scale-0
+                       transition-transform duration-500
+                       group-hover:scale-100
+            `}
+          />
+        </React.Fragment>
       ))}
-    </div>
-    </div>
-  </section>
-);
-
-const Card = React.memo(({ title, description, src }) => (
-  <div className="rounded-xl group relative flex h-56 flex-col overflow-hidden p-6 text-center md:h-80 md:p-9">
-    <div className="absolute inset-0">
-      <Image
-        src={src}
-        alt={title}
-        layout="fill"
-        objectFit="cover"
-        className="
-          transition-transform duration-500 ease-in-out
-          group-hover:scale-110
-          group-hover:blur-sm
-        "
-      />
-      <div
-        className="
-          absolute inset-0 bg-black/50 backdrop-blur-sm
-          opacity-0 transition-opacity duration-500
-          group-hover:opacity-100
-        "
-      />
-    </div>
-    <div className="relative z-10 flex flex-col justify-center items-center h-full">
-      <h2 className="mb-2 text-2xl font-semibold md:text-3xl">{title}</h2>
-      <p
-        className="
-          max-w-xs text-sm text-neutral-200
-          opacity-0 transition-opacity duration-300 delay-100
-          group-hover:opacity-100
-        "
-      >
-        {description}
-      </p>
-    </div>
-    <Corners />
-  </div>
-));
-
-const Corners = () => (
-  <>
-    {["top left", "top right", "bottom left", "bottom right"].map((pos) => (
-      <React.Fragment key={pos}>
-        <span
-          className={`
-            absolute ${
-              pos.includes("top") ? "top-[1px]" : "bottom-[1px]"
-            } ${
-              pos.includes("left") ? "left-[1px]" : "right-[1px]"
-            } z-10 h-3 w-[1px] origin-${pos.replace(" ", "-")}
-            bg-yellow-500 scale-0
-            transition-transform duration-500
-            group-hover:scale-100
-          `}
-        />
-        <span
-          className={`
-            absolute ${
-              pos.includes("top") ? "top-[1px]" : "bottom-[1px]"
-            } ${
-              pos.includes("left") ? "left-[1px]" : "right-[1px]"
-            } z-10 h-[1px] w-3 origin-${
-            pos.includes("left") ? "left" : "right"
-          }
-            bg-yellow-500 scale-0
-            transition-transform duration-500
-            group-hover:scale-100
-          `}
-        />
-      </React.Fragment>
-    ))}
-  </>
-);
+    </>
+  );
+};
 
 export default OurProducts;
