@@ -5,7 +5,7 @@ import { GiCrane } from 'react-icons/gi';
 
 const WhatWeDoConstruction = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[#3A3A3A]">
+    <section className="py-16 md:py-16 lg:py-20 bg-[#3A3A3A]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8 md:mb-12">
           What We Do

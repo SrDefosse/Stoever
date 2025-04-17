@@ -5,21 +5,27 @@ const LetsWorkTogether = () => {
   const backgroundImageUrl = "/letsworktogether.jpg"; // Path relative to public folder
 
   return (
-    <section 
-      className="relative flex h-[80vh] min-h-[600px] items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImageUrl})` }} // Use path from public folder
-    >
-      {/* Overlay Oscuro */}
-      <div className="absolute inset-0 bg-black/50 z-0"></div>
-
-      {/* Contenido */}
-      <div className="relative z-10 flex flex-col items-center text-center text-white p-4">
-        <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-          Let's Work Together
-        </h2>
-        <YellowGlassButton text="Get in Touch" onClick={() => console.log("Button clicked!")} />
+    // Contenedor externo similar a LeatherCTA
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
+      {/* Contenedor interno similar a LeatherCTA */}
+      <div className="w-[95%] md:w-[80%] h-[50vh] md:h-[85vh] relative rounded-xl shadow-2xl overflow-hidden">
+        {/* Imagen de fondo */}
+        <img 
+          src={backgroundImageUrl} 
+          alt="Construction site" // Cambia el alt text si es necesario
+          className="w-full h-full object-cover"
+        />
+        
+        {/* Superposición de contenido */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-black/50">
+          {/* Contenido original */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center px-4">
+            Let's Work Together
+          </h2>
+          <YellowGlassButton text="Get in Touch" onClick={() => console.log("Button clicked!")} />
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

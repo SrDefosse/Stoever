@@ -59,7 +59,7 @@ const NavbarConstruction = () => {
   const navLinks = [
     { href: '/construction', text: 'Home' },
     { href: '/construction/about', text: 'About Us' },
-    { href: '/construction/services', text: 'Products and Services' }, // Kept specific construction link
+    { href: '/construction/productsandservices', text: 'Products and Services' },
     {
       text: 'Our Companies', // Added dropdown
       items: [
