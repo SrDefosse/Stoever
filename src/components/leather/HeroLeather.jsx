@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import Link from 'next/link';
 import Image from 'next/image';
 import BlueGlassButton from "../ui/BlueGlassButton";
 import GreenGlassButton from "../ui/GreenGlassButton";
+import MaxWidthWrapper from "../ui/MaxWidthWrapper";
 
 const HeroLeather = () => {
   return (
@@ -32,10 +35,19 @@ const HeroLeather = () => {
               with eco-friendly technologies and premium quality results.
             </p>
             
-            <div className="flex flex-row gap-4">
-              <GreenGlassButton text="Explore Products" />
-              <BlueGlassButton text="Our Technology" />
-            </div>
+            <motion.div
+              className="flex flex-row gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+            >
+              <Link href="/leather/products">
+                <GreenGlassButton text="Explore Products" />
+              </Link>
+              <Link href="/leather/products#technology-intro">
+                <BlueGlassButton text="Our Technology" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>

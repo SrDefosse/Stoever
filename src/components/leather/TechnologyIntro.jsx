@@ -4,7 +4,9 @@ import LeatherCycle from './LeatherCycle';
 
 const TechnologyIntro = () => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div 
+      id="technology-intro"
+      className="relative w-full min-h-screen overflow-hidden">
       {/* Title */}
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}

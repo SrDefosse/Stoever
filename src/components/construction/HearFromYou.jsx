@@ -1,5 +1,6 @@
 import React from "react";
 import YellowGlassButton from "../ui/YellowGlassButton"; 
+import Link from 'next/link';
 
 const HearFromYou = () => {
   const backgroundImageUrl = "/hearfromyou.jpg"; 
@@ -19,9 +20,11 @@ const HearFromYou = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-black/50">
           {/* Contenido original */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center px-4">
-            Let's Work Together
+            We want to hear from you
           </h2>
-          <YellowGlassButton text="Get in Touch" onClick={() => console.log("Button clicked!")} />
+          <Link href="/construction/contact">
+            <YellowGlassButton text="Get in Touch" />
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import GreenButton from "../ui/GreenButton";
 
 const LeatherFuture = () => {
@@ -18,7 +19,9 @@ const LeatherFuture = () => {
             We specialize in the research, development, manufacturing, and marketing of sustainable biochemicals for the tanning industry. We aim to innovate and go one step further into green technology.
           </p>
           <div className="flex">
-            <GreenButton text="Learn More" />
+            <Link href="/leather/about">
+              <GreenButton text="Learn More" />
+            </Link>
           </div>
         </div>
       </div>

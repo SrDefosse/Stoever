@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Link from 'next/link';
 import MaxWidthWrapper from "../ui/MaxWidthWrapper";
 import BlueGlassButton from "../ui/BlueGlassButton";
 import WhiteGlassButton from "../ui/WhiteGlassButton";
@@ -97,8 +98,12 @@ const HeroSection = ({ videoUrl = "/hero_video.mp4" }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <BlueGlassButton text="Learn More" />
-            <WhiteGlassButton text="Contact Us" />
+            <Link href="/aboutUs">
+              <BlueGlassButton text="Learn More" />
+            </Link>
+            <Link href="/contact">
+              <WhiteGlassButton text="Contact Us" />
+            </Link>
           </motion.div>
         </motion.div>
       </MaxWidthWrapper>

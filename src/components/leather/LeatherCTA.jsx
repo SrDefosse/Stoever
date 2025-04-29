@@ -1,5 +1,6 @@
 import React from 'react';
 import GreenGlassButton from '../ui/GreenGlassButton';
+import Link from 'next/link';
 
 const LeatherCTA = () => {
   return (
@@ -17,7 +18,9 @@ const LeatherCTA = () => {
           <h2 className="text-3xl md:text-4xl lg:text-6xl text-white font-bold text-center px-4">
             Contact us
           </h2>
-          <GreenGlassButton text="Get in touch" />
+          <Link href="/leather/contact">
+            <GreenGlassButton text="Get in touch" />
+          </Link>
         </div>
       </div>
     </div>

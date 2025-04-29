@@ -1,6 +1,6 @@
 import React from 'react';
 import YellowButton from '../ui/YellowButton';
-
+import Link from 'next/link';
 // Placeholder images - replace with actual image paths or components
 const placeholderImages = [
   '/placeholder-vinyl.jpg', // Replace with actual image path
@@ -73,7 +73,9 @@ const ProductsCTA = () => {
         </div>
 
         <div className="text-center">
-          <YellowButton text="Explore All Products" onClick={() => console.log('Navigate to products page')} />
+          <Link href="/construction/productsandservices">
+            <YellowButton text="Explore All Products" />
+          </Link>
         </div>
       </div>
     </section>

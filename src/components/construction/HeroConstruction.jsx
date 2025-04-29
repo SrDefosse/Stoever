@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import YellowGlassButton from "../ui/YellowGlassButton";
 import WhiteGlassButton from "../ui/WhiteGlassButton";
+import Link from 'next/link';
 
 const HeroConstruction = () => {
   return (
@@ -33,8 +34,12 @@ const HeroConstruction = () => {
             </p>
             
             <div className="flex flex-row gap-4">
-              <YellowGlassButton text="Learn More" /> {/* Changed button */}
-              <WhiteGlassButton text="Our Services" /> {/* Changed button */}
+              <Link href="/construction/about">
+                <YellowGlassButton text="Learn More" /> {/* Changed button */}
+              </Link>
+              <Link href="/construction/productsandservices">
+                <WhiteGlassButton text="Our Services" /> {/* Changed button */}
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import YellowButton from '../ui/YellowButton';
-
+import Link from 'next/link';
 const CraftingYourVision = () => {
   return (
     <section className="py-16 md:py-24 bg-[#3A3A3A] text-white">
@@ -12,7 +12,9 @@ const CraftingYourVision = () => {
           We aim to bring you materials of the highest quality in construction. At the same time we protect, preservate and optimize diverse work spaces while taking design, style and the necessities of our clients in mind.
         </p>
         <div className="flex justify-center">
-          <YellowButton text="Learn More" />
+          <Link href="/construction/about">
+            <YellowButton text="Learn More" />
+          </Link>
         </div>
       </div>
     </section>

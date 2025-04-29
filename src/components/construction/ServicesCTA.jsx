@@ -1,6 +1,7 @@
 import React from "react";
 import YellowButton from "../ui/YellowButton";
 import { FaTools, FaHardHat } from "react-icons/fa";
+import Link from 'next/link';
 
 const ServicesCTA = () => {
   return (
@@ -30,8 +31,6 @@ const ServicesCTA = () => {
               All of our services range from complete facility inspections and
               design to construction.
             </p>
-            {/* Button Usage */}
-            <YellowButton text="Learn More" />
           </div>
 
           {/* Column 2: Work and Construction */}
@@ -48,9 +47,12 @@ const ServicesCTA = () => {
               projects we work on, always providing clarity to our clients
               throughout every stage of their project.
             </p>
-            {/* Button Usage */}
-            <YellowButton text="Learn More" />
-          </div>
+          </div>          
+        </div>
+        <div className="mt-12 flex justify-center">
+            <Link href="/construction/productsandservices">
+              <YellowButton text="Learn More" />
+            </Link>
         </div>
       </div>
     </section>

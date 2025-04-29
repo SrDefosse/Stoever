@@ -61,7 +61,7 @@ const NavbarLeather = () => {
   const navLinks = [
     { href: '/leather', text: 'Home' },
     { href: '/leather/about', text: 'About Us' },
-    { href: '/leather/products', text: 'Products' },
+    { href: '/leather/products', text: 'Products and Technology' },
     {
       text: 'Our Companies',
       items: [

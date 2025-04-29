@@ -2,7 +2,6 @@ import { font } from "@/fonts";
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/stoever/Hero";
 import Cards from "@/components/stoever/Cards";
-import ContentandCollage from "@/components/stoever/ContentandCollage";
 import WhatWeDo from "@/components/stoever/WhatWeDo";
 import OurPresence from "@/components/stoever/OurPresence";
 import Footer from "@/components/layout/Footer";

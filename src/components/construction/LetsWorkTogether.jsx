@@ -1,5 +1,6 @@
 import React from "react";
 import YellowGlassButton from "../ui/YellowGlassButton"; // Assuming YellowGlassButton is in ../ui
+import Link from 'next/link';
 
 const LetsWorkTogether = () => {
   const backgroundImageUrl = "/letsworktogether.jpg"; // Path relative to public folder
@@ -22,7 +23,9 @@ const LetsWorkTogether = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center px-4">
             Let's Work Together
           </h2>
-          <YellowGlassButton text="Get in Touch" onClick={() => console.log("Button clicked!")} />
+          <Link href="/construction/contact">
+            <YellowGlassButton text="Get in Touch" />
+          </Link>
         </div>
       </div>
     </div>

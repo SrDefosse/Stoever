@@ -4,7 +4,9 @@ import Image from 'next/image';
 
 const WhatWeDo = () => {
   return (
-    <section className="relative w-full max-w-7xl mx-auto min-h-[700px] flex items-center overflow-hidden my-20 rounded-3xl">
+    <section 
+      id="what-we-do"
+      className="relative w-full max-w-7xl mx-auto min-h-[700px] flex items-center overflow-hidden my-20 rounded-3xl">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0 rounded-3xl">
         <Image 

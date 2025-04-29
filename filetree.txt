@@ -1,0 +1,187 @@
+Stoever/
+├── .eslintrc.json
+├── .gitignore
+├── .prettierrc
+├── README.md
+├── filetree.txt
+├── jsconfig.json
+├── move_files.ps1
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public/
+│   ├── about-bg.jpg
+│   ├── aboutconstruction-hero.mp4
+│   ├── aboutleather-bg.jpg
+│   ├── biosolutions_icon.png
+│   ├── biosolutions_logo.png
+│   ├── biosolutions_text_logo_white.png
+│   ├── boot.png
+│   ├── certificacion1.png
+│   ├── certificacion2.png
+│   ├── certificacion3.png
+│   ├── certificacion4.png
+│   ├── certificacion5.png
+│   ├── certificacion6.png
+│   ├── certificacion7.png
+│   ├── collage1.jpg
+│   ├── collage2.jpg
+│   ├── collage3.jpg
+│   ├── collage4.jpg
+│   ├── collage5.jpg
+│   ├── construction-services.jpg
+│   ├── construction-stats.jpg
+│   ├── construction.jpg
+│   ├── construction_icon.png
+│   ├── construction_logo.png
+│   ├── construction_text_icon_white.png
+│   ├── cow.png
+│   ├── enterprise.jpg
+│   ├── favicon.ico
+│   ├── green_innovators.jpg
+│   ├── grid1.jpg
+│   ├── grid10.jpg
+│   ├── grid11.jpg
+│   ├── grid12.jpg
+│   ├── grid13.jpg
+│   ├── grid14.jpg
+│   ├── grid2.jpg
+│   ├── grid3.jpg
+│   ├── grid4.jpg
+│   ├── grid5.jpg
+│   ├── grid6.jpg
+│   ├── grid7.jpg
+│   ├── grid8.jpg
+│   ├── grid9.jpg
+│   ├── group_icon.png
+│   ├── group_text_icon.png
+│   ├── group_text_icon_white.png
+│   ├── hearfromyou.jpg
+│   ├── hero_video.mp4
+│   ├── leather-bg.jpg
+│   ├── leather-cta-bg.jpg
+│   ├── leather-video.mp4
+│   ├── leather.jpg
+│   ├── leather.png
+│   ├── letsworktogether.jpg
+│   ├── manufacturing-process.jpg
+│   ├── nature.png
+│   ├── philosophy-bg.png
+│   ├── products-hero-bg.jpg
+│   ├── pshero-bg.jpg
+│   ├── scraps.png
+│   ├── stoever_group_logo.png
+│   ├── stoever_group_logo_white.png
+│   ├── stoever_logo_black.png
+│   ├── stoever_logo_notext.png
+│   ├── stoever_logo_white.png
+│   ├── technology-bg.jpg
+│   ├── vercel.svg
+│   ├── what-we-do-bg.jpg
+│   └── world-map.png
+├── src/
+│   ├── ColorPalette.md
+│   ├── Structure.md
+│   ├── components/
+│   │   ├── construction/
+│   │   │   ├── AboutDescription.jsx
+│   │   │   ├── AboutHeroConstruction.jsx
+│   │   │   ├── ConstructionContact.jsx
+│   │   │   ├── ConstructionStats.jsx
+│   │   │   ├── CraftingYourVision.jsx
+│   │   │   ├── DevelopmentAccordion.jsx
+│   │   │   ├── HearFromYou.jsx
+│   │   │   ├── HeroConstruction.jsx
+│   │   │   ├── LetsWorkTogether.jsx
+│   │   │   ├── MissionVissionConstruction.jsx
+│   │   │   ├── OurProducts.jsx
+│   │   │   ├── OurServices.jsx
+│   │   │   ├── PSHero.jsx
+│   │   │   ├── ProductsCTA.jsx
+│   │   │   ├── ServicesCTA.jsx
+│   │   │   └── WhatWeDoConstruction.jsx
+│   │   ├── layout/
+│   │   │   ├── FloatingBizSwitch.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── FooterConstruction.jsx
+│   │   │   ├── FooterLeather.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── NavbarConstruction.jsx
+│   │   │   └── NavbarLeather.jsx
+│   │   ├── leather/
+│   │   │   ├── AboutHeroLeather.jsx
+│   │   │   ├── HeroLeather.jsx
+│   │   │   ├── LeatherCTA.jsx
+│   │   │   ├── LeatherContact.jsx
+│   │   │   ├── LeatherCycle.jsx
+│   │   │   ├── LeatherFuture.jsx
+│   │   │   ├── LeatherMarquee.jsx
+│   │   │   ├── LeatherPhilosophy.jsx
+│   │   │   ├── LeatherProductsBento.jsx
+│   │   │   ├── LeatherProductsCategories.jsx
+│   │   │   ├── LeatherProductsHero.jsx
+│   │   │   ├── LeatherStats.jsx
+│   │   │   ├── LeatherVideo.jsx
+│   │   │   ├── TechProposal.jsx
+│   │   │   ├── TechnologyIntro.jsx
+│   │   │   ├── TimelineDemo.jsx
+│   │   │   └── TimelineLeather.jsx
+│   │   ├── stoever/
+│   │   │   ├── Cards.jsx
+│   │   │   ├── Certifications.jsx
+│   │   │   ├── ContactUs.jsx
+│   │   │   ├── ContentandCollage.jsx
+│   │   │   ├── DemoWorldMap.jsx
+│   │   │   ├── DoubleCards.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── MissionVision.jsx
+│   │   │   ├── OurPresence.jsx
+│   │   │   ├── Stats.jsx
+│   │   │   ├── SubsidiariesSection.jsx
+│   │   │   ├── WhatWeDo.jsx
+│   │   │   ├── WhyChooseUs.jsx
+│   │   │   ├── WorldMap.jsx
+│   │   │   └── aboutHero.jsx
+│   │   └── ui/
+│   │       ├── BlueButton.jsx
+│   │       ├── BlueGlassButton.jsx
+│   │       ├── Button.jsx
+│   │       ├── Button2.jsx
+│   │       ├── CustomSelect.jsx
+│   │       ├── Divider.jsx
+│   │       ├── DropdownMenu.jsx
+│   │       ├── FAQ.jsx
+│   │       ├── GreenButton.jsx
+│   │       ├── GreenGlassButton.jsx
+│   │       ├── LeatherFAQ.jsx
+│   │       ├── MaxWidthWrapper.jsx
+│   │       ├── WhiteButton.jsx
+│   │       ├── WhiteDivider.jsx
+│   │       ├── WhiteGlassButton.jsx
+│   │       ├── YellowButton.jsx
+│   │       └── YellowGlassButton.jsx
+│   ├── fonts.js
+│   ├── lib/
+│   │   └── utils.js
+│   ├── pages/
+│   │   ├── _app.jsx
+│   │   ├── _document.jsx
+│   │   ├── aboutUs/
+│   │   │   └── index.jsx
+│   │   ├── construction/
+│   │   │   ├── about.jsx
+│   │   │   ├── contact.jsx
+│   │   │   ├── index.jsx
+│   │   │   └── productsandservices.jsx
+│   │   ├── contact/
+│   │   │   └── index.jsx
+│   │   ├── index.jsx
+│   │   └── leather/
+│   │       ├── about.jsx
+│   │       ├── contact.jsx
+│   │       ├── index.jsx
+│   │       └── products.jsx
+│   └── styles/
+│       └── globals.css
+└── tailwind.config.js

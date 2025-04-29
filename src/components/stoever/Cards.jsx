@@ -12,21 +12,21 @@ const Cards = () => {
         <Card
           title="Stoever Construction"
           description="With over 25 years of experience, Stoever Construction is a manufacturer and applicator of our extensive range of paints and supplies for use in construction"
-          href="#"
+          href="/construction"
           bgUrl="/construction.jpg"
           icon="/construction_icon.png"
         />      
         <Card
           title="Stoever Group"
           description="With over 70 years of experience in the chemical and leather tanning industry, Stoever Group holds presence in 15 countries worldwide."
-          href="#"
+          href="#what-we-do"
           bgUrl="/enterprise.jpg"
           icon="/group_icon.png"
         />
         <Card
           title="Stoever Biosolutions for Leather"
           description="Specialized in the research, development, manufacturing and marketing of biochemicals for the tanning industry; Stoever Biosolutions for Leather is compromised with environmentally friendly solutions."
-          href="#"
+          href="/leather"
           bgUrl="/leather.jpg"
           icon="/biosolutions_icon.png"
         />
