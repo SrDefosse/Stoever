@@ -2,6 +2,7 @@ import React from "react";
 import BlueButton from "../ui/BlueButton";
 import WhiteButton from "../ui/WhiteButton";
 import MaxWidthWrapper from "../ui/MaxWidthWrapper";
+import Link from "next/link";
 
 const SubsidiariesSection = () => {
   return (
