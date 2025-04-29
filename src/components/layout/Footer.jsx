@@ -51,28 +51,28 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-blue-400/30">Quick Links</h3>
             <ul className="space-y-2">
               <li className="transition-transform hover:translate-x-1">
-                <Link href="/about-us" className="text-gray-300 hover:text-white flex items-center">
+                <Link href="/" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Home
+                </Link>
+              </li>
+              <li className="transition-transform hover:translate-x-1">
+                <Link href="/aboutUs" className="text-gray-300 hover:text-white flex items-center">
                   <span className="mr-2">›</span>About Us
                 </Link>
               </li>
               <li className="transition-transform hover:translate-x-1">
-                <Link href="/technology" className="text-gray-300 hover:text-white flex items-center">
-                  <span className="mr-2">›</span>Technology
+                <Link href="/" className="text-gray-300 hover:text-white flex items-center">
+                  <span className="mr-2">›</span>Stoever Group
                 </Link>
               </li>
               <li className="transition-transform hover:translate-x-1">
                 <Link href="/leather" className="text-gray-300 hover:text-white flex items-center">
-                  <span className="mr-2">›</span>Leather Solutions
+                  <span className="mr-2">›</span>Stoever Leather
                 </Link>
               </li>
               <li className="transition-transform hover:translate-x-1">
                 <Link href="/construction" className="text-gray-300 hover:text-white flex items-center">
-                  <span className="mr-2">›</span>Construction
-                </Link>
-              </li>
-              <li className="transition-transform hover:translate-x-1">
-                <Link href="/careers" className="text-gray-300 hover:text-white flex items-center">
-                  <span className="mr-2">›</span>Careers
+                  <span className="mr-2">›</span>Stoever Construction
                 </Link>
               </li>
               <li className="transition-transform hover:translate-x-1">

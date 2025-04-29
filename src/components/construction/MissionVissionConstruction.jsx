@@ -14,36 +14,40 @@ const MissionVision = () => {
   };
 
   const items = [
-    {
-      number: '01',
-      title: 'Mission',
-      content: [
-        'Example Text',
-        'Example Text',
-        'Example Text',
-        'Example Text',
-      ],
-    },
-    {
-      number: '02',
-      title: 'Vision',
-      content: [
-        'Example Text',
-        'Example Text',
-        'Example Text',
-        'Example Text',
-      ],
-    },
-    {
-      number: '03',
-      title: 'Values',
-      content: [
-        'Example Text',
-        'Example Text',
-        'Example Text',
-        'Example Text',
-        'Example Text',
-      ],
+      {
+        number: '01',
+        title: 'Mission',
+        content: [
+          'Manufacture ecological chemicals',
+          'Serve diverse industries',
+          'Committed personnel',
+          'Innovation & values',
+          'Satisfy stakeholders',
+          'Maximize profitability',
+        ],
+      },
+      {
+        number: '02',
+        title: 'Vision',
+        content: [
+          'First market choice',
+          'Exceed client expectations',
+          'Quality products',
+          'Exemplary service',
+          'Ecological responsibility',
+          'Cutting-edge technology',
+          'Pioneering collagen tanning',
+        ],
+      },
+      {
+        number: '03',
+        title: 'Values',
+        content: [
+          'Optimal sustainable processes',
+          'Employ innovation',
+          'Develop opportunities',
+          'Ensure future stability',
+        ],
     },
   ];
 

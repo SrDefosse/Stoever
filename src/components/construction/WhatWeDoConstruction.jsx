@@ -17,7 +17,7 @@ const WhatWeDoConstruction = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-center">
           {/* Card 1: Maintenance */}
-          <div className="p-6 bg-gray-700 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-600 transition-all duration-300">
+          <div className="p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
             <div className="text-white mb-3 text-4xl inline-block">
               <FiTool />
             </div>
@@ -25,7 +25,7 @@ const WhatWeDoConstruction = () => {
             <p className="text-white">General upkeep and repairs.</p>
           </div>
           {/* Card 2: Remodeling */}
-          <div className="p-6 bg-gray-700 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-600 transition-all duration-300">
+          <div className="p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
              <div className="text-white mb-3 text-4xl inline-block">
               <MdOutlineFactory />
             </div>
@@ -33,7 +33,7 @@ const WhatWeDoConstruction = () => {
             <p className="text-white">Modernizing and adapting spaces.</p>
           </div>
           {/* Card 3: Construction */}
-          <div className="p-6 bg-gray-700 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-600 transition-all duration-300">
+          <div className="p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
              <div className="text-white mb-3 text-4xl inline-block">
                <GiCrane />
             </div>
@@ -41,7 +41,7 @@ const WhatWeDoConstruction = () => {
              <p className="text-white">From foundation to finish.</p>
          </div>
           {/* Card 4: Execution */}
-          <div className="p-6 bg-gray-700 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-600 transition-all duration-300">
+          <div className="p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
             <div className="text-white mb-3 text-4xl inline-block">
                <FiFileText />
             </div>

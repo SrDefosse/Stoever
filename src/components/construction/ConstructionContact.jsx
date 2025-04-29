@@ -129,6 +129,7 @@ const ConstructionContact = () => {
                   value={division}
                   onChange={setDivision}
                   placeholder="Select a division..."
+                  variant="yellow"
                 />
               </div>
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroLeather from '@/components/leather/HeroLeather';
 import NavbarLeather from '@/components/layout/NavbarLeather';
-import LeatherMarquee from '@/components/leather/LeatherMarquee';
 import LeatherFuture from '@/components/leather/LeatherFuture';
 import LeatherStats from '@/components/leather/LeatherStats';
 import Divider from '@/components/ui/Divider';
@@ -16,9 +15,6 @@ const LeatherPage = () => {
         <NavbarLeather />
         <div>
           <HeroLeather />
-        </div>
-        <div>
-          <LeatherMarquee />
         </div>
         <div>
           <Divider />

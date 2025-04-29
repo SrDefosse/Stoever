@@ -81,7 +81,7 @@ const NavbarLeather = () => {
         {/* Top bar with logo and hamburger */}
         <div className="flex justify-between items-center w-full lg:w-auto">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/leather">
             <div className="flex items-center bg-gray-900/20 backdrop-blur-xl rounded-full py-2 px-6 shadow-lg border border-white/30 transition-transform duration-200 hover:scale-[1.02] cursor-pointer">
               <div className="hidden lg:block">
                 <Image

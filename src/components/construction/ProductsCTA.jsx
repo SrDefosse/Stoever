@@ -3,10 +3,10 @@ import YellowButton from '../ui/YellowButton';
 import Link from 'next/link';
 // Placeholder images - replace with actual image paths or components
 const placeholderImages = [
-  '/placeholder-vinyl.jpg', // Replace with actual image path
-  '/placeholder-poly.jpg',  // Replace with actual image path
-  '/placeholder-stucco.jpg', // Replace with actual image path
-  '/placeholder-concrete.jpg', // Replace with actual image path
+  '/grid1.jpg', // Replace with actual image path
+  '/grid5.jpg',  // Replace with actual image path
+  '/grid8.jpg', // Replace with actual image path
+  '/grid12.jpg', // Replace with actual image path
 ];
 
 const products = [

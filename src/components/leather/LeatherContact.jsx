@@ -139,6 +139,7 @@ const ContactUs = () => {
                   value={division}
                   onChange={setDivision}
                   placeholder="Select a division..."
+                  variant="green"
                 />
               </div>
 
