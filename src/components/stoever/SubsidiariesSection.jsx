@@ -26,7 +26,7 @@ const SubsidiariesSection = () => {
             <h3 className="text-2xl font-bold text-gray-800">
               Stoever Construction
             </h3>
-            <Link href="/stoever-construction">
+            <Link href="/construction">
             <BlueButton text="Visit" />
             </Link>
           </div>
@@ -43,7 +43,7 @@ const SubsidiariesSection = () => {
             <h3 className="text-2xl font-bold text-gray-800">
               Stoever Leather
             </h3>
-            <Link href="/stoever-leather">
+            <Link href="/leather">
             <BlueButton text="Visit" />
             </Link>
           </div>
