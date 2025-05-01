@@ -39,62 +39,55 @@ const productsData = [
   },
   {
     id: 6,
-    title: "Self-leveling Resins",
-    description:
-      "A product approved by the FDA with excellent chemical, mechanical, and electrical properties that generate great firmness and hardness on the surface, facilitating activities shortly after application.",
-    src: "/grid6.jpg",
-  },
-  {
-    id: 7,
     title: "Sealants",
     description:
       "Stoever offers three types of sealants, each with excellent stability, moisture resistance, and high performance for sealing surfaces before applying paint or any other type of coating.",
     src: "/grid7.jpg",
   },
   {
-    id: 8,
+    id: 7,
     title: "Stucco",
     description:
       "Stoever offers various types of stuccos and pastes, made from cement powder and mineral granulometry that generates great mechanical strength and controlled purity in interior and exterior finishes.",
     src: "/grid8.jpg",
   },
   {
-    id: 9,
+    id: 8,
     title: "Enamels",
     description:
       "Alkyd enamel with good adhesion, high impact and corrosion resistance. At Stoever, we offer a quick-drying or normal-drying primer.",
     src: "/grid9.jpg",
   },
   {
-    id: 10,
+    id: 9,
     title: "Textured Pastes",
     description:
       "These are textured coatings made from 100% acrylic resins, with selected mineral fillers, silica sand, and top-quality additives. They boast excellent hardness, mechanical strength, and weather resistance. They are 100% washable.",
     src: "/grid10.jpg",
   },
   {
-    id: 11,
+    id: 10,
     title: "Floor Adhesive",
     description:
       "Stoever offers a wide variety of floor adhesives made from fine-grained aggregate cements and chemical additives, creating a product with many benefits and properties. We tailor the best adhesive for your project.",
     src: "/grid11.jpg",
   },
   {
-    id: 12,
+    id: 11,
     title: "Concrete",
     description:
       "Stoever Concrete offers a wide range of comprehensive concrete solutions for construction.",
     src: "/grid12.jpg",
   },
   {
-    id: 13,
+    id: 12,
     title: "Plaster",
     description:
       "Stoever offers a wide range of easy-to-use and easy-to-handle plasters, as they are manufactured without sand, resulting in a lightweight material with excellent adhesion to any indoor or outdoor surface.",
     src: "/grid13.jpg",
   },
   {
-    id: 14,
+    id: 13,
     title: "Aggregates for Concrete",
     description:
       "Stoever has a quarry where you can find different sizes of gravel to meet any resistance. You'll also find different qualities of sand and gravel for your platforms.",
@@ -111,24 +104,31 @@ function OurProducts() {
         </h2>
       </div>
       <div className="max-w-7xl mx-auto rounded-lg overflow-hidden border border-neutral-700">
-        <div className="rounded-xl mx-auto grid max-w-7xl grid-cols-1 divide-y divide-neutral-700 border border-neutral-700 md:grid-cols-2 md:divide-x md:divide-y">
-          {productsData.map((p) => (
-            <Card
-              key={p.id}
-              title={p.title}
-              description={p.description}
-              src={p.src}
-            />
-          ))}
+        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 gap-px bg-neutral-700">
+          {productsData.map((p, index) => {
+            const isLastItem = index === productsData.length - 1;
+            const isOddCount = productsData.length % 2 !== 0;
+            const cardClassName = isLastItem && isOddCount ? "md:col-span-2" : "";
+
+            return (
+              <Card
+                className={cardClassName}
+                key={p.id}
+                title={p.title}
+                description={p.description}
+                src={p.src}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
-const Card = React.memo(function Card({ title, description, src }) {
+const Card = React.memo(function Card({ title, description, src, className }) {
   return (
-    <div className="rounded-xl group relative flex h-56 flex-col overflow-hidden p-6 text-center md:h-80 md:p-9">
+    <div className={`group relative flex h-56 flex-col overflow-hidden p-6 text-center bg-[#3A3A3A] md:h-80 md:p-9 ${className || ''}`}>
       <div className="absolute inset-0">
         <Image
           src={src}

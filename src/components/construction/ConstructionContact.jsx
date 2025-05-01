@@ -85,7 +85,6 @@ const ConstructionContact = () => {
                   <div>
                     <h4 className="font-semibold text-yellow-700">Business Hours</h4>
                     <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 10:00 AM - 2:00 PM</p>
                   </div>
                 </div>
               </div>

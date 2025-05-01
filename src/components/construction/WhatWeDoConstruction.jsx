@@ -32,14 +32,6 @@ const WhatWeDoConstruction = () => {
             <h3 className="text-xl font-semibold text-yellow-500 mb-2">Remodeling Industrial Areas</h3>
             <p className="text-white">Modernizing and adapting spaces.</p>
           </div>
-          {/* Card 3: Construction */}
-          <div className="p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-             <div className="text-white mb-3 text-4xl inline-block">
-               <GiCrane />
-            </div>
-            <h3 className="text-xl font-semibold text-yellow-500 mb-2">Building Construction</h3>
-             <p className="text-white">From foundation to finish.</p>
-         </div>
           {/* Card 4: Execution */}
           <div className="p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
             <div className="text-white mb-3 text-4xl inline-block">
