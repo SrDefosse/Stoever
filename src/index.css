@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/* You might want to add other selectors if you use custom elements or classes for buttons */

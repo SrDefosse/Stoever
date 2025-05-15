@@ -1,0 +1,7 @@
+Color Palette
+#011961 
+#007AFFff
+ #0126A9
+#66CC66
+#515151 
+#FFDD0A
