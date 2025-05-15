@@ -74,11 +74,11 @@ const NavbarLeather = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300`}
+      className={`fixed top-0 left-0 right-0 z-50 w-full p-4 flex justify-center transition-all duration-300 ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'} lg:pointer-events-auto`}
     >
       <div className="flex w-full max-w-6xl flex-col lg:flex-row">
         {/* Top bar with logo and hamburger */}
-        <div className="flex justify-between items-center w-full lg:w-auto">
+        <div className="flex justify-between items-center w-full lg:w-auto pointer-events-auto">
           {/* Logo */}
           <Link to="/">
             <div className="flex items-center bg-gray-900/20 backdrop-blur-xl rounded-full py-2 px-6 shadow-lg border border-white/30 transition-transform duration-200 hover:scale-[1.02] cursor-pointer">
@@ -133,9 +133,7 @@ const NavbarLeather = () => {
 
         {/* Menú móvil */}
         <div
-          className={`lg:hidden mt-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transform transition-all duration-300 ease-out ${
-            isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'
-          }`}
+          className={`lg:hidden mt-4 bg-slate-900/20 backdrop-blur-xl rounded-xl shadow-lg border border-white/30 overflow-hidden transform transition-all duration-300 ease-out ${isOpen ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-0 pointer-events-none'}`}
           style={{ transformOrigin: 'top' }}
         >
           <div className="p-4">
