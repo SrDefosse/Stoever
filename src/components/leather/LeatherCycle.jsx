@@ -118,11 +118,11 @@ const LeatherCycle = () => {
 
   // --- Datos de los Nodos ---
   const nodesData = [
-    { id: 'source', img: '/cow.png', text: 'From Source', angle: -90 },
-    { id: 'plant', img: '/scraps.png', text: 'To Our Plant', angle: -18 },
-    { id: 'leather', img: '/leather.png', text: 'To Leather', angle: 54 },
-    { id: 'product', img: '/boot.png', text: 'To Product', angle: 126 },
-    { id: 'nature', img: '/nature.png', text: 'To Nature', angle: 198 }
+    { id: 'source', img: '/cycle/cow.webp', text: 'From Source', angle: -90 },
+    { id: 'plant', img: '/cycle/plant.webp', text: 'To Our Plant', angle: -18 },
+    { id: 'leather', img: '/cycle/leather.webp', text: 'To Leather', angle: 54 },
+    { id: 'product', img: '/cycle/boot.webp', text: 'To Product', angle: 126 },
+    { id: 'nature', img: '/cycle/nature.webp', text: 'To Nature', angle: 198 }
   ];
   const numNodes = nodesData.length;
 
