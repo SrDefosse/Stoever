@@ -23,7 +23,7 @@ const SubsidiariesSection = () => {
               className="w-32 h-32 object-contain"
             />
             <h3 className="text-2xl font-bold text-gray-800">
-              Stoever Construction
+              Stoever for Construction
             </h3>
             <BlueButton text="Visit" href="/construction" />
           </div>
@@ -38,7 +38,7 @@ const SubsidiariesSection = () => {
               className="w-32 h-32 object-contain"
             />
             <h3 className="text-2xl font-bold text-gray-800">
-              Stoever Leather
+              Stoever for Leather
             </h3>
             <BlueButton text="Visit" href="/leather" />
           </div>

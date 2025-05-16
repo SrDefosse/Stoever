@@ -25,7 +25,7 @@ const WhatWeDo = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">What We Do</h2>
           <p className="text-lg md:text-xl mb-8">
-          Stoever is specialized in the research, development, fabrication and commercialization of cutting-edge biochemical products in many industries, such as the tanning industry, agro-industrial and construction that are aimed to be environmentally friendly 
+          Stoever is specialized in the research, development, fabrication and commercialization of cutting-edge biochemical products in many industries, such as the tanning industry and construction that are aimed to be environmentally friendly 
           </p>
         </motion.div>
       </div>
