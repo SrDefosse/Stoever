@@ -97,8 +97,8 @@ const HeroSection = ({ videoUrl = "/stoever/hero_video.mp4" }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <BlueGlassButton text="Learn More" />
-            <WhiteGlassButton text="Contact Us" />
+            <BlueGlassButton text="Learn More" href="#subsidiaries-section"/>
+            <WhiteGlassButton text="Contact Us" href="/contact" />
           </motion.div>
         </motion.div>
       </MaxWidthWrapper>

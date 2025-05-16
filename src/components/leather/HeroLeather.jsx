@@ -24,8 +24,9 @@ const HeroLeather = () => {
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-2xl text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Premium Leather <br />
-              <span className="text-[#66CC66]">Sustainable Solutions</span>
+              <span className="text-[#66CC66]">Biosolutions</span> for the
+              <span className="text-[#66CC66]"> leather </span>
+               industry
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl">
@@ -34,8 +35,8 @@ const HeroLeather = () => {
             </p>
             
             <div className="flex flex-row gap-4">
-              <GreenGlassButton text="Explore Products" />
-              <BlueGlassButton text="Our Technology" />
+              <GreenGlassButton text="Explore Products" href="/leather/products" />
+              <BlueGlassButton text="Our Technology" href="/leather/products#tech-proposal" />
             </div>
           </div>
         </div>

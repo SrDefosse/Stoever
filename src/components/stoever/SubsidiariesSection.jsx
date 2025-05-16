@@ -25,7 +25,7 @@ const SubsidiariesSection = () => {
             <h3 className="text-2xl font-bold text-gray-800">
               Stoever Construction
             </h3>
-            <BlueButton text="Visit" />
+            <BlueButton text="Visit" href="/construction" />
           </div>
         </div>
 
@@ -40,7 +40,7 @@ const SubsidiariesSection = () => {
             <h3 className="text-2xl font-bold text-gray-800">
               Stoever Leather
             </h3>
-            <BlueButton text="Visit" />
+            <BlueButton text="Visit" href="/leather" />
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ const SubsidiariesSection = () => {
         </h2>
       </div>
       <div className="flex justify-center">
-        <WhiteButton text="Contact" />
+        <WhiteButton text="Contact" href="/contact" />
       </div>
     </section>
     </MaxWidthWrapper>

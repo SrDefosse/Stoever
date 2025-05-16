@@ -110,7 +110,7 @@ const TechProposal = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div id="tech-proposal" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <h2 className="text-4xl md:text-5xl font-light text-center mb-16">Technical Advantages</h2>
       
       <div className="space-y-4">

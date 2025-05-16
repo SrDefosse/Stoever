@@ -2,7 +2,6 @@ import React from 'react';
 // import Image from 'next/image'; // Remove next/image
 import YellowGlassButton from "../ui/YellowGlassButton";
 import WhiteGlassButton from "../ui/WhiteGlassButton";
-import MaxWidthWrapper from '../ui/MaxWidthWrapper';
 
 const HeroConstruction = () => {
   return (
@@ -34,8 +33,8 @@ const HeroConstruction = () => {
             </p>
             
             <div className="flex flex-row gap-4">
-              <YellowGlassButton text="Learn More" href="/construction/about" /> 
-              <WhiteGlassButton text="Our Services" href="/construction/services" /> 
+              <YellowGlassButton text="Learn More" href="#products-cta" /> 
+              <WhiteGlassButton text="Our Services" href="/construction/productsandservices" /> 
             </div>
           </div>
         </div>

@@ -5,6 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/stoever_logo_notext.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stoever</title>
+    <script>
+      // Solución simple para scroll a elementos con id cuando hay hash en la URL
+      window.addEventListener('load', function() {
+        // Al cargar la página, verifica si hay un hash en la URL
+        if (window.location.hash) {
+          // Espera un poco para que todos los elementos estén cargados
+          setTimeout(function() {
+            const id = window.location.hash.substring(1);
+            const element = document.getElementById(id);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 300); // 300ms debería ser suficiente para que la página termine de renderizarse
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

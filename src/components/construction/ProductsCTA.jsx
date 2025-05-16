@@ -18,14 +18,14 @@ const products = [
     image: '/construction/grid/grid8.webp', 
   },
   {
-    name: "Concrete",
-    description: "We offer a wide range of comprehensive concrete solutions for construction.",
-    image: '/construction/grid/grid12.webp', 
+    name: "Aggregates for Concrete",
+    description: "Stoever has a quarry where you can find different sizes of gravel to meet any resistance. You'll also find different qualities of sand and gravel for your platforms.",
+    image: '/construction/grid/grid14.webp', 
   }
 ];
 
 const ProductCard = ({ name, description, image }) => (
-  <div className="relative h-80 overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+  <div id="products-cta" className="relative h-80 overflow-hidden rounded-lg shadow-lg group cursor-pointer">
     {/* Background Image with Zoom Effect */}
     <div
       className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105"

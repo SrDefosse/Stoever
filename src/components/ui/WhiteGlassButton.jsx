@@ -1,9 +1,10 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 
-const WhiteGlassButton = ({ text = "Click me", onClick }) => {
+const WhiteGlassButton = ({ text = "Click me", onClick, href = "#" }) => {
   return (
-    <button 
+    <a 
+      href={href}
       onClick={onClick}
       className="group flex h-10 items-center gap-2 rounded-full bg-white/30 backdrop-blur-md border border-white/30 pl-3 pr-4 text-white shadow-md transition-all duration-300 ease-in-out hover:bg-white hover:pl-2 hover:shadow-lg active:bg-blue-700"
     >
@@ -11,7 +12,7 @@ const WhiteGlassButton = ({ text = "Click me", onClick }) => {
         <FiArrowRight className="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-white" />
       </span>
       <span className="transition-colors duration-300 group-hover:text-black">{text}</span>
-    </button>
+    </a>
   );
 };
 

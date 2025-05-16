@@ -17,7 +17,7 @@ const LeatherCTA = () => {
           <h2 className="text-3xl md:text-4xl lg:text-6xl text-white font-bold text-center px-4">
             Contact us
           </h2>
-          <GreenGlassButton text="Get in touch" />
+          <GreenGlassButton text="Get in touch" href="/leather/contact" />
         </div>
       </div>
     </div>

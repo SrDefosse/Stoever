@@ -18,7 +18,7 @@ const LeatherFuture = () => {
             We specialize in the research, development, manufacturing, and marketing of sustainable biochemicals for the tanning industry. We aim to innovate and go one step further into green technology.
           </p>
           <div className="flex">
-            <GreenButton text="Learn More" />
+            <GreenButton text="Learn More" href="/leather/about" />
           </div>
         </div>
       </div>
