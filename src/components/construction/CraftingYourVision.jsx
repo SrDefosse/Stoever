@@ -12,7 +12,7 @@ const CraftingYourVision = () => {
           We aim to bring you materials of the highest quality in construction. At the same time we protect, preservate and optimize diverse work spaces while taking design, style and the necessities of our clients in mind.
         </p>
         <div className="flex justify-center">
-          <YellowButton text="Learn More" />
+          <YellowButton text="Learn More" href="/construction/about" />
         </div>
       </div>
     </section>

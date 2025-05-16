@@ -18,6 +18,7 @@ function DemoWorldMap() {
     { name: 'Thailand', lat: 13.7563, lng: 100.5018 },
     { name: 'Turkey', lat: 41.0082, lng: 28.9784 },
     { name: 'USA', lat: 40.7128, lng: -74.0060 },
+    { name: 'Mexico', lat: 19.4326, lng: -99.1332 },
   ];
 
   // Generar conexiones entre pares aleatorios de países
@@ -48,7 +49,6 @@ function DemoWorldMap() {
         <div className="w-full max-w-full sm:max-w-5xl overflow-hidden">
           <WorldMap
              dots={exampleDots}
-             lineColor="#0ea5e9"
            />
         </div>
       </main>

@@ -65,8 +65,8 @@ const ProductsCTA = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <YellowButton text="Explore All Products" onClick={() => console.log('Navigate to products page')} />
+        <div className="">
+          <YellowButton text="Explore All Products" href="/construction/productsandservices" />
         </div>
       </div>
     </section>

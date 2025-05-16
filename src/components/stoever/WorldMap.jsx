@@ -14,7 +14,6 @@ const svgMap = map.getSVG({
 
 function WorldMap({
   dots = [],
-  lineColor = "#0ea5e9",
 }) {
   const containerRef = useRef(null);
   const svgRef = useRef(null);
@@ -26,12 +25,6 @@ function WorldMap({
     const x = (lng + 180) * (mapWidth / 360);
     const y = ((-1 * lat) + 90) * (mapHeight / 180);
     return { x, y };
-  };
-
-  const createCurvedPath = (start, end) => {
-    const midX = (start.x + end.x) / 2;
-    const controlY = Math.min(start.y, end.y) - Math.abs(start.y - end.y) * 0.5 - 30;
-    return `M ${start.x} ${start.y} Q ${midX} ${controlY} ${end.x} ${end.y}`;
   };
 
   return (
@@ -51,18 +44,18 @@ function WorldMap({
           className="w-full h-full absolute inset-0 pointer-events-none select-none"
           style={{ zIndex: 2, maxHeight: '60vw', minHeight: '180px' }}
         >
-          {/* Gradiente para las líneas */}
+          {/* Removed gradient for the lines */}
           <defs>
-            <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            {/* <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="white" stopOpacity="0" />
               <stop offset="5%" stopColor={lineColor} stopOpacity="1" />
               <stop offset="95%" stopColor={lineColor} stopOpacity="1" />
               <stop offset="100%" stopColor="white" stopOpacity="0" />
-            </linearGradient>
+            </linearGradient> */}
           </defs>
 
-          {/* Grupo para las líneas curvas */}
-          <g>
+          {/* Removed group for curved lines */}
+          {/* <g>
             {dots.map((dot, i) => {
               const startPoint = projectPoint(dot.start.lat, dot.start.lng);
               const endPoint = projectPoint(dot.end.lat, dot.end.lng);
@@ -79,7 +72,7 @@ function WorldMap({
                 />
               );
             })}
-          </g>
+          </g> */}
 
           {/* Grupo para los puntos y animaciones */}
           <g>
@@ -94,14 +87,14 @@ function WorldMap({
                       cx={startCoords.x}
                       cy={startCoords.y}
                       r="3"
-                      fill={lineColor}
+                      fill="#0ea5e9" // Using a default color or you might want to make this a prop
                     />
                     {isInView && (
                       <circle
                         cx={startCoords.x}
                         cy={startCoords.y}
                         r="3"
-                        fill={lineColor}
+                        fill="#0ea5e9" // Using a default color
                         opacity="0.6"
                       >
                         <animate attributeName="r" from="3" to="10" dur="1.5s" begin={`${0.3 * i}s`} repeatCount="indefinite" />
@@ -115,14 +108,14 @@ function WorldMap({
                       cx={endCoords.x}
                       cy={endCoords.y}
                       r="3"
-                      fill={lineColor}
+                      fill="#0ea5e9" // Using a default color
                     />
                     {isInView && (
                       <circle
                         cx={endCoords.x}
                         cy={endCoords.y}
                         r="3"
-                        fill={lineColor}
+                        fill="#0ea5e9" // Using a default color
                         opacity="0.6"
                       >
                         <animate attributeName="r" from="3" to="10" dur="1.5s" begin={`${0.3 * i + 0.5}s`} repeatCount="indefinite" />
