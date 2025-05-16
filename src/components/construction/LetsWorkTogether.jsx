@@ -22,7 +22,7 @@ const LetsWorkTogether = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center px-4">
             Let's Work Together
           </h2>
-          <YellowGlassButton text="Get in Touch" onClick={() => console.log("Button clicked!")} />
+          <YellowGlassButton text="Get in Touch" href="/construction/contact" />
         </div>
       </div>
     </div>

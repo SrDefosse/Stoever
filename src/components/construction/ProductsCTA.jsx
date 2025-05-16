@@ -6,26 +6,30 @@ const products = [
     name: "Vinyl Paints",
     description: "We offer various grades of interior and exterior vinyl paints with a durability of 3.5 and 7 years, and offers color matching services in the grade of your choice.",
     image: '/construction/grid/grid1.webp', 
+    href: "/construction/productsandservices"
   },
   {
     name: "Polyurethanes",
     description: "A high-performance 2-component coating, developing excellent chemical and mechanical resistance properties at room temperature.",
     image: '/construction/grid/grid5.webp', 
+    href: "/construction/productsandservices"
   },
   {
     name: "Stuccos",
     description: "We offer various types of stuccos and pastes, made from cement powder and mineral granulometry that generate great mechanical strength and controlled purity in interior and exterior finishes.",
     image: '/construction/grid/grid8.webp', 
+    href: "/construction/productsandservices"
   },
   {
     name: "Aggregates for Concrete",
     description: "Stoever has a quarry where you can find different sizes of gravel to meet any resistance. You'll also find different qualities of sand and gravel for your platforms.",
     image: '/construction/grid/grid14.webp', 
+    href: "/construction/productsandservices"
   }
 ];
 
-const ProductCard = ({ name, description, image }) => (
-  <div id="products-cta" className="relative h-80 overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+const ProductCard = ({ name, description, image, href }) => (
+  <a href={href} id="products-cta" className="relative h-80 overflow-hidden rounded-lg shadow-lg group cursor-pointer block">
     {/* Background Image with Zoom Effect */}
     <div
       className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105"
@@ -45,7 +49,7 @@ const ProductCard = ({ name, description, image }) => (
         {name}
       </h3>
     </div>
-  </div>
+  </a>
 );
 
 const ProductsCTA = () => {
