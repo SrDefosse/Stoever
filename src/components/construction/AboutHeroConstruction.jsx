@@ -10,7 +10,10 @@ const AboutHeroConstruction = () => {
           autoPlay
           muted
           loop
-          className="object-cover w-full h-full brightness-75"
+          playsInline
+          disablePictureInPicture
+          controls={false}
+          className="object-cover w-full h-full brightness-75 pointer-events-none"
           priority
         />
         <div className="absolute inset-0 bg-black/40 z-10" />

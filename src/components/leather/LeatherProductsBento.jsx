@@ -7,35 +7,35 @@ const products = [
     title: 'Tanning',
     description: 'Pre-tanners for wet-white leather.',
     image: '/leather/bentogrid/tanning.webp',
-    link: '/leather/products#tech-proposal'
+    link: '/leather/products#products'
   },
   {
     id: 2,
     title: 'Re-tanning',
     description: 'Bio-collagens and re-tanners for all kinds of leather.',
     image: '/leather/bentogrid/retanning.webp',
-    link: '/leather/products#tech-proposal'
+    link: '/leather/products#products'
   },
   {
     id: 3,
     title: 'Soaking',
     description: 'Probiotics, fermentation biochemicals and blend of organic acids.',
     image: '/leather/bentogrid/soaking.webp',
-    link: '/leather/products#tech-proposal'
+    link: '/leather/products#products'
   },
   {
     id: 4,
     title: 'Greasing',
     description: 'Oils for re-hydration of the leather.',
     image: '/leather/bentogrid/greasing.webp',
-    link: '/leather/products#tech-proposal'
+    link: '/leather/products#products'
   },
   {
     id: 5,
     title: 'Anilines',
     description: 'Industrial colorants.',
     image: '/leather/bentogrid/anilines.webp',
-    link: '/leather/products#tech-proposal'
+    link: '/leather/products#products'
   },
 ]
 
@@ -56,7 +56,7 @@ export default function SolidBento() {
     // Si ya estamos en la página de productos
     if (window.location.pathname === '/leather/products') {
       // Scroll a la sección
-      const element = document.getElementById('tech-proposal');
+      const element = document.getElementById('products');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
@@ -66,7 +66,7 @@ export default function SolidBento() {
       
       // Dar tiempo para que la página se cargue y luego hacer scroll
       setTimeout(() => {
-        const element = document.getElementById('tech-proposal');
+        const element = document.getElementById('products');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }

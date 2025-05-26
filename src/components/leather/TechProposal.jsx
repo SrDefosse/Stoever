@@ -111,7 +111,7 @@ const TechProposal = () => {
 
   return (
     <div id="tech-proposal" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2 className="text-4xl md:text-5xl font-light text-center mb-16">Technical Advantages</h2>
+      <h2 className="text-4xl md:text-5xl text-center mb-16">Technical Advantages</h2>
       
       <div className="space-y-4">
         {descriptions.map((item, idx) => (
@@ -129,7 +129,7 @@ const TechProposal = () => {
               <div className="flex items-center space-x-4">
                 <span className="text-gray-400 font-light text-lg md:text-xl">{item.id}</span>
                 <span className="text-xl md:text-2xl">{item.icon}</span>
-                <h3 className="text-xl md:text-2xl font-light group-hover:text-blue-500 transition-colors duration-200">
+                <h3 className="text-xl md:text-2xl font-light group-hover:text-green-500 transition-colors duration-200">
                   {item.title}
                 </h3>
               </div>

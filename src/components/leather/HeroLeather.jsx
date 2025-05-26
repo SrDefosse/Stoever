@@ -30,8 +30,7 @@ const HeroLeather = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl">
-              Discover our innovative approach to leather processing 
-              with eco-friendly technologies and premium quality results.
+              Discover our innovative approach to socially and environmentally sustainable leather manufacturing.
             </p>
             
             <div className="flex flex-row gap-4">

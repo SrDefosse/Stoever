@@ -10,7 +10,7 @@ const TechnologyIntro = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-light text-center py-16"
+        className="text-4xl md:text-5xl text-center py-16"
       >
         Circular Economy
       </motion.h2>

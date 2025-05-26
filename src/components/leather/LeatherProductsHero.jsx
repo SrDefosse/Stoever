@@ -29,8 +29,8 @@ const LeatherProductsHero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl mx-auto">
-              Discover our innovative approach to leather processing 
-              with eco-friendly technologies and premium quality results.
+            We are leaders in the manufacture of Biopolymers and Biocollagens from by-products, 
+            providing sustainable solutions for the processing of sustainable leathers.
             </p>
           </div>
         </div>

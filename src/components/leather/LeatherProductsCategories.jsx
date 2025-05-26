@@ -20,11 +20,21 @@ const LeatherProductsCategories = () => {
       name: "Soaking",
       icon: <GiWaterDrop className="w-6 h-6" />,
       products: [
-        "PROSOAK: Surfactant-free moisturizing probiotic",
-        "PROSPEED: Surfactant-free moisturizing probiotic with accelerating effect",
-        "PRODEGRATE: Surfactant-free probiotic with degreasing effect",
-        "PRODEGRATE PLUS: Fermentation biochemicals with long-chain alcohol emulsifier",
-        "OIL TG: Blend of organic acids and low molecular weight salts"
+        {
+          name: "Quistopal Bio"
+        },
+        {
+          name: "Biostogreen"
+        },
+        {
+          name: "Soak GM"
+        },
+        {
+          name: "Enzyme LP"
+        },
+        {
+          name: "Relax BTN"
+        }
       ]
     },
     {
@@ -32,7 +42,24 @@ const LeatherProductsCategories = () => {
       name: "Tanning",
       icon: <GiSpray className="w-6 h-6" />,
       products: [
-        "ZEOTAN B: Pre-tanner for wet-white leather"
+        {
+          name: "Cal TR"
+        },
+        {
+          name: "Zyme RDT"
+        },
+        {
+          name: "Zecotan B"
+        },
+        {
+          name: "Biopolimer"
+        },
+        {
+          name: "Biocollagen"
+        },
+        {
+          name: "Quistomax DIJ"
+        }
       ]
     },
     {
@@ -40,10 +67,51 @@ const LeatherProductsCategories = () => {
       name: "Re-tanning",
       icon: <GiRecycle className="w-6 h-6" />,
       products: [
-        "ZEOTAN C: Retanning agent for all types of leather",
-        "CCL: Biopolymer for wet-white tanning",
-        "WB: Biopolymer for all types of leather",
-        "WW: Biopolymer for wet-white tanning"
+        {
+          name: "Syntanil 60"
+        },
+        {
+          name: "Supra 4"
+        },
+        {
+          name: "Supra 5"
+        },
+        {
+          name: "Syntan N"
+        },
+        {
+          name: "Syntan AC"
+        },
+        {
+          name: "Syntan B"
+        },
+        {
+          name: "Syntan R77"
+        },
+        {
+          name: "Quistoplast DDM"
+        },
+        {
+          name: "Quistoplast D-E"
+        },
+        {
+          name: "Quistoplast STS"
+        },
+        {
+          name: "Biosyntan CLF"
+        },
+        {
+          name: "Biosyntan ECO M"
+        },
+        {
+          name: "Biosyntan ECO D"
+        },
+        {
+          name: "Biosyntan SYA"
+        },
+        {
+          name: "Biosyntan SCK"
+        }
       ]
     },
     {
@@ -51,26 +119,60 @@ const LeatherProductsCategories = () => {
       name: "Anilines",
       icon: <GiChemicalDrop className="w-6 h-6" />,
       products: [
-        "Industrial colorants for leather"
+        {
+          name: "Industrial Colorants"
+        }
       ]
     },
     {
       id: "05",
-      name: "Greasing",
+      name: "Fatliquoring",
       icon: <GiOilDrum className="w-6 h-6" />,
       products: [
-        "STOIL 912-D",
-        "STOIL E-70",
-        "STOIL HK",
-        "STOIL HW",
-        "STOIL LT-N"
+        {
+          name: "Quistosan R10"
+        },
+        {
+          name: "Quistosan B8"
+        },
+        {
+          name: "Quistosan R55"
+        },
+        {
+          name: "Quistosan SP"
+        },
+        {
+          name: "Quistosan Dermagras"
+        },
+        {
+          name: "Base BB"
+        },
+        {
+          name: "Quistomax L1"
+        },
+        {
+          name: "Quistomax DIJ"
+        },
+        {
+          name: "Quistomax MP"
+        },
+        {
+          name: "Bioil RW"
+        },
+        {
+          name: "Bioil MP"
+        }
       ]
     }
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2 className="text-4xl md:text-5xl font-light text-center mb-16">Products by Category</h2>
+    <div id="products" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+              <h2 className="text-2xl md:text-3xl font-light text-center mb-16 max-w-4xl mx-auto leading-relaxed">
+          Our process preserves the distinctive naturalness of genuine leather through the synergy between fiber structure, 
+          biopolymers, tanning agents, and synthetic products. This combination achieves optimal adherence and fullness, 
+          maximizing material utilization while reducing the environmental impact of the tanning process.
+        </h2>
       
       <div className="space-y-4">
         {categories.map((category, idx) => (
@@ -88,7 +190,7 @@ const LeatherProductsCategories = () => {
               <div className="flex items-center space-x-4">
                 <span className="text-gray-400 font-light text-lg md:text-xl">{category.id}</span>
                 <span className="text-xl md:text-2xl">{category.icon}</span>
-                <h3 className="text-xl md:text-2xl font-light group-hover:text-blue-500 transition-colors duration-200">
+                <h3 className="text-xl md:text-2xl font-light group-hover:text-green-500 transition-colors duration-200">
                   {category.name}
                 </h3>
               </div>
@@ -112,17 +214,24 @@ const LeatherProductsCategories = () => {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <div className="pl-12 pt-4 space-y-3">
+                  <div className="pl-12 pt-4 space-y-6">
                     {category.products.map((product, productIdx) => (
-                      <motion.p
+                      <motion.div
                         key={productIdx}
-                        className="text-gray-600 font-light text-lg md:text-xl"
+                        className="border-l-2 border-green-200 pl-4"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: productIdx * 0.1 }}
                       >
-                        {product}
-                      </motion.p>
+                        <h4 className="text-lg md:text-xl font-medium text-gray-800 mb-2">
+                          {product.name}
+                        </h4>
+                        {product.description && (
+                          <p className="text-gray-600 font-light text-base md:text-lg leading-relaxed">
+                            {product.description}
+                          </p>
+                        )}
+                      </motion.div>
                     ))}
                   </div>
                 </motion.div>
