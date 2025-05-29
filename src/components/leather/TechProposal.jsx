@@ -37,72 +37,66 @@ const TechProposal = () => {
     },
     {
       id: "02",
-      title: "Lubricants",
-      icon: <GiOilDrum className="w-6 h-6" />,
-      content: "Nanolubricant provides a different and more efficient lubrication compared to microemulsion oils."
-    },
-    {
-      id: "03",
       title: "Particle Size",
       icon: <GiAtom className="w-6 h-6" />,
       content: "Nanoparticles allow for more uniform penetration and distribution."
     },
     {
-      id: "04",
+      id: "03",
       title: "Agent Penetration",
       icon: <GiArrowDunk className="w-6 h-6" />,
       content: "Improved penetration due to the rapid dissociation of zinc in an acidic medium."
     },
     {
-      id: "05",
+      id: "04",
       title: "Leather Flexibility",
       icon: <GiAbstract021 className="w-6 h-6" />,
       content: "The mechanics of leather are superior due to flexible ionic bonds and better lubricant distribution."
     },
     {
-      id: "06",
+      id: "05",
       title: "Closed Grain",
       icon: <GiCrackedGlass className="w-6 h-6" />,
       content: "Adhesion and cohesion of the leather fibers is improved due to zinc bonding."
     },
     {
-      id: "07",
+      id: "06",
       title: "Leather Fullness",
       icon: <GiLeatherBoot className="w-6 h-6" />,
       content: "Greater flexibility and fracture resistance."
     },
     {
-      id: "08",
+      id: "07",
       title: "Process Efficiency",
       icon: <GiSpeedometer className="w-6 h-6" />,
       content: "The rapid dissociation of zinc in acid makes the process more efficient."
     },
     {
-      id: "09",
+      id: "08",
       title: "Lightweight & Odor Free",
       icon: <GiFeather className="w-6 h-6" />,
       content: "Due to particle size and low addition."
     },
     {
-      id: "10",
+      id: "09",
       title: "Improved Dye Distribution",
       icon: <GiPaintBucket className="w-6 h-6" />,
       content: "By providing more chemical bonds, the distribution of dyes is more thorough."
     },
     {
-      id: "11",
+      id: "10",
       title: "Minimal Environmental Impact",
       icon: <GiEarthAmerica className="w-6 h-6" />,
       content: "The minimal use of zinc minimizes impact on the environment."
     },
     {
-      id: "12",
+      id: "11",
       title: "Mechanical Resistance",
       icon: <GiStrong className="w-6 h-6" />,
       content: "Resistance to traction and abrasion is improved due to strong and flexible zinc bonds."
     },
     {
-      id: "13",
+      id: "12",
       title: "Homogeneity of the Product",
       icon: <GiPuzzle className="w-6 h-6" />,
       content: "The uniform distribution of agents results in a more homogeneous leather"
@@ -111,7 +105,7 @@ const TechProposal = () => {
 
   return (
     <div id="tech-proposal" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2 className="text-4xl md:text-5xl text-center mb-16">Technical Advantages</h2>
+      <h2 className="text-4xl md:text-5xl text-center mb-16">Technical advantage of our biopolymers and biocollagen</h2>
       
       <div className="space-y-4">
         {descriptions.map((item, idx) => (

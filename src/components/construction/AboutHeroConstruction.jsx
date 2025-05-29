@@ -6,7 +6,7 @@ const AboutHeroConstruction = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <video
-          src="/aboutconstruction-hero.mp4" // Placeholder image, replace with actual path
+          src="https://blinksites.mx/imgs/video-stoever-construction.mp4" // Placeholder image, replace with actual path
           autoPlay
           muted
           loop

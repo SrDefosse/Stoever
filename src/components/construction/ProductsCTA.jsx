@@ -9,7 +9,7 @@ const products = [
     href: "/construction/productsandservices"
   },
   {
-    name: "Polyurethanes",
+    name: "Flooring Systems",
     description: "A high-performance 2-component coating, developing excellent chemical and mechanical resistance properties at room temperature.",
     image: '/construction/grid/grid5.webp', 
     href: "/construction/productsandservices"
