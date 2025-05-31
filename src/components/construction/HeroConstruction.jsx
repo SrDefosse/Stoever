@@ -1,19 +1,22 @@
 import React from 'react';
-// import Image from 'next/image'; // Remove next/image
 import YellowGlassButton from "../ui/YellowGlassButton";
 import WhiteGlassButton from "../ui/WhiteGlassButton";
 
 const HeroConstruction = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {/* Replace next/image with img */}
-        <img
-          src="/construction/construction_hero.webp" 
-          alt="Construction background"
-          className="absolute inset-0 w-full h-full object-cover brightness-75" 
-          loading="eager" 
+        <video
+          src="https://blinksites.mx/imgs/video-stoever-construction.mp4#t=30"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover brightness-75"
+          onLoadedData={(e) => {
+            e.target.currentTime = 30;
+          }}
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
       </div>

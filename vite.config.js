@@ -43,7 +43,6 @@ export default defineConfig({
     
     // Ajusta el límite de advertencia
     chunkSizeWarningLimit: 800,
-    
     // Configuración de CSS
     cssCodeSplit: true,
   },

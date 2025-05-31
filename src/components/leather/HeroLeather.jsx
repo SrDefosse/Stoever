@@ -6,15 +6,15 @@ import GreenGlassButton from "../ui/GreenGlassButton";
 const HeroLeather = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {/* Replace next/image with img */}
-        <img
-          src="/leather/leather-bg.webp" // Ensure this is in /public
-          alt="Leather background"
-          // Add classes for fill behavior
+        <video
+          src="https://blinksites.mx/imgs/hero-leather.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute inset-0 w-full h-full object-cover brightness-75"
-          loading="lazy" // Add lazy loading
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
       </div>

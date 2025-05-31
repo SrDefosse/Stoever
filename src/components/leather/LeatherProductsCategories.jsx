@@ -21,19 +21,24 @@ const LeatherProductsCategories = () => {
       icon: <GiWaterDrop className="w-6 h-6" />,
       products: [
         {
-          name: "Quistopal Bio"
+          name: "Quistopal Bio",
+          description: "Moisturizer with detergent power, free of nonyl phenol (NP, NPEO) and restricted substances. Ideal for wetting and washing of wet-blue and wet-white leather."
         },
         {
-          name: "Biostogreen"
+          name: "Biostogreen",
+          description: "Fermentation biochemicals with probiotics combined with long-chain alcohol emulsifier."
         },
         {
-          name: "Soak GM"
+          name: "Soak GM",
+          description: "Amine blend auxiliary for unhairing suitable for clean and ecological processes. Excellent detergency powers, grease and dirt dispersion."
         },
         {
-          name: "Enzyme LP"
+          name: "Enzyme LP",
+          description: "Protease enzyme auxiliary with depilation action. Good opening of hair follicles obtaining good grain or pore of the leather."
         },
         {
-          name: "Relax BTN"
+          name: "Relax BTN",
+          description: "Auxiliary for reducer-free unhairing, excellent regulator of fiber swelling, improving distension of natural leather wrinkles."
         }
       ]
     },
@@ -43,22 +48,12 @@ const LeatherProductsCategories = () => {
       icon: <GiSpray className="w-6 h-6" />,
       products: [
         {
-          name: "Cal TR"
+          name: "Cal TR",
+          description: "Blend of organic acids and low molecular weight salts with good penetration."
         },
         {
-          name: "Zyme RDT"
-        },
-        {
-          name: "Zecotan B"
-        },
-        {
-          name: "Biopolimer"
-        },
-        {
-          name: "Biocollagen"
-        },
-        {
-          name: "Quistomax DIJ"
+          name: "Zyme RDT",
+          description: "Special enzyme for leathers where good softness is required, cleaning of follicles, keratin residues without damaging the grain of the leather."
         }
       ]
     },
@@ -68,49 +63,64 @@ const LeatherProductsCategories = () => {
       icon: <GiRecycle className="w-6 h-6" />,
       products: [
         {
-          name: "Syntanil 60"
+          name: "Syntanil 60",
+          description: "Neutralizing synthetic used in the uniform neutralization of chrome-tanned leather, allowing to obtain soft leathers with firm grain."
         },
         {
-          name: "Supra 4"
+          name: "Supra 4",
+          description: "Neutral naphthalenesulfonic employed for the re-tanning of chrome leathers, dye penetration auxiliary and as an ideal dispersant for vegetable extracts."
         },
         {
-          name: "Supra 5"
+          name: "Supra 5",
+          description: "Neutral naphthalenic employed for the re-tanning of chrome leathers, dye penetration auxiliary."
         },
         {
-          name: "Syntan N"
+          name: "Syntan N",
+          description: "Naphthalenesulfonic synthetic employed as dye equalizer and lightener in dyeing."
         },
         {
-          name: "Syntan AC"
+          name: "Syntan AC",
+          description: "Acrylic re-tanning agent that provides excellent fullness to loose parts of leathers."
         },
         {
-          name: "Syntan B"
+          name: "Syntan B",
+          description: "Balance of vegetable tannins and synthetic dispersant re-tanning agents. Has low level of astringency, recommended for re-tanning of chrome leathers."
         },
         {
-          name: "Syntan R77"
+          name: "Syntan R77",
+          description: "Melamine-based product employed for re-tanning of chrome leathers, reinforces the fibrous structure with good fullness, provides plumpness and firmness of grain."
         },
         {
-          name: "Quistoplast DDM"
+          name: "Quistoplast DDM",
+          description: "Synthetic Dicyandiamide re-tanning agent designed for obtaining excellent quality leathers."
         },
         {
-          name: "Quistoplast D-E"
+          name: "Quistoplast D-E",
+          description: "Dicyandiamide-Melamine resin-based product with low formaldehyde. Designed for manufacturing high-end leathers."
         },
         {
-          name: "Quistoplast STS"
+          name: "Quistoplast STS",
+          description: "Polymeric re-tanning agent that provides excellent fullness and pleasant touch in contact with leather. Suitable for obtaining all types of leathers requiring firm grain and great softness, without affecting breaks."
         },
         {
-          name: "Biosyntan CLF"
+          name: "Biosyntan CLF",
+          description: "Medium-high molecular weight acrylic-maleic copolymer that forms a film of medium hardness and low elasticity capable of providing high filling power to leather fibers."
         },
         {
-          name: "Biosyntan ECO M"
+          name: "Basyntan ECO M",
+          description: "Highly concentrated Melamine-based resin that provides plumpness, rubbery touch and firm grain."
         },
         {
-          name: "Biosyntan ECO D"
+          name: "Basyntan ECO D",
+          description: "Dicyandiamide-based polymer with specific filling action for the empty and spongy area of hides, improving fiber density."
         },
         {
-          name: "Biosyntan SYA"
+          name: "Basyntan SYA",
+          description: "Sulfone-based polymer. Replacement polymer with good tanning power that gives plumpness, roundness and firm grain to the leather."
         },
         {
-          name: "Biosyntan SCK"
+          name: "Basyntan SCK",
+          description: "Phenyl Phenol Sulfone-based Syntan. Synthetic with good tanning power. Provides good plumpness, roundness, firm grain and closed pore to hides."
         }
       ]
     },
@@ -120,7 +130,139 @@ const LeatherProductsCategories = () => {
       icon: <GiChemicalDrop className="w-6 h-6" />,
       products: [
         {
-          name: "Industrial Colorants"
+          name: "Black 5TN Plus"
+        },
+        {
+          name: "Black NTI 130%"
+        },
+        {
+          name: "Black SR 140%"
+        },
+        {
+          name: "Black 12B"
+        },
+        {
+          name: "Grey R"
+        },
+        {
+          name: "Grey V"
+        },
+        {
+          name: "Grey MCGB"
+        },
+        {
+          name: "Brown TDM"
+        },
+        {
+          name: "Brown TMPV"
+        },
+        {
+          name: "Brown LGN"
+        },
+        {
+          name: "Brown EHI 130%"
+        },
+        {
+          name: "Brown IGC 150%"
+        },
+        {
+          name: "Brown BHR"
+        },
+        {
+          name: "Brown MF"
+        },
+        {
+          name: "Brown G"
+        },
+        {
+          name: "Beige ZLF"
+        },
+        {
+          name: "Havane RI"
+        },
+        {
+          name: "Green BN"
+        },
+        {
+          name: "Green V"
+        },
+        {
+          name: "Green SI"
+        },
+        {
+          name: "Green NG"
+        },
+        {
+          name: "Olive SG"
+        },
+        {
+          name: "Olive N"
+        },
+        {
+          name: "Yellow ENG"
+        },
+        {
+          name: "Yellow G"
+        },
+        {
+          name: "Yellow R 200%"
+        },
+        {
+          name: "Blue 2J"
+        },
+        {
+          name: "Blue 2G 250%"
+        },
+        {
+          name: "Blue 5R"
+        },
+        {
+          name: "Blue 6B"
+        },
+        {
+          name: "Blue BRA2"
+        },
+        {
+          name: "Blue BR"
+        },
+        {
+          name: "Turquoise GL"
+        },
+        {
+          name: "Red SBG"
+        },
+        {
+          name: "Red CI 180%"
+        },
+        {
+          name: "Red F3B"
+        },
+        {
+          name: "Red 3BW"
+        },
+        {
+          name: "Orange GS 150%"
+        },
+        {
+          name: "Orange GC"
+        },
+        {
+          name: "Orange R 115%"
+        },
+        {
+          name: "Fucsia B"
+        },
+        {
+          name: "Violet S4B"
+        },
+        {
+          name: "Violet 5BL"
+        },
+        {
+          name: "Bordeaux SB 140%"
+        },
+        {
+          name: "Bordeaux V"
         }
       ]
     },
@@ -130,37 +272,48 @@ const LeatherProductsCategories = () => {
       icon: <GiOilDrum className="w-6 h-6" />,
       products: [
         {
-          name: "Quistosan R10"
+          name: "Quistosan R10",
+          description: "Blend of synthetic and marine sulfited oil, recommended for fatliquoring of economical hides, cutting flesh and cattle and pig linings."
         },
         {
-          name: "Quistosan B8"
+          name: "Quistosan B8",
+          description: "Sulfited oil with excellent penetration that provides a soft and fresh touch."
         },
         {
-          name: "Quistosan R55"
+          name: "Quistosan R55",
+          description: "Natural sulfited oil. Excellent softness inside the leather."
         },
         {
-          name: "Quistosan SP"
+          name: "Quistosan SP",
+          description: "Universal anionic sulfonated oil for full grain and corrected grain leathers."
         },
         {
-          name: "Quistosan Dermagras"
+          name: "Base BB",
+          description: "Natural synthetic sulfited oil with excellent penetration."
         },
         {
-          name: "Base BB"
+          name: "Quistomax L1",
+          description: "Anionic phospholipid-based emulsion."
         },
         {
-          name: "Quistomax L1"
+          name: "Quistomax LM",
+          description: "Combination of natural phospholipids with refined hydrocarbons in emulsion."
         },
         {
-          name: "Quistomax DIJ"
+          name: "Quistomax DIJ",
+          description: "Synthetic fatliquor. Due to its chemical nature, it is mainly used as a penetration auxiliary in any fatliquoring composition. It can be used in both tanning and re-tanning baths. As a penetration and fatliquor distribution component, it provides excellent softness and good surface touch. Good stability to electrolytes. Can be used in chrome tanning and pickling."
         },
         {
-          name: "Quistomax MP"
+          name: "Bioil RW",
+          description: "Blend of sulfonated oils with auxiliaries, good light fastness properties, excellent lubrication power."
         },
         {
-          name: "Bioil RW"
+          name: "Bioil MP",
+          description: "Universal anionic oil for articles where medium softness, fullness and firm grain are required."
         },
         {
-          name: "Bioil MP"
+          name: "Quistosan S-50",
+          description: "Universal anionic oil for full grain and corrected leathers."
         }
       ]
     }
