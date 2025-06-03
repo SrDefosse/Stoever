@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import Image from "next/image"; // Remove next/image
 
 const productsData = [
@@ -90,6 +90,27 @@ const productsData = [
 ];
 
 function OurProducts() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeCard, setActiveCard] = useState(null);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+      setIsMobile(isTouchDevice);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  const handleCardClick = (cardId) => {
+    if (isMobile) {
+      setActiveCard(activeCard === cardId ? null : cardId);
+    }
+  };
+
   return (
     <section className="bg-[#3A3A3A] p-4 text-neutral-50 md:p-12">
       <div className="max-w-7xl mx-auto mb-8">
@@ -110,6 +131,9 @@ function OurProducts() {
                 description={p.description}
                 src={p.src}
                 className={cardClassName}
+                isMobile={isMobile}
+                isActive={activeCard === p.id}
+                onClick={() => handleCardClick(p.id)}
               />
             );
           })}
@@ -119,47 +143,54 @@ function OurProducts() {
   );
 }
 
-const Card = React.memo(function Card({ title, description, src, className }) {
+const Card = React.memo(function Card({ title, description, src, className, isMobile, isActive, onClick }) {
   return (
-    <div className={`bg-neutral-800 group relative flex h-56 flex-col overflow-hidden p-6 text-center md:h-80 md:p-9 ${className || ''}`}>
+    <div 
+      className={`bg-neutral-800 group relative flex h-56 flex-col overflow-hidden p-6 text-center md:h-80 md:p-9 ${className || ''} ${isMobile ? 'cursor-pointer' : ''}`}
+      onClick={onClick}
+    >
       <div className="absolute inset-0">
         <img
           src={src}
           alt={title}
-          className="
+          className={`
             absolute inset-0 w-full h-full object-cover 
             transition-transform duration-500 ease-in-out
-            group-hover:scale-110
-            group-hover:blur-sm
-          "
+            ${isMobile && isActive ? 'scale-110 blur-sm' : 'group-hover:scale-110 group-hover:blur-sm'}
+          `}
           loading="lazy"
         />
         <div
-          className="
+          className={`
             absolute inset-0 bg-black/50 backdrop-blur-sm
-            opacity-0 transition-opacity duration-500
-            group-hover:opacity-100
-          "
+            transition-opacity duration-500
+            ${isMobile && isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}
+          `}
         />
       </div>
       <div className="relative z-10 flex flex-col justify-center items-center h-full">
         <h2 className="mb-2 text-2xl font-semibold md:text-3xl">{title}</h2>
         <p
-          className="
+          className={`
             max-w-xs text-sm text-neutral-200
-            opacity-0 transition-opacity duration-300 delay-100
-            group-hover:opacity-100
-          "
+            transition-opacity duration-300 delay-100
+            ${isMobile && isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}
+          `}
         >
           {description}
         </p>
+        {isMobile && !isActive && (
+          <p className="absolute bottom-4 text-xs text-amber-600">
+            tap to see more
+          </p>
+        )}
       </div>
-      <Corners />
+      <Corners isActive={isActive} isMobile={isMobile} />
     </div>
   );
 });
 
-const Corners = function Corners() {
+const Corners = function Corners({ isActive, isMobile }) {
   return (
     <>
       {["top left", "top right", "bottom left", "bottom right"].map((pos) => (
@@ -171,7 +202,7 @@ const Corners = function Corners() {
                        z-10 h-3 w-[1px] origin-${pos.replace(" ", "-")}
                        bg-yellow-500 scale-0
                        transition-transform duration-500
-                       group-hover:scale-100
+                       ${isMobile && isActive ? 'scale-100' : 'group-hover:scale-100'}
             `}
           />
           <span
@@ -183,7 +214,7 @@ const Corners = function Corners() {
                        }
                        bg-yellow-500 scale-0
                        transition-transform duration-500
-                       group-hover:scale-100
+                       ${isMobile && isActive ? 'scale-100' : 'group-hover:scale-100'}
             `}
           />
         </React.Fragment>

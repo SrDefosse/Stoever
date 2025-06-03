@@ -7,10 +7,10 @@ const Cards = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center text-[#011961] mb-12">
         Our Subsidiaries
       </h2>
-      <div className="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <Card
           title="Stoever Construction"
-          description="With over 25 years of experience, Stoever Construction is a manufacturer and applicator of our extensive range of paints and supplies for use in construction"
+          description="With over 25 years of experience, Stoever Construction is a manufacturer and applicator of an extensive range of paints and supplies for use in construction"
           href="/construction"
           bgUrl="/stoever/card1.webp"
           icon="/icons/construction_icon.webp"
@@ -24,7 +24,7 @@ const Cards = () => {
         />
         <Card
           title="Stoever Biosolutions for Leather"
-          description="Specialized in the research, development, manufacturing and marketing of biochemicals for the tanning industry; Stoever Biosolutions for Leather is compromised with environmentally friendly solutions."
+          description="Specialized in the research, development, manufacturing and marketing of sustainable biochemicals for the tanning industry."
           href="/leather"
           bgUrl="/stoever/card3.webp"
           icon="/icons/biosolutions_icon.webp"
