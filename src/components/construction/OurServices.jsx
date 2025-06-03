@@ -20,9 +20,9 @@ const OurServices = () => {
 
           {/* Section 1.2: Vertical Development Details */}
           <div className="space-y-4"> {/* Removed padding-left */}
-            <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-4">Solutions for Vertical Development</h3>
+            <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-4">Solutions with Innovative Coatings</h3>
             <p className="text-white leading-relaxed">
-              Our products are designed to optimize vertical development, providing materials and construction systems that improve efficiency and safety in multi-story buildings. We offer specialized technical assistance for the correct implementation of our solutions in your projects.
+              Our products are designed to optimize development, providing materials and construction systems that improve efficiency and safety. We offer specialized technical assistance for the correct implementation of our solutions in your projects.
             </p>
             <DevelopmentAccordion />
           </div>

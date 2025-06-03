@@ -13,7 +13,7 @@ const Certifications = () => {
   return (
     <section className="relative w-full overflow-hidden py-12 sm:py-16">
       <div className="flex flex-col items-center justify-center">
-        <span className="mb-8 bg-gradient-to-br from-zinc-200 to-zinc-500 bg-clip-text text-center text-2xl">
+        <span className="mb-8 bg-gradient-to-br from-zinc-200 to-zinc-500 bg-clip-text text-center text-3xl">
           Certifications
         </span>
         <div className="flex w-full justify-center">
