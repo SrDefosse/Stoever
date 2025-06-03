@@ -32,9 +32,9 @@ const productsData = [
   },
   {
     id: 5,
-    title: "Polyurethanes",
+    title: "Flooring Systems",
     description:
-      "It is a high-performance 2-component coating, developing excellent chemical and mechanical resistance properties at room temperature.",
+      "High-performance 2-component coating, developing excellent chemical and mechanical resistance properties at room temperature.",
     src: "/construction/grid/grid5.webp",
   },
 

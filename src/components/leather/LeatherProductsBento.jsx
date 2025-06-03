@@ -75,8 +75,8 @@ export default function SolidBento() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
+    <div className="mx-auto max-w-7xl px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[calc(100vh-140px)] min-h-[600px] max-h-[800px]">
         {products.map((product, index) => (
           <a
             key={product.id}

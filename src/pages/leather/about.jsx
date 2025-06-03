@@ -7,6 +7,7 @@ import TimelineDemo from "../../components/leather/TimelineDemo";
 import LeatherPhilosophy from "../../components/leather/LeatherPhilosophy";
 import LeatherCTA from "../../components/leather/LeatherCTA";
 import LeatherContact from "../../components/leather/LeatherContact";
+import FullCycle from "../../components/leather/FullCycle"
 
 const LeatherAbout = () => {
   return (
@@ -15,6 +16,7 @@ const LeatherAbout = () => {
       <AboutHeroLeather />
       <TimelineDemo />
       <LeatherPhilosophy />
+      <FullCycle/>
       <LeatherCTA />
       <Divider />
       <LeatherContact/>

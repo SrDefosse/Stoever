@@ -178,7 +178,7 @@ const ContactUs = () => {
           <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-200"> {/* Altura ajustada y borde añadido */}
             {/* IMPORTANTE: Reemplaza el src con el enlace de embed correcto de Google Maps */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d404.8234489422328!2d-101.6261319940457!3d21.104470777027142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbfce99289a9f%3A0xe4ed8f64e56ef1c4!2sQuimica%20Stoever!5e1!3m2!1ses-419!2smx!4v1743626585726!5m2!1ses-419!2smx" // Ejemplo, necesitas tu propio enlace de embed
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59555.233035071!2d-101.70241655136712!3d21.10450880000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbfce99289a9f%3A0xe4ed8f64e56ef1c4!2sQuimica%20Stoever!5e0!3m2!1ses-419!2smx!4v1748975300557!5m2!1ses-419!2smx" // Ejemplo, necesitas tu propio enlace de embed
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -195,3 +195,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+

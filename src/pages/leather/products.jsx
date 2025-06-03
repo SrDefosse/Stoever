@@ -4,22 +4,41 @@ import LeatherProductsHero from '../../components/leather/LeatherProductsHero';
 import BioProducts from '../../components/leather/BioProducts';
 import LeatherProductsCategories from '../../components/leather/LeatherProductsCategories';
 import BeamHouse from '../../components/leather/BeamHouse';
-import TechnologyIntro from '../../components/leather/TechnologyIntro';
 import TechProposal from '../../components/leather/TechProposal';
 import LeatherContact from '../../components/leather/LeatherContact';
 import FooterLeather from '../../components/layout/FooterLeather';
+import Certifications from '../../components/stoever/Certifications';
+
 const ProductsPage = () => {
   return (
     <main className="min-h-screen">
-      <NavbarLeather />
-      <LeatherProductsHero />
-      <BioProducts />
-      <LeatherProductsCategories />
-      <BeamHouse />
-      <TechnologyIntro />
-      <TechProposal />
-      <LeatherContact/>
-      <FooterLeather />
+      <div>
+        <NavbarLeather />
+      </div>
+      <div>
+        <LeatherProductsHero />
+      </div>
+      <div>
+        <BioProducts />
+      </div>
+      <div>
+        <LeatherProductsCategories />
+      </div>
+      <div>
+        <BeamHouse />
+      </div>
+      <div>
+        <TechProposal />
+      </div>
+      <div>
+        <Certifications/>
+      </div>
+      <div>
+        <LeatherContact/>
+      </div>
+      <div>
+        <FooterLeather />
+      </div>
     </main>
   );
 };

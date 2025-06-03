@@ -321,11 +321,24 @@ const LeatherProductsCategories = () => {
 
   return (
     <div id="products" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-              <h2 className="text-2xl md:text-3xl font-light text-center mb-16 max-w-4xl mx-auto leading-relaxed">
-          Our process preserves the distinctive naturalness of genuine leather through the synergy between fiber structure, 
-          biopolymers, tanning agents, and synthetic products. This combination achieves optimal adherence and fullness, 
-          maximizing material utilization while reducing the environmental impact of the tanning process.
-        </h2>
+      {/* Title Section */}
+      <div className="mb-12">
+        <h1 className="text-3xl md:text-4xl font-regular text-gray-800 mb-8">
+          Our Technology
+        </h1>
+      </div>
+
+      {/* Description Section with Green Strip */}
+      <div className="relative mb-16">
+        <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-green-400 to-green-600"></div>
+        <div className="bg-gradient-to-r from-green-50 to-transparent pl-8 pr-4 py-8 rounded-r-lg">
+          <p className="text-xl md:text-2xl font-light text-gray-700 leading-relaxed max-w-4xl">
+            Our process preserves the distinctive naturalness of genuine leather through the synergy between fiber structure, 
+            biopolymers, tanning agents, and synthetic products. This combination achieves optimal adherence and fullness, 
+            maximizing material utilization while reducing the environmental impact of the tanning process.
+          </p>
+        </div>
+      </div>
       
       <div className="space-y-4">
         {categories.map((category, idx) => (

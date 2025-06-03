@@ -28,8 +28,8 @@ function WorldMap({
   };
 
   return (
-    <div ref={containerRef} className="w-full h-full min-h-[25vh] sm:min-h-[40vh] md:min-h-[70vh] flex items-center justify-center py-2 pb-0">
-      <div className="w-full max-w-[98vw] sm:w-[90vw] sm:max-w-[1400px] aspect-[2/1] sm:aspect-[2/1] relative flex items-center justify-center overflow-hidden">
+    <div ref={containerRef} className="w-full h-full min-h-[20vh] sm:min-h-[30vh] md:min-h-[50vh] flex items-center justify-center py-2 pb-0">
+      <div className="w-full max-w-[95vw] sm:w-[80vw] sm:max-w-[1000px] aspect-[2/1] sm:aspect-[2/1] relative flex items-center justify-center overflow-hidden">
         {/* Render SVG base as background only once */}
         <div
           className="h-full w-full absolute inset-0 pointer-events-none select-none"

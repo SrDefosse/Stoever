@@ -46,23 +46,23 @@ function DemoWorldMap() {
           Stoever has presence worldwide
         </h1>
 
-        <div className="w-full max-w-full sm:max-w-5xl overflow-hidden">
+        <div className="w-full max-w-full sm:max-w-3xl overflow-hidden">
           <WorldMap
              dots={exampleDots}
            />
         </div>
 
         {/* Lista de países con presencia */}
-        <div className="w-full max-w-5xl mt-8 sm:mt-12">          
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-4">
+        <div className="w-full max-w-4xl mt-4 sm:mt-6">          
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 px-2">
             {countries.map((country, index) => (
               <div 
                 key={index}
-                className="bg-white border-2 border-[#011961] rounded-full px-4 py-2 sm:px-6 sm:py-3 shadow-lg"
+                className="bg-white border-2 border-[#011961] rounded-full px-3 py-1 sm:px-4 sm:py-2 shadow-lg"
               >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-[#011961] rounded-full"></div>
-                  <p className="text-sm sm:text-base font-medium text-[#011961] whitespace-nowrap">
+                <div className="flex items-center gap-1.5">
+                  <div className="w-1.5 h-1.5 bg-[#011961] rounded-full"></div>
+                  <p className="text-xs sm:text-sm font-medium text-[#011961] whitespace-nowrap">
                     {country.name}
                   </p>
                 </div>
@@ -70,8 +70,8 @@ function DemoWorldMap() {
             ))}
           </div>
           
-          <div className="text-center mt-6">
-            <p className="text-sm text-gray-600 italic">
+          <div className="text-center mt-4">
+            <p className="text-xs text-gray-600 italic">
               Global reach, local expertise
             </p>
           </div>

@@ -149,11 +149,15 @@ const LeatherCycle = () => {
 
   // --- Renderizado del Componente ---
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen p-4 overflow-hidden relative">
+    <div className="flex flex-col items-center justify-center w-full p-4 overflow-hidden relative" style={{ minHeight: 'calc(70vh - 80px)' }}>
       {/* Contenedor Principal Medible */}
       <div
         ref={containerRef}
-        className="relative w-full max-w-[95vw] aspect-square mx-auto sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
+        className="relative w-full aspect-square mx-auto"
+        style={{ 
+          maxWidth: 'min(calc(70vw), calc(75vh - 120px), 500px)',
+          width: '100%'
+        }}
       >
         {/* Renderizar sólo cuando las dimensiones estén listas */}
         {dimensions.width > 0 ? (
