@@ -9,7 +9,7 @@ const CountUpStatsGrid = () => { // Renombrado para claridad
         {/* Image - Left Column */}
         <div className="relative h-full min-h-[400px] overflow-hidden rounded-2xl">
           <img  
-            src="/leather/leather-stats.webp"
+            src="/leather-imgs/leather-stats.webp"
             alt="Stoever manufacturing process"
             className="h-full w-full object-cover"
           />

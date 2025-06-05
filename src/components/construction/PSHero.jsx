@@ -7,7 +7,7 @@ const ProductsAndServicesHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/construction/pshero-bg.webp"
+          src="/construction-imgs/pshero-bg.webp"
           alt="Construction About background"
           className="absolute inset-0 w-full h-full object-cover brightness-75"
           loading="lazy"

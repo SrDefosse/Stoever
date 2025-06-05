@@ -2,7 +2,7 @@ import React from "react";
 import YellowGlassButton from "../ui/YellowGlassButton"; // Assuming YellowGlassButton is in ../ui
 
 const LetsWorkTogether = () => {
-  const backgroundImageUrl = "/construction/letsworktogether.webp"; // Path relative to public folder
+  const backgroundImageUrl = "/construction-imgs/letsworktogether.webp"; // Path relative to public folder
 
   return (
     // Contenedor externo similar a LeatherCTA

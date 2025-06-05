@@ -13,21 +13,21 @@ const Cards = () => {
           title="Stoever Construction"
           description="With over 25 years of experience, Stoever Construction is a manufacturer and applicator of an extensive range of paints and supplies for use in construction"
           href="/construction"
-          bgUrl="/stoever/card1.webp"
+          bgUrl="/stoever-imgs/card1.webp"
           icon="/icons/construction_icon.webp"
         />      
         <Card
           title="Stoever Group"
           description="With over 70 years of experience in the chemical and leather tanning industry, Stoever Group holds presence in 15 countries worldwide."
           href="#whatwedo"
-          bgUrl="/stoever/card2.webp"
+          bgUrl="/stoever-imgs/card2.webp"
           icon="/icons/group_icon.webp"
         />
         <Card
           title="Stoever Biosolutions for Leather"
           description="Specialized in the research, development, manufacturing and marketing of sustainable biochemicals for the tanning industry."
           href="/leather"
-          bgUrl="/stoever/card3.webp"
+          bgUrl="/stoever-imgs/card3.webp"
           icon="/icons/biosolutions_icon.webp"
         />
       </div>
@@ -38,7 +38,7 @@ const Cards = () => {
 const Card = ({ bgUrl, title, href, icon, description }) => {
   const isScrollLink = href.startsWith('#');
   
-  const cardClasses = "group relative flex overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1";
+  const cardClasses = "group relative flex overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer";
   
   const content = (
     <>

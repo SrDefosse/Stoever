@@ -25,26 +25,36 @@ function App() {
         <Route path="/" element={<StoeverHomePage />} />
         
         <Route path="/about" element={<AboutStoeverPage />} />
+        <Route path="/about/" element={<AboutStoeverPage />} />
       
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact/" element={<ContactPage />} />
         
         {/* Leather */}
         <Route path="/leather" element={<LeatherPage />} />
+        <Route path="/leather/" element={<LeatherPage />} />
         
         <Route path="/leather/about" element={<AboutLeatherPage />} />
+        <Route path="/leather/about/" element={<AboutLeatherPage />} />
 
         <Route path="/leather/products" element={<LeatherProductsPage />} />
+        <Route path="/leather/products/" element={<LeatherProductsPage />} />
 
         <Route path="/leather/contact" element={<LeatherContactPage />} />
+        <Route path="/leather/contact/" element={<LeatherContactPage />} />
         
         {/* Construction */}
         <Route path="/construction" element={<ConstructionPage />} />
+        <Route path="/construction/" element={<ConstructionPage />} />
 
         <Route path="/construction/about" element={<AboutConstructionPage />} />
+        <Route path="/construction/about/" element={<AboutConstructionPage />} />
 
         <Route path="/construction/productsandservices" element={<ConstructionProductsPage />} />
+        <Route path="/construction/productsandservices/" element={<ConstructionProductsPage />} />
 
         <Route path="/construction/contact" element={<ConstructionContactPage />} />
+        <Route path="/construction/contact/" element={<ConstructionContactPage />} />
 
         {/* Optional: 404 Not Found Route */}
         {/* <Route path="*" element={<div>Page Not Found</div>} /> */}

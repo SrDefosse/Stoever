@@ -7,7 +7,7 @@ const LeatherCTA = () => {
       <div className="w-[95%] md:w-[80%] h-[50vh] md:h-[85vh] relative rounded-xl shadow-2xl overflow-hidden">
         {/* Image Background */}
         <img 
-          src="/leather/leather-cta-bg.webp" 
+          src="/leather-imgs/leather-cta-bg.webp" 
           alt="Leather craftsmanship" 
           className="w-full h-full object-cover"
         />

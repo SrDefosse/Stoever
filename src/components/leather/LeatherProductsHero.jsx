@@ -10,7 +10,7 @@ const LeatherProductsHero = () => {
       <div className="absolute inset-0 z-0">
         {/* Replace next/image with img */}
         <img
-          src="/leather/products-hero-bg.webp" // Keep src 
+          src="/leather-imgs/products-hero-bg.webp" // Keep src 
           alt="Leather background" // Keep alt
           // fill // Removed fill prop
           className="absolute inset-0 w-full h-full object-cover brightness-75" // Added classes for positioning and cover

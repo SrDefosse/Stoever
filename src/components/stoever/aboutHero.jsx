@@ -8,7 +8,7 @@ const AboutHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/stoever/about-bg.webp"
+          src="/stoever-imgs/about-bg.webp"
           alt="Stoever sustainable construction"
           className="w-full h-full object-cover"
         />

@@ -6,35 +6,35 @@ const products = [
     id: 1,
     title: 'Tanning',
     description: 'Pre-tanners for wet-white leather.',
-    image: '/leather/bentogrid/tanning.webp',
+    image: '/leather-imgs/bentogrid/tanning.webp',
     link: '/leather/products#products'
   },
   {
     id: 2,
     title: 'Re-tanning',
     description: 'Bio-collagens and re-tanners for all kinds of leather.',
-    image: '/leather/bentogrid/retanning.webp',
+    image: '/leather-imgs/bentogrid/retanning.webp',
     link: '/leather/products#products'
   },
   {
     id: 3,
     title: 'Soaking',
     description: 'Probiotics, fermentation biochemicals and blend of organic acids.',
-    image: '/leather/bentogrid/soaking.webp',
+    image: '/leather-imgs/bentogrid/soaking.webp',
     link: '/leather/products#products'
   },
   {
     id: 4,
     title: 'Greasing',
     description: 'Oils for re-hydration of the leather.',
-    image: '/leather/bentogrid/greasing.webp',
+    image: '/leather-imgs/bentogrid/greasing.webp',
     link: '/leather/products#products'
   },
   {
     id: 5,
     title: 'Anilines',
     description: 'Industrial colorants.',
-    image: '/leather/bentogrid/anilines.webp',
+    image: '/leather-imgs/bentogrid/anilines.webp',
     link: '/leather/products#products'
   },
 ]

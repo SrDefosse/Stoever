@@ -8,7 +8,7 @@ const AboutHeroLeather = () => {
       <div className="absolute inset-0 z-0">
         {/* Replace next/image with img */}
         <img
-          src="/leather/aboutleather-bg.webp" 
+          src="/leather-imgs/aboutleather-bg.webp" 
           alt="Leather background" 
           className="absolute inset-0 w-full h-full object-cover brightness-75" // Added classes for positioning and cover
           // priority // Removed priority prop

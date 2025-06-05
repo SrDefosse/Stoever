@@ -5,7 +5,13 @@ import { FiArrowRight } from "react-icons/fi";
 const BlueButton = ({ text = "Click me", onClick, href = "#" }) => {
   const isScrollLink = href.startsWith('#');
   
-  const buttonClasses = "group flex h-10 items-center gap-2 rounded-full bg-blue-500 pl-3 pr-4 text-white shadow-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:pl-2 hover:shadow-lg active:bg-blue-700";
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
+  };
+  
+  const buttonClasses = "group flex h-10 items-center gap-2 rounded-full bg-blue-500 pl-3 pr-4 text-white shadow-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:pl-2 hover:shadow-lg active:bg-blue-700 cursor-pointer";
   
   const content = (
     <>
@@ -20,7 +26,7 @@ const BlueButton = ({ text = "Click me", onClick, href = "#" }) => {
     return (
       <a
         href={href}
-        onClick={onClick}
+        onClick={handleClick}
         className={buttonClasses}
       >
         {content}
@@ -31,7 +37,7 @@ const BlueButton = ({ text = "Click me", onClick, href = "#" }) => {
   return (
     <Link
       to={href}
-      onClick={onClick}
+      onClick={handleClick}
       className={buttonClasses}
     >
       {content}

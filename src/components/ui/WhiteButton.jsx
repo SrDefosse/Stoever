@@ -1,11 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
 const WhiteButton = ({ text = "Click me", onClick, href = "#" }) => {
+  const navigate = useNavigate();
   const isScrollLink = href.startsWith('#');
   
-  const buttonClasses = "group flex h-10 items-center gap-2 rounded-full bg-white pl-3 pr-4 text-gray-800 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-100 hover:pl-2 hover:shadow-lg active:bg-gray-200";
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
+    
+    if (isScrollLink) {
+      // Para scroll, usar comportamiento normal
+      return;
+    }
+    
+    // Para navegación, prevenir default y usar navigate
+    e.preventDefault();
+    navigate(href);
+  };
+  
+  const buttonClasses = "group flex h-10 items-center gap-2 rounded-full bg-white pl-3 pr-4 text-gray-800 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-100 hover:pl-2 hover:shadow-lg active:bg-gray-200 cursor-pointer";
   
   const content = (
     <>
@@ -20,7 +36,7 @@ const WhiteButton = ({ text = "Click me", onClick, href = "#" }) => {
     return (
       <a
         href={href}
-        onClick={onClick}
+        onClick={handleClick}
         className={buttonClasses}
       >
         {content}
@@ -29,13 +45,12 @@ const WhiteButton = ({ text = "Click me", onClick, href = "#" }) => {
   }
 
   return (
-    <Link
-      to={href}
-      onClick={onClick}
+    <div
+      onClick={handleClick}
       className={buttonClasses}
     >
       {content}
-    </Link>
+    </div>
   );
 };
 

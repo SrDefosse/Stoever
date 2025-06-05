@@ -33,7 +33,7 @@ const OurServices = () => {
         <div className="md:col-span-1 lg:col-span-1 flex justify-center items-center">
           <div className="w-full max-w-xs lg:max-w-sm shadow-lg rounded-lg overflow-hidden"> {/* Increased max-width on large screens */}
             <img
-              src="/construction/construction-services.webp"
+              src="/construction-imgs/construction-services.webp"
               alt="Modern vertical construction project"
               className="w-full h-auto object-cover"
               style={{ aspectRatio: '9 / 16' }}

@@ -34,7 +34,7 @@ const CountUpStatsGrid = () => { // Renombrado para claridad
         {/* Image - Right Column */}
         <div className="relative h-full min-h-[400px] overflow-hidden rounded-2xl">
           <img
-            src="/stoever/stats.webp" 
+            src="/stoever-imgs/stats.webp" 
             alt="Stoever manufacturing process"
             className="h-full w-full object-cover"
           />

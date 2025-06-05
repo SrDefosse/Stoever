@@ -35,7 +35,7 @@ const ConstructionStats = () => { // Renombrado para claridad
           {/* Image - Right Column */}
           <div className="relative h-full min-h-[400px] overflow-hidden rounded-2xl">
             <img
-              src="/construction/construction-stats.webp" // Aquí deberás colocar la ruta correcta de tu imagen
+              src="/construction-imgs/construction-stats.webp" // Aquí deberás colocar la ruta correcta de tu imagen
               alt="Stoever manufacturing process"
               className="h-full w-full object-cover"
             />

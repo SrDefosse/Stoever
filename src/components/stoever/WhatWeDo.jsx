@@ -7,7 +7,7 @@ const WhatWeDo = () => {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0 rounded-3xl px-4 md:px-8 pointer-events-none">
         <img 
-          src="/stoever/what-we-do-bg.webp"
+          src="/stoever-imgs/what-we-do-bg.webp"
           alt="What We Do Background"
           className="w-full h-full object-cover brightness-75 rounded-3xl"
           loading="lazy"

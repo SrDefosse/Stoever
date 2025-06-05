@@ -11,7 +11,7 @@ const DoubleCards = () => {
           {/* Imagen con altura responsiva y margen inferior para móviles/tabletas */}
           <img
             className="w-full h-64 sm:h-80 md:h-[500px] lg:h-[600px] object-cover rounded-2xl mb-6 lg:mb-0 shadow-md" // Añadido shadow-md para un poco de profundidad
-            src="/stoever/green_innovators.webp"
+            src="/stoever-imgs/green_innovators.webp"
             alt="Green Innovators"
           />
           {/* Caja de contenido */}

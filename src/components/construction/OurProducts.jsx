@@ -7,35 +7,35 @@ const productsData = [
     title: "Vinyl Paints",
     description:
       "Stoever offers various grades of interior and exterior vinyl paints with a durability of 3.5 and 7 years, and offers color matching services in the grade of your choice.",
-    src: "/construction/grid/grid1.webp",
+    src: "/construction-imgs/grid/grid1.webp",
   },
   {
     id: 2,
     title: "Antimicrobial Paints",
     description:
       "High-quality paint with silver nanoparticles that eliminate up to 99.99% of all types of bacteria and fungi harboring on surfaces. Technology approved under ASTM D 3273-12 and JIS Z 2801:2010.",
-    src: "/construction/grid/grid2.webp",
+    src: "/construction-imgs/grid/grid2.webp",
   },
   {
     id: 3,
     title: "Waterproofers",
     description:
       "Water-based acrylic waterproofing, manufactured with high-quality polymers, so it has high resistance to the sun's UV rays, prevents water leaks, and is easy to apply.",
-    src: "/construction/grid/grid3.webp",
+    src: "/construction-imgs/grid/grid3.webp",
   },
   {
     id: 4,
     title: "Industrial Epoxies",
     description:
       "Contains two-component resins with excellent covering power, highly resistant to water and corrosive products, and is used for heavy traffic in industrial plants and commerce.",
-    src: "/construction/grid/grid4.webp",
+    src: "/construction-imgs/grid/grid4.webp",
   },
   {
     id: 5,
     title: "Flooring Systems",
     description:
       "High-performance 2-component coating, developing excellent chemical and mechanical resistance properties at room temperature.",
-    src: "/construction/grid/grid5.webp",
+    src: "/construction-imgs/grid/grid5.webp",
   },
 
   {
@@ -43,49 +43,49 @@ const productsData = [
     title: "Sealants",
     description:
       "Stoever offers three types of sealants, each with excellent stability, moisture resistance, and high performance for sealing surfaces before applying paint or any other type of coating.",
-    src: "/construction/grid/grid6.webp",
+    src: "/construction-imgs/grid/grid6.webp",
   },
   {
     id: 7,
     title: "Stucco",
     description:
       "Stoever offers various types of stuccos and pastes, made from cement powder and mineral granulometry that generates great mechanical strength and controlled purity in interior and exterior finishes.",
-    src: "/construction/grid/grid8.webp",
+    src: "/construction-imgs/grid/grid8.webp",
   },
   {
     id: 8,
     title: "Oil Paints",
     description:
       "Stoever offers a wide range of oil paints, including alkyd enamel, with good adhesion, high impact and corrosion resistance. At Stoever, we offer a quick-drying or normal-drying primer.",
-    src: "/construction/grid/grid9.webp",
+    src: "/construction-imgs/grid/grid9.webp",
   },
   {
     id: 9,
     title: "Textured Pastes",
     description:
       "These are textured coatings made from 100% acrylic resins, with selected mineral fillers, silica sand, and top-quality additives. They boast excellent hardness, mechanical strength, and weather resistance. They are 100% washable.",
-    src: "/construction/grid/grid10.webp",
+    src: "/construction-imgs/grid/grid10.webp",
   },
   {
     id: 10,
     title: "Floor Adhesive",
     description:
       "Stoever offers a wide variety of floor adhesives made from fine-grained aggregate cements and chemical additives, creating a product with many benefits and properties. We tailor the best adhesive for your project.",
-    src: "/construction/grid/grid11.webp",
+    src: "/construction-imgs/grid/grid11.webp",
   },
   {
     id: 11,
     title: "Plaster",
     description:
       "Stoever offers a wide range of easy-to-use and easy-to-handle plasters, as they are manufactured without sand, resulting in a lightweight material with excellent adhesion to any indoor or outdoor surface.",
-    src: "/construction/grid/grid13.webp",
+    src: "/construction-imgs/grid/grid13.webp",
   },
   {
     id: 12,
     title: "Aggregates for Concrete",
     description:
       "Stoever has a quarry where you can find different sizes of gravel to meet any resistance. You'll also find different qualities of sand and gravel for your platforms.",
-    src: "/construction/grid/grid14.webp",
+    src: "/construction-imgs/grid/grid14.webp",
   },
 ];
 

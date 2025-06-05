@@ -2,7 +2,7 @@ import React from "react";
 import YellowGlassButton from "../ui/YellowGlassButton"; 
 
 const HearFromYou = () => {
-  const backgroundImageUrl = "/construction/hearfromyou.webp"; 
+  const backgroundImageUrl = "/construction-imgs/hearfromyou.webp"; 
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">

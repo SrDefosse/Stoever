@@ -12,7 +12,7 @@ const colors = {
   white: "#FFFFFF",
 };
 
-const HeroSection = ({ videoUrl = "/stoever/hero_video.mp4" }) => {
+const HeroSection = ({ videoUrl = "/stoever-imgs/hero_video.mp4" }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -48,7 +48,6 @@ const HeroSection = ({ videoUrl = "/stoever/hero_video.mp4" }) => {
           preload="auto"
           className="absolute w-full h-full object-cover"
           style={{ opacity: 0.85 }}
-          poster="/stoever_group_logo_white.png"
         >
           <source src={videoUrl} type="video/mp4" />
           Tu navegador no soporta videos HTML5.
