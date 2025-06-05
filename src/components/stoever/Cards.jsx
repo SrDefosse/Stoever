@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
 const Cards = () => {
@@ -35,11 +36,12 @@ const Cards = () => {
 };
 
 const Card = ({ bgUrl, title, href, icon, description }) => {
-  return (
-    <a
-      href={href}
-      className="group relative flex overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-    >
+  const isScrollLink = href.startsWith('#');
+  
+  const cardClasses = "group relative flex overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1";
+  
+  const content = (
+    <>
       {/* Fondo con efecto zoom */}
       <div 
         className="absolute inset-0 w-full h-full transition-transform duration-500 transform group-hover:scale-105"
@@ -75,7 +77,27 @@ const Card = ({ bgUrl, title, href, icon, description }) => {
           </div>
         </div>
       </div>
-    </a>
+    </>
+  );
+
+  if (isScrollLink) {
+    return (
+      <a
+        href={href}
+        className={cardClasses}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      to={href}
+      className={cardClasses}
+    >
+      {content}
+    </Link>
   );
 };
 
