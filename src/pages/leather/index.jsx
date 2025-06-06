@@ -8,6 +8,7 @@ import LeatherProductsBento from '../../components/leather/LeatherProductsBento'
 import LeatherContact from '../../components/leather/LeatherContact';
 import FooterLeather from '../../components/layout/FooterLeather';
 import Certifications from "../../components/stoever/Certifications";
+import DemoWorldMap from '../../components/stoever/DemoWorldMap';
 
 const LeatherPage = () => {
   return (
@@ -28,6 +29,9 @@ const LeatherPage = () => {
         <div>
           <Divider />
           <LeatherProductsBento />
+        </div>
+        <div>
+          <DemoWorldMap/>
         </div>
         <div>
           <Certifications/>

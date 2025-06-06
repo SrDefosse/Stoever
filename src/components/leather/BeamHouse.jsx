@@ -37,7 +37,7 @@ const BeamHouse = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl text-gray-800 mb-6">
-            Beamhouse Technology
+            Beamhouse Technology (By Proviera)
           </h2>
           <div className="w-24 h-1 bg-green-500 mx-auto mb-8"></div>
         </motion.div>

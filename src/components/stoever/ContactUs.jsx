@@ -4,11 +4,71 @@ import CustomSelect from "../ui/CustomSelect";
 
 const ContactUs = () => {
   const [division, setDivision] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
   const divisionOptions = [
     { value: 'leather', label: 'Stoever Leather' },
     { value: 'construction', label: 'Stoever Construction' }
   ];
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/email/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          division: division,
+          subject: formData.subject,
+          message: formData.message
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        setDivision('');
+      } else {
+        setSubmitStatus('error');
+        console.error('Error:', data);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Network error:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section className="w-full relative py-20 md:py-28">
@@ -110,13 +170,35 @@ const ContactUs = () => {
 
           {/* --- Columna Derecha: Formulario --- */}
           <div className="bg-[#007AFF]/75 backdrop-blur-lg rounded-xl shadow-2xl p-6 md:p-10 border border-white/20">
-            <form className="space-y-6">
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                <p className="text-green-100 text-center">
+                  ✅ Message sent successfully! We'll get back to you soon.
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                <p className="text-red-100 text-center">
+                  ❌ Failed to send message. Please try again.
+                </p>
+              </div>
+            )}
+
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-1">Full Name</label>
                 <input 
                   type="text" 
                   id="name" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   placeholder="Type your full name" 
+                  required
                   className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
                 />
               </div>
@@ -126,7 +208,11 @@ const ContactUs = () => {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="example@yourcompany.com" 
+                  required
                   className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
                 />
               </div>
@@ -147,7 +233,11 @@ const ContactUs = () => {
                 <input 
                   type="text" 
                   id="subject" 
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   placeholder="What is this about?" 
+                  required
                   className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
                 />
               </div>
@@ -156,14 +246,33 @@ const ContactUs = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-1">Message</label>
                 <textarea 
                   id="message" 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows={4} 
                   placeholder="Write your comment or question here..." 
+                  required
                   className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent resize-none transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:bg-white/15"
                 />
               </div>
 
               <div className="pt-4">
-                <WhiteGlassButton text="Send Message" />
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="w-full group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white/30 backdrop-blur-md border border-white/30 px-6 text-white shadow-md transition-all duration-300 ease-in-out hover:bg-white hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isLoading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="transition-colors duration-300 group-hover:text-black">Send Message</span>
+                    </>
+                  )}
+                </button>
               </div>
             </form>
           </div> {/* --- Fin Columna Derecha --- */}

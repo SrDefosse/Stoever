@@ -8,7 +8,7 @@ const HeroConstruction = () => {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="https://blinksites.mx/imgs/video-stoever-construction.mp4#t=30"
+          src="/construction-imgs/video-stoever-construction.mp4#t=30"
           autoPlay
           muted
           loop

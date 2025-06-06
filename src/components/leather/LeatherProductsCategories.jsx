@@ -107,19 +107,19 @@ const LeatherProductsCategories = () => {
           description: "Medium-high molecular weight acrylic-maleic copolymer that forms a film of medium hardness and low elasticity capable of providing high filling power to leather fibers."
         },
         {
-          name: "Basyntan ECO M",
+          name: "Stoevertan ECO M",
           description: "Highly concentrated Melamine-based resin that provides plumpness, rubbery touch and firm grain."
         },
         {
-          name: "Basyntan ECO D",
+          name: "Stoevertan ECO D",
           description: "Dicyandiamide-based polymer with specific filling action for the empty and spongy area of hides, improving fiber density."
         },
         {
-          name: "Basyntan SYA",
+          name: "Stoevertan SYA",
           description: "Sulfone-based polymer. Replacement polymer with good tanning power that gives plumpness, roundness and firm grain to the leather."
         },
         {
-          name: "Basyntan SCK",
+          name: "Stoevertan SCK",
           description: "Phenyl Phenol Sulfone-based Syntan. Synthetic with good tanning power. Provides good plumpness, roundness, firm grain and closed pore to hides."
         }
       ]

@@ -9,7 +9,7 @@ const HeroLeather = () => {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="https://blinksites.mx/imgs/hero-leather.mp4"
+          src="/leather-imgs/hero-leather.mp4"
           autoPlay
           muted
           loop

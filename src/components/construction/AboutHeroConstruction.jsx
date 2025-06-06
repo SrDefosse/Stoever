@@ -6,7 +6,7 @@ const AboutHeroConstruction = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <video
-          src="https://blinksites.mx/imgs/video-stoever-construction.mp4" // Placeholder image, replace with actual path
+          src="/construction-imgs/video-stoever-construction.mp4" 
           autoPlay
           muted
           loop
@@ -26,7 +26,6 @@ const AboutHeroConstruction = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             We build the <span className="text-[#FFDD0A]">Future</span> with <span className="text-[#FFDD0A]">You</span> In Mind.
             </h1>
-            {/* You can add more text or elements here if needed */}
           </div>
         </div>
       </div>
